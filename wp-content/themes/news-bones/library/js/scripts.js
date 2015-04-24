@@ -132,3 +132,25 @@ jQuery(document).ready(function($) {
 
 }); /* end of as page load scripts */
 
+//integrate IDIO into signup form
+jQuery(window).load(function() {
+    jQuery('.epm-submit-chimp').click(function() {
+
+        //get form values
+        var epm_form2 = jQuery(this);
+        var epm_email2 = jQuery(epm_form2).parent().find('#epm-email').val();
+
+        _iaq = _iaq || {};
+
+        //track email in idio
+        _iaq.push(["user","email",epm_email2]);
+        //add user to "Subscriber" group in idio
+        _iaq.push(['group', 'Subscribers']);
+        _iaq.push(['track', 'join']);
+        console.log(_iaq);
+
+        return false;
+    });
+});
+
+
