@@ -190,52 +190,27 @@ img {
   width: 100%;
 }
 
-/* line 27, ../scss/breakpoints/_481up.scss */
-#logo {
-  display: block;
-}
-/* line 30, ../scss/breakpoints/_481up.scss */
-#logo a img {
-  width: 230px;
-}
-
-/* line 37, ../scss/breakpoints/_481up.scss */
-#mlogo {
-  display: none !important;
-}
-
-/* line 45, ../scss/breakpoints/_481up.scss */
-.overlay span {
-  display: block;
-  font-size: 30px;
-}
-
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 57, ../scss/breakpoints/_481up.scss */
-.widget_search {
-  display: block;
-}
-
 /* .menu is clearfixed inside mixins.scss */
-/* line 61, ../scss/breakpoints/_481up.scss */
+/* line 38, ../scss/breakpoints/_481up.scss */
 .menu {
   /* end .menu ul */
 }
-/* line 62, ../scss/breakpoints/_481up.scss */
+/* line 39, ../scss/breakpoints/_481up.scss */
 .menu ul {
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 63, ../scss/breakpoints/_481up.scss */
+/* line 40, ../scss/breakpoints/_481up.scss */
 .menu ul li {
   /*
   plan your menus and drop-downs wisely.
   */
 }
-/* line 64, ../scss/breakpoints/_481up.scss */
+/* line 41, ../scss/breakpoints/_481up.scss */
 .menu ul li a {
   /*
   you can use hover styles here even though this size
@@ -248,27 +223,23 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
-/* line 109, ../scss/breakpoints/_481up.scss */
+/* line 86, ../scss/breakpoints/_481up.scss */
 .entry-content {
   /* at this larger size, we can start to align images */
 }
-/* line 110, ../scss/breakpoints/_481up.scss */
-.entry-content img {
-  width: auto;
-}
-/* line 116, ../scss/breakpoints/_481up.scss */
+/* line 90, ../scss/breakpoints/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
-/* line 121, ../scss/breakpoints/_481up.scss */
+/* line 95, ../scss/breakpoints/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
-/* line 126, ../scss/breakpoints/_481up.scss */
+/* line 100, ../scss/breakpoints/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -280,19 +251,14 @@ POSTS & CONTENT STYLES
 /*********************
 HOMEPAGE STYLES
 *********************/
-/* line 140, ../scss/breakpoints/_481up.scss */
+/* line 114, ../scss/breakpoints/_481up.scss */
 .NewsCats:first-child {
   padding-right: 0.75em;
 }
 
-/* line 143, ../scss/breakpoints/_481up.scss */
+/* line 117, ../scss/breakpoints/_481up.scss */
 .banner {
   display: none;
-}
-
-/* line 153, ../scss/breakpoints/_481up.scss */
-article header h1 {
-  font-size: 26px !important;
 }
 
 /*********************
@@ -303,11 +269,6 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 /* end .footer-links */
-/* line 180, ../scss/breakpoints/_481up.scss */
-h1.single {
-  font-size: 36px;
-}
-
 /******************************************************************
 Site Name:
 Author:
@@ -327,7 +288,7 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 29, ../scss/breakpoints/_768up.scss */
+/* line 26, ../scss/breakpoints/_768up.scss */
 .wrap {
   width: 760px;
 }
@@ -335,36 +296,37 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
-/* line 41, ../scss/breakpoints/_768up.scss */
+/* line 38, ../scss/breakpoints/_768up.scss */
 .header-right {
-  margin-top: 45px;
+  border-bottom: 3px solid #4dae36;
+  margin-top: 30px;
 }
 
-/* line 48, ../scss/breakpoints/_768up.scss */
+/* line 45, ../scss/breakpoints/_768up.scss */
 #inner-header {
-  /*background: url('/wp-content/uploads/2015/03/watermark.png') no-repeat right;	*/
+  background: url("/wp-content/uploads/2015/03/watermark.png") no-repeat right;
 }
 
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 56, ../scss/breakpoints/_768up.scss */
+/* line 53, ../scss/breakpoints/_768up.scss */
 header {
   /* end .nav */
 }
-/* line 57, ../scss/breakpoints/_768up.scss */
+/* line 54, ../scss/breakpoints/_768up.scss */
 header .nav {
   border: 0;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 59, ../scss/breakpoints/_768up.scss */
+/* line 56, ../scss/breakpoints/_768up.scss */
 header .nav ul {
   background: #000;
   margin-top: 0;
 }
-/* line 63, ../scss/breakpoints/_768up.scss */
+/* line 60, ../scss/breakpoints/_768up.scss */
 header .nav li {
   float: left;
   position: relative;
@@ -374,13 +336,13 @@ header .nav li {
   */
   /* showing sub-menus */
 }
-/* line 68, ../scss/breakpoints/_768up.scss */
+/* line 65, ../scss/breakpoints/_768up.scss */
 header .nav li:hover, header .nav li:focus {
   color: #fff;
   background: #4dae36;
-  /*border:none;*/
+  border: none;
 }
-/* line 75, ../scss/breakpoints/_768up.scss */
+/* line 72, ../scss/breakpoints/_768up.scss */
 header .nav li a {
   border-bottom: 0;
   /*
@@ -388,11 +350,11 @@ header .nav li a {
   has the possibility of being a mobile device.
   */
 }
-/* line 83, ../scss/breakpoints/_768up.scss */
+/* line 80, ../scss/breakpoints/_768up.scss */
 header .nav li a:hover, header .nav li a:focus {
-  /*border:none;*/
+  border: none;
 }
-/* line 99, ../scss/breakpoints/_768up.scss */
+/* line 96, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu,
 header .nav li ul.children {
   margin-top: 0;
@@ -403,7 +365,7 @@ header .nav li ul.children {
   z-index: 8999;
   /* highlight sub-menu current page */
 }
-/* line 108, ../scss/breakpoints/_768up.scss */
+/* line 105, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu li,
 header .nav li ul.children li {
   /*
@@ -412,7 +374,7 @@ header .nav li ul.children li {
   for usability. k, bai.
   */
 }
-/* line 110, ../scss/breakpoints/_768up.scss */
+/* line 107, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu li a,
 header .nav li ul.children li a {
   padding-left: 10px;
@@ -421,29 +383,29 @@ header .nav li ul.children li a {
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
-/* line 127, ../scss/breakpoints/_768up.scss */
+/* line 124, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu li:last-child a,
 header .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 137, ../scss/breakpoints/_768up.scss */
+/* line 134, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu li ul,
 header .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
-/* line 152, ../scss/breakpoints/_768up.scss */
+/* line 149, ../scss/breakpoints/_768up.scss */
 header .nav li:hover > ul {
   top: auto;
   visibility: visible;
 }
-/* line 160, ../scss/breakpoints/_768up.scss */
+/* line 157, ../scss/breakpoints/_768up.scss */
 header .nav li.current-menu-item,
 header .nav li.current_page_item,
 header .nav li.current_page_ancestor {
   background: #4dae36;
 }
-/* line 164, ../scss/breakpoints/_768up.scss */
+/* line 161, ../scss/breakpoints/_768up.scss */
 header .nav li.current-menu-item a,
 header .nav li.current_page_item a,
 header .nav li.current_page_ancestor a {
@@ -453,21 +415,21 @@ header .nav li.current_page_ancestor a {
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 179, ../scss/breakpoints/_768up.scss */
+/* line 176, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   margin-top: 0px;
 }
 
-/* line 184, ../scss/breakpoints/_768up.scss */
+/* line 181, ../scss/breakpoints/_768up.scss */
 .widget {
   /*padding: 0 10px;*/
 }
-/* line 189, ../scss/breakpoints/_768up.scss */
+/* line 186, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 197, ../scss/breakpoints/_768up.scss */
+/* line 194, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -483,7 +445,7 @@ SIDEBARS & ASIDES
 /* category widget */
 /* recent-comments widget */
 /* search widget */
-/* line 285, ../scss/breakpoints/_768up.scss */
+/* line 282, ../scss/breakpoints/_768up.scss */
 .widget_search {
   float: left;
   margin-left: 75px;
@@ -494,56 +456,43 @@ SIDEBARS & ASIDES
 /*********************
 HOME STYLES
 *********************/
-/* line 301, ../scss/breakpoints/_768up.scss */
+/* line 298, ../scss/breakpoints/_768up.scss */
 #s {
   float: left;
   width: 200px;
 }
 
-/* line 305, ../scss/breakpoints/_768up.scss */
+/* line 302, ../scss/breakpoints/_768up.scss */
 #searchsubmit {
   float: left;
 }
 
-/* line 309, ../scss/breakpoints/_768up.scss */
+/* line 306, ../scss/breakpoints/_768up.scss */
 .NewsCats {
   margin-bottom: 10px;
 }
 
-/* line 313, ../scss/breakpoints/_768up.scss */
+/* line 310, ../scss/breakpoints/_768up.scss */
 .NewsCats .cat {
   border: 1px solid #e3e3e3;
 }
 
 /* line 319, ../scss/breakpoints/_768up.scss */
-.NewsCats span {
-  font-size: 18px;
-  color: #fff;
-  margin-left: 20px;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.8);
-  font-weight: bold;
-}
-
-/* line 330, ../scss/breakpoints/_768up.scss */
 .NewsCats h3 {
   font-size: 14px;
   margin: 0px;
   height: 22px;
   overflow: hidden;
+  color: #4dae36;
   font-weight: bold;
 }
-/* line 337, ../scss/breakpoints/_768up.scss */
-.NewsCats h3 a {
-  color: #666 !important;
-}
 
-/* line 343, ../scss/breakpoints/_768up.scss */
+/* line 329, ../scss/breakpoints/_768up.scss */
 .NewsCats p {
   margin-bottom: 10px;
 }
 
-/* line 348, ../scss/breakpoints/_768up.scss */
+/* line 334, ../scss/breakpoints/_768up.scss */
 .NewsCats .entry {
   font-size: 12px;
   padding: 0px;
@@ -552,12 +501,12 @@ HOME STYLES
   border-bottom: 1px solid #e3e3e3;
 }
 
-/* line 355, ../scss/breakpoints/_768up.scss */
+/* line 341, ../scss/breakpoints/_768up.scss */
 .NewsCats .entry p {
   margin: 0px;
 }
 
-/* line 361, ../scss/breakpoints/_768up.scss */
+/* line 347, ../scss/breakpoints/_768up.scss */
 .NewsCats .more_stories {
   float: right;
   background: #4dae36;
@@ -567,49 +516,61 @@ HOME STYLES
   margin-top: -5px;
 }
 
-/* line 373, ../scss/breakpoints/_768up.scss */
+/* line 357, ../scss/breakpoints/_768up.scss */
+.stories {
+  /*height:220px;*/
+  height: 315px;
+  background: #FFF;
+  padding: 10px;
+  /*color:#fff;*/
+}
+
+/* line 367, ../scss/breakpoints/_768up.scss */
 .banner {
   margin-top: 10px;
   display: none;
 }
 
-/* line 381, ../scss/breakpoints/_768up.scss */
+/* line 372, ../scss/breakpoints/_768up.scss */
+.mid-home-banner {
+  margin-bottom: 10px;
+  background: #c1377f;
+  padding: 10px;
+}
+
+/* line 377, ../scss/breakpoints/_768up.scss */
+.mid-home-banner h2 {
+  color: #fff;
+  text-align: center;
+}
+
+/* line 383, ../scss/breakpoints/_768up.scss */
 #Hero {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-/* line 386, ../scss/breakpoints/_768up.scss */
+/* line 388, ../scss/breakpoints/_768up.scss */
 #Hero h1 {
-  font-size: 28px;
-}
-
-/* line 391, ../scss/breakpoints/_768up.scss */
-.overlay {
-  /*top:150px;*/
-}
-/* line 394, ../scss/breakpoints/_768up.scss */
-.overlay span {
-  display: block;
-  font-size: 40px;
-}
-
-/*********************
-SINGLE POST / PAGE STYLES
-*********************/
-/* line 412, ../scss/breakpoints/_768up.scss */
-article header h1 {
-  font-size: 26px !important;
-  margin: 0px;
-  padding: 0px;
-  display: inline-block;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 30px;
+  left: 20px;
+  padding: 12px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
 }
 
 /*********************
 CATEGORY STYLES
 *********************/
-/* line 430, ../scss/breakpoints/_768up.scss */
-article.top header h2 {
+/* line 405, ../scss/breakpoints/_768up.scss */
+article.top header {
+  position: relative;
+}
+/* line 408, ../scss/breakpoints/_768up.scss */
+article.top header h3 {
   font-size: 27px;
   margin-left: 26px;
   margin-right: 20px;
@@ -624,7 +585,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 454, ../scss/breakpoints/_768up.scss */
+/* line 432, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
