@@ -85,7 +85,84 @@
                              </section> 
                             <div class="clearfix"></div>
                             <section class="NewsCats" class="m-all cf">-->
-                           
+                           <script type="text/javascript">
+
+var _ipc = {
+
+    api_key: '02F55TD5SZYNPCN7BONR',
+
+	complete: function(){
+
+		jQuery(".idio__p").text(jQuery(".idio__p").text().substring(0, 117) + "...");
+
+		jQuery("#idio .title").css({
+
+			"background-image": "url(" + jQuery(".idio__entry[data-image]").first().data('image') + ")",
+
+			"background-repeat": "no-repeat",
+
+			"background-size": "cover"
+
+		});
+
+	}
+
+};
+
+!function(d,s){var ip=d.createElement(s);ip.async=1,s=d.getElementsByTagName(s)[0],ip.src='//s.idio.co/ip.js',s.parentNode.insertBefore(ip,s)}(document,'script');
+
+</script>
+
+
+<section class="m-all t-1of2 d-1of3 last-col cf NewsCats" id='idio'>
+
+    <div class="cat">
+
+        <div class="title" style=
+
+        'background-size:cover;'>
+
+        <span>Recommended stories</span>
+
+        </div>
+
+
+
+        <div class='stories'>
+
+
+
+			<script class="idio-recommendations" type="text/x-mustache" data-rpp="3" data-fallback-section="1">
+
+				{{#content}}
+
+					<div class="entry idio__entry" {{#main_image_url}}data-image="{{main_image_url}}?w=300&amp;h=100" {{/main_image_url}}>
+
+						<h3><a href="{{link_url}}" rel="bookmark" title="{{title}}">{{title}}</a></h3>
+
+
+
+						<p><font class="idio__p">{{abstract}}</font>
+
+						<a class="excerpt-read-more" href=
+
+						"{{link_url}}">
+
+						Read&nbsp;more&nbsp;&raquo;</a></p>
+
+					</div>
+
+				{{/content}}
+
+			</script>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>idio.render()</script>
          
                             <?php
 							$cats = get_option("theme_name_front_page_elements");
@@ -96,7 +173,7 @@
 								);
                            // $cats = get_categories($args);
 							
-							$i = 0;
+							$i = 1;
                             foreach ($cats as $cat_ID) :
 							$cat_name = get_the_category_by_ID( $cat_ID );
 							
