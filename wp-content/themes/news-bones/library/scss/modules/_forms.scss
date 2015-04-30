@@ -45,7 +45,10 @@ textarea,
   margin-bottom: 14px;
   font-size: 1em;
   color: $text-color;
-  border-radius: 3px;
+  -webkit-appearance: none;
+ /* border-radius: 3px;*/
+  -webkit-border-radius:0px;
+  -moz-border-radius:0px;
   vertical-align: middle;
   box-shadow: none;
   border: 0;

@@ -750,6 +750,23 @@ function news_register_meta_boxes( $meta_boxes )
             ),
         )
     );
+	
+	 $meta_boxes[] = array(
+        'id'       => 'intro',
+        'title'    => 'Intro Text',
+        'pages'    => array( 'post', 'page' ),
+        'context'  => 'normal',
+        'priority' => 'high',
+
+        'fields' => array(
+            array(
+                'name'  => 'intro',
+                'id'    => $prefix . 'intro',
+                'type'  => 'textarea',
+				'class' => 'large-text'
+            ),
+        )
+    );
 
 
 

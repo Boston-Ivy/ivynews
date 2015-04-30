@@ -24,14 +24,37 @@ them in here, they won't work.
 
 img{ width:100%;}
 
+#logo{
+	display:block;
+	a{
+		img{
+			width:230px;	
+		}
+	}
+}
 
+	
+	#mlogo {
+		display:none !important;
+		
+	}
+	
+	
+.overlay{
+	
+	span{
+		display:block;
+		font-size:30px;
+
+	}
+}
 
 
 
 /*********************
 NAVIGATION STYLES
 *********************/
-
+.widget_search{ display:block;}
 .nav {}
 
 	/* .menu is clearfixed inside mixins.scss */
@@ -84,6 +107,9 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
+		img{
+			width:auto;	
+		}
 
 
 	/* at this larger size, we can start to align images */
@@ -119,6 +145,19 @@ HOMEPAGE STYLES
 }
 
 
+article{
+		
+		
+		header{
+			
+			h1{
+				font-size:26px !important;
+							
+			}
+			
+		}
+}
+
 
 
 
@@ -138,3 +177,6 @@ do they need tweaking?
 	}
 } /* end .footer-links */
 
+h1.single{
+	font-size:36px;	
+}

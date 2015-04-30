@@ -19,6 +19,9 @@ GENERAL STYLES
 
 body {}
 
+
+
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -36,14 +39,14 @@ HEADER STYLES
 	#logo {}
 	
 	.header-right{
-		border-bottom: 3px solid $green;
-		margin-top:30px;
+		
+		margin-top:45px;
 		
 		
 	}
 	
 #inner-header{
-	background: url('/wp-content/uploads/2015/03/watermark.png') no-repeat right;	
+	/*background: url('/wp-content/uploads/2015/03/watermark.png') no-repeat right;	*/
 }
 	
 
@@ -65,7 +68,7 @@ header{
 		&:hover, &:focus {
 				color: $white;
 				background:$green;
-				border:none;
+				/*border:none;*/
 				
 		}	
 
@@ -79,7 +82,7 @@ header{
 			
 			&:hover, &:focus {
 				
-				border:none;
+				/*border:none;*/
 			}	
 			
 				
@@ -315,14 +318,16 @@ width:200px;
 
 
 
-
 .NewsCats h3{
     font-size:14px;
     margin:0px;
     height:22px;
     overflow:hidden;
-	color: $green;
+	
 	font-weight:bold;
+	a{
+		color:#666 !important;	
+	}
    
 }
 
@@ -354,14 +359,6 @@ width:200px;
 		
 }
 
-.stories{
-	/*height:220px;*/
-    height:315px;
-    background: #FFF;
-    padding:10px;
-    /*color:#fff;*/
-   
-}
 
 
 .banner{
@@ -369,15 +366,7 @@ width:200px;
 	display:none;
 
 }
-.mid-home-banner{
-	margin-bottom:10px;
-	background:#c1377f;	
-	padding:10px;
-}
-.mid-home-banner h2{
-	color:$white;
-	text-align:center;
-}
+
 
 
 #Hero{
@@ -386,16 +375,40 @@ width:200px;
 	position:relative;	
 	
 	h1{
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
-    color: #fff;
-    font-size: 30px;
-    left: 20px;
-    padding: 12px;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-			
+	    font-size: 28px;
 	}
+}
+
+.overlay{
+	/*top:150px;*/
+	
+	span{
+		display:block;
+		font-size:40px;
+		
+
+	}
+}
+
+
+/*********************
+SINGLE POST / PAGE STYLES
+*********************/
+
+article{
+		
+		
+		header{
+			
+			h1{
+				font-size:26px !important;
+				margin:0px;
+				padding:0px;
+				display:inline-block; 
+							
+			}
+			
+		}
 }
 
 
@@ -403,9 +416,9 @@ width:200px;
 CATEGORY STYLES
 *********************/
 article.top header{
-		position:relative;
+		
 	
-	 h3 {
+	 h2 {
     
     	font-size: 27px;
 	    margin-left: 26px;

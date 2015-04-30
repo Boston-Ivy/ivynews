@@ -197,8 +197,22 @@
                                         <?php
                                         while (have_posts()) : the_post(); ?>
                                           <div class="entry">
-                                           <h3><a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>"><?php echo the_title()?></a></h3>
-                                            <?php $excerpt = get_the_excerpt(); ?>
+                                           <h3>
+                                           		<a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>">
+                                                <?php if(!empty(rwmb_meta( 'rw_tagline'))){ ?>
+										   			<span><?php echo rwmb_meta( 'rw_tagline'); ?> / </span>
+                                                 <?php } ?>
+												<?php echo the_title()?>
+                                               </a>
+                                          </h3>
+                                            <?php
+											if(!empty(rwmb_meta( 'rw_intro'))){
+												$excerpt = rwmb_meta( 'rw_intro');
+											}else{												
+												$excerpt = get_the_excerpt(); 
+											}
+											?>
+                                            
                                            <p><?php  echo string_limit_words($excerpt,20);  ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></P>
                                           </div>
                                   <?php
