@@ -221,7 +221,7 @@
 											}
 											?>
                                             
-                                           <p><?php  echo string_limit_words($excerpt,20);  ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></P>
+                                           <p><?php  echo string_limit_words($excerpt,18);  ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></P>
                                           </div>
                                   <?php
                                           

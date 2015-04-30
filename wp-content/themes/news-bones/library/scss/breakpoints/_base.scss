@@ -480,8 +480,10 @@ float:left !important;
 .NewsCats h3{
     font-size:14px;
     margin:0px;
-	color: $gray;
 	font-weight:bold;
+	a{
+		color:#666;	
+	}
 	
 	span{
 		color:$green;	
@@ -498,8 +500,7 @@ float:left !important;
     font-size:12px;
     padding:0px;
     margin-bottom:10px;
-    height:80px;
-	border-bottom:1px solid #e3e3e3;
+  	border-bottom:1px solid #e3e3e3;
 }
 .NewsCats .entry p{
 	margin:0px;
@@ -518,9 +519,7 @@ float:left !important;
 }
 
 .stories{
-	/*height:220px;*/
-    height:310px;
-    background: #FFF;
+	background: #FFF;
     padding:10px;
     /*color:#fff;*/
    

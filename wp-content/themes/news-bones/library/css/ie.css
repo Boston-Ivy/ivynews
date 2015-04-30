@@ -295,6 +295,16 @@ article header h1 {
   font-size: 26px !important;
 }
 
+/* line 161, ../scss/breakpoints/_481up.scss */
+.stories {
+  height: 310px;
+}
+
+/* line 165, ../scss/breakpoints/_481up.scss */
+.NewsCats .entry {
+  height: 80px;
+}
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -303,7 +313,7 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 /* end .footer-links */
-/* line 180, ../scss/breakpoints/_481up.scss */
+/* line 188, ../scss/breakpoints/_481up.scss */
 h1.single {
   font-size: 36px;
 }
@@ -521,17 +531,13 @@ HOME STYLES
   margin: 0px;
   font-weight: bold;
 }
-/* line 326, ../scss/breakpoints/_768up.scss */
-.NewsCats h3 a {
-  color: #666 !important;
-}
 
-/* line 332, ../scss/breakpoints/_768up.scss */
+/* line 330, ../scss/breakpoints/_768up.scss */
 .NewsCats p {
   margin-bottom: 10px;
 }
 
-/* line 337, ../scss/breakpoints/_768up.scss */
+/* line 335, ../scss/breakpoints/_768up.scss */
 .NewsCats .entry {
   font-size: 12px;
   padding: 0px;
@@ -540,12 +546,12 @@ HOME STYLES
   border-bottom: 1px solid #e3e3e3;
 }
 
-/* line 344, ../scss/breakpoints/_768up.scss */
+/* line 342, ../scss/breakpoints/_768up.scss */
 .NewsCats .entry p {
   margin: 0px;
 }
 
-/* line 350, ../scss/breakpoints/_768up.scss */
+/* line 348, ../scss/breakpoints/_768up.scss */
 .NewsCats .more_stories {
   float: right;
   background: #4dae36;
@@ -555,28 +561,28 @@ HOME STYLES
   margin-top: -5px;
 }
 
-/* line 362, ../scss/breakpoints/_768up.scss */
+/* line 360, ../scss/breakpoints/_768up.scss */
 .banner {
   margin-top: 10px;
   display: none;
 }
 
-/* line 370, ../scss/breakpoints/_768up.scss */
+/* line 368, ../scss/breakpoints/_768up.scss */
 #Hero {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-/* line 375, ../scss/breakpoints/_768up.scss */
+/* line 373, ../scss/breakpoints/_768up.scss */
 #Hero h1 {
   font-size: 28px;
 }
 
-/* line 380, ../scss/breakpoints/_768up.scss */
+/* line 378, ../scss/breakpoints/_768up.scss */
 .overlay {
   /*top:150px;*/
 }
-/* line 383, ../scss/breakpoints/_768up.scss */
+/* line 381, ../scss/breakpoints/_768up.scss */
 .overlay span {
   display: block;
   font-size: 40px;
@@ -585,7 +591,7 @@ HOME STYLES
 /*********************
 SINGLE POST / PAGE STYLES
 *********************/
-/* line 401, ../scss/breakpoints/_768up.scss */
+/* line 399, ../scss/breakpoints/_768up.scss */
 article header h1 {
   font-size: 26px !important;
   margin: 0px;
@@ -596,7 +602,7 @@ article header h1 {
 /*********************
 CATEGORY STYLES
 *********************/
-/* line 419, ../scss/breakpoints/_768up.scss */
+/* line 417, ../scss/breakpoints/_768up.scss */
 article.top header h2 {
   font-size: 27px;
   margin-left: 26px;
@@ -612,7 +618,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 443, ../scss/breakpoints/_768up.scss */
+/* line 441, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
