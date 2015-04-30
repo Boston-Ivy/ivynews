@@ -238,6 +238,7 @@
                                 
                                 ?>
                                 <a class="more_stories" href="<?php echo $category_link ?>" rel="bookmark" title="View all stories in <?php echo $cat_name;?>">More stories &raquo;</a>
+                                <div class="clearfix"></div>
                                		</div>
                                </div>
                                
