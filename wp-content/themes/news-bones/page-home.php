@@ -102,7 +102,7 @@
 								};
 								</script>
 
-
+								<script type="text/javascript" src="//s.idio.co/ip.js"></script>
 
                             <section class="m-all t-1of2 d-1of3 last-col cf NewsCats" id='idio'>
                                 <div class="cat">
