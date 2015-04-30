@@ -199,7 +199,8 @@
                                           <div class="entry">
                                            <h3>
                                            		<a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>">
-                                                <?php if(!empty(rwmb_meta('rw_tagline'))){ ?>
+
+                                                <?php if( !empty(rwmb_meta('rw_tagline') )) { ?>
 										   			
                                                     <span><?php echo rwmb_meta('rw_tagline'); ?> / </span>
                                                     
