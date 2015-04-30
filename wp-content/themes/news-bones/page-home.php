@@ -212,8 +212,10 @@
                                                </a>
                                           </h3>
                                             <?php
-											if(!empty(rwmb_meta( 'rw_intro'))){
-												$excerpt = rwmb_meta( 'rw_intro');
+												$intro = rwmb_meta( 'rw_intro');
+											
+											if(!empty($intro)){
+												$excerpt = $intro;
 											}else{												
 												$excerpt = get_the_excerpt(); 
 											}
