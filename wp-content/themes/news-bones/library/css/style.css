@@ -3063,21 +3063,19 @@ you can add resource intensive styles.
   .NewsCats h3 {
     font-size: 14px;
     margin: 0px;
-    height: 22px;
-    overflow: hidden;
     font-weight: bold;
   }
-  /* line 328, ../scss/breakpoints/_768up.scss */
+  /* line 326, ../scss/breakpoints/_768up.scss */
   .NewsCats h3 a {
     color: #666 !important;
   }
 
-  /* line 334, ../scss/breakpoints/_768up.scss */
+  /* line 332, ../scss/breakpoints/_768up.scss */
   .NewsCats p {
     margin-bottom: 10px;
   }
 
-  /* line 339, ../scss/breakpoints/_768up.scss */
+  /* line 337, ../scss/breakpoints/_768up.scss */
   .NewsCats .entry {
     font-size: 12px;
     padding: 0px;
@@ -3086,12 +3084,12 @@ you can add resource intensive styles.
     border-bottom: 1px solid #e3e3e3;
   }
 
-  /* line 346, ../scss/breakpoints/_768up.scss */
+  /* line 344, ../scss/breakpoints/_768up.scss */
   .NewsCats .entry p {
     margin: 0px;
   }
 
-  /* line 352, ../scss/breakpoints/_768up.scss */
+  /* line 350, ../scss/breakpoints/_768up.scss */
   .NewsCats .more_stories {
     float: right;
     background: #4dae36;
@@ -3101,28 +3099,28 @@ you can add resource intensive styles.
     margin-top: -5px;
   }
 
-  /* line 364, ../scss/breakpoints/_768up.scss */
+  /* line 362, ../scss/breakpoints/_768up.scss */
   .banner {
     margin-top: 10px;
     display: none;
   }
 
-  /* line 372, ../scss/breakpoints/_768up.scss */
+  /* line 370, ../scss/breakpoints/_768up.scss */
   #Hero {
     width: 100%;
     overflow: hidden;
     position: relative;
   }
-  /* line 377, ../scss/breakpoints/_768up.scss */
+  /* line 375, ../scss/breakpoints/_768up.scss */
   #Hero h1 {
     font-size: 28px;
   }
 
-  /* line 382, ../scss/breakpoints/_768up.scss */
+  /* line 380, ../scss/breakpoints/_768up.scss */
   .overlay {
     /*top:150px;*/
   }
-  /* line 385, ../scss/breakpoints/_768up.scss */
+  /* line 383, ../scss/breakpoints/_768up.scss */
   .overlay span {
     display: block;
     font-size: 40px;
@@ -3131,7 +3129,7 @@ you can add resource intensive styles.
   /*********************
   SINGLE POST / PAGE STYLES
   *********************/
-  /* line 403, ../scss/breakpoints/_768up.scss */
+  /* line 401, ../scss/breakpoints/_768up.scss */
   article header h1 {
     font-size: 26px !important;
     margin: 0px;
@@ -3142,7 +3140,7 @@ you can add resource intensive styles.
   /*********************
   CATEGORY STYLES
   *********************/
-  /* line 421, ../scss/breakpoints/_768up.scss */
+  /* line 419, ../scss/breakpoints/_768up.scss */
   article.top header h2 {
     font-size: 27px;
     margin-left: 26px;
@@ -3158,7 +3156,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 445, ../scss/breakpoints/_768up.scss */
+  /* line 443, ../scss/breakpoints/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.
