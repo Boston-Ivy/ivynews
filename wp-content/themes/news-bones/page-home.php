@@ -107,7 +107,7 @@
                             <section class="m-all t-1of2 d-1of3 last-col cf NewsCats" id='idio'>
                                 <div class="cat">
                                     <div class="title" style='background-size:cover;'>
-                                        <span>Recommended stories</span>
+                                        <span>Recommended</span>
                                     </div>
                                     <div class='stories'>
                                         <script class="idio-recommendations" type="text/x-mustache" data-rpp="3" data-fallback-section="1">
