@@ -2742,7 +2742,7 @@ tweeners.
   /* line 45, ../scss/breakpoints/_481up.scss */
   .overlay span {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
   }
 
   /*********************
@@ -3126,7 +3126,7 @@ you can add resource intensive styles.
   /* line 381, ../scss/breakpoints/_768up.scss */
   .overlay span {
     display: block;
-    font-size: 40px;
+    font-size: 30px;
   }
 
   /*********************
