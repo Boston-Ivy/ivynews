@@ -191,7 +191,7 @@
             
                                 if (have_posts()) : ?>
                                        <div class="title" style='background: url(<?php echo $feat_image[0]?>) no-repeat; background-size:cover; '>
-                                       		<span><?php echo strtolower($cat_name);?></span>
+                                       		<span><?php echo $cat_name;?></span>
                                        </div>
                                         <div class='stories'>
                                         <?php
