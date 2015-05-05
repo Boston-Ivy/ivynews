@@ -2691,6 +2691,11 @@ view.
   line-height: 22px;
 }
 
+/* line 1426, ../scss/breakpoints/_base.scss */
+.ticker-stocks-container {
+  display: none;
+}
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2851,6 +2856,11 @@ tweeners.
   /* line 188, ../scss/breakpoints/_481up.scss */
   h1.single {
     font-size: 36px;
+  }
+
+  /* line 192, ../scss/breakpoints/_481up.scss */
+  .ticker-stocks-container {
+    display: block;
   }
 }
 /*********************

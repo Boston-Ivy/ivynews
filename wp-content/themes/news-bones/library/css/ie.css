@@ -318,6 +318,11 @@ h1.single {
   font-size: 36px;
 }
 
+/* line 192, ../scss/breakpoints/_481up.scss */
+.ticker-stocks-container {
+  display: block;
+}
+
 /******************************************************************
 Site Name:
 Author:
