@@ -318,11 +318,6 @@ h1.single {
   font-size: 36px;
 }
 
-/* line 192, ../scss/breakpoints/_481up.scss */
-.ticker-stocks-container {
-  display: block;
-}
-
 /******************************************************************
 Site Name:
 Author:
@@ -360,26 +355,31 @@ HEADER STYLES
   /*background: url('/wp-content/uploads/2015/03/watermark.png') no-repeat right;	*/
 }
 
+/* line 52, ../scss/breakpoints/_768up.scss */
+.ticker-stocks-container {
+  display: block;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 56, ../scss/breakpoints/_768up.scss */
+/* line 60, ../scss/breakpoints/_768up.scss */
 header {
   /* end .nav */
 }
-/* line 57, ../scss/breakpoints/_768up.scss */
+/* line 61, ../scss/breakpoints/_768up.scss */
 header .nav {
   border: 0;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 59, ../scss/breakpoints/_768up.scss */
+/* line 63, ../scss/breakpoints/_768up.scss */
 header .nav ul {
   background: #000;
   margin-top: 0;
 }
-/* line 63, ../scss/breakpoints/_768up.scss */
+/* line 67, ../scss/breakpoints/_768up.scss */
 header .nav li {
   float: left;
   position: relative;
@@ -389,13 +389,13 @@ header .nav li {
   */
   /* showing sub-menus */
 }
-/* line 68, ../scss/breakpoints/_768up.scss */
+/* line 72, ../scss/breakpoints/_768up.scss */
 header .nav li:hover, header .nav li:focus {
   color: #fff;
   background: #4dae36;
   /*border:none;*/
 }
-/* line 75, ../scss/breakpoints/_768up.scss */
+/* line 79, ../scss/breakpoints/_768up.scss */
 header .nav li a {
   border-bottom: 0;
   /*
@@ -403,11 +403,11 @@ header .nav li a {
   has the possibility of being a mobile device.
   */
 }
-/* line 83, ../scss/breakpoints/_768up.scss */
+/* line 87, ../scss/breakpoints/_768up.scss */
 header .nav li a:hover, header .nav li a:focus {
   /*border:none;*/
 }
-/* line 99, ../scss/breakpoints/_768up.scss */
+/* line 103, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu,
 header .nav li ul.children {
   margin-top: 0;
@@ -418,7 +418,7 @@ header .nav li ul.children {
   z-index: 8999;
   /* highlight sub-menu current page */
 }
-/* line 108, ../scss/breakpoints/_768up.scss */
+/* line 112, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu li,
 header .nav li ul.children li {
   /*
@@ -427,7 +427,7 @@ header .nav li ul.children li {
   for usability. k, bai.
   */
 }
-/* line 110, ../scss/breakpoints/_768up.scss */
+/* line 114, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu li a,
 header .nav li ul.children li a {
   padding-left: 10px;
@@ -436,29 +436,29 @@ header .nav li ul.children li a {
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
-/* line 127, ../scss/breakpoints/_768up.scss */
+/* line 131, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu li:last-child a,
 header .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-/* line 137, ../scss/breakpoints/_768up.scss */
+/* line 141, ../scss/breakpoints/_768up.scss */
 header .nav li ul.sub-menu li ul,
 header .nav li ul.children li ul {
   top: 0;
   left: 100%;
 }
-/* line 152, ../scss/breakpoints/_768up.scss */
+/* line 156, ../scss/breakpoints/_768up.scss */
 header .nav li:hover > ul {
   top: auto;
   visibility: visible;
 }
-/* line 160, ../scss/breakpoints/_768up.scss */
+/* line 164, ../scss/breakpoints/_768up.scss */
 header .nav li.current-menu-item,
 header .nav li.current_page_item,
 header .nav li.current_page_ancestor {
   background: #4dae36;
 }
-/* line 164, ../scss/breakpoints/_768up.scss */
+/* line 168, ../scss/breakpoints/_768up.scss */
 header .nav li.current-menu-item a,
 header .nav li.current_page_item a,
 header .nav li.current_page_ancestor a {
@@ -468,21 +468,21 @@ header .nav li.current_page_ancestor a {
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 179, ../scss/breakpoints/_768up.scss */
+/* line 183, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   margin-top: 0px;
 }
 
-/* line 184, ../scss/breakpoints/_768up.scss */
+/* line 188, ../scss/breakpoints/_768up.scss */
 .widget {
   /*padding: 0 10px;*/
 }
-/* line 189, ../scss/breakpoints/_768up.scss */
+/* line 193, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 197, ../scss/breakpoints/_768up.scss */
+/* line 201, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -498,7 +498,7 @@ SIDEBARS & ASIDES
 /* category widget */
 /* recent-comments widget */
 /* search widget */
-/* line 285, ../scss/breakpoints/_768up.scss */
+/* line 289, ../scss/breakpoints/_768up.scss */
 .widget_search {
   float: left;
   margin-left: 75px;
@@ -509,40 +509,40 @@ SIDEBARS & ASIDES
 /*********************
 HOME STYLES
 *********************/
-/* line 301, ../scss/breakpoints/_768up.scss */
+/* line 305, ../scss/breakpoints/_768up.scss */
 #s {
   float: left;
   width: 200px;
 }
 
-/* line 305, ../scss/breakpoints/_768up.scss */
+/* line 309, ../scss/breakpoints/_768up.scss */
 #searchsubmit {
   float: left;
 }
 
-/* line 309, ../scss/breakpoints/_768up.scss */
+/* line 313, ../scss/breakpoints/_768up.scss */
 .NewsCats {
   margin-bottom: 10px;
 }
 
-/* line 313, ../scss/breakpoints/_768up.scss */
+/* line 317, ../scss/breakpoints/_768up.scss */
 .NewsCats .cat {
   border: 1px solid #e3e3e3;
 }
 
-/* line 321, ../scss/breakpoints/_768up.scss */
+/* line 325, ../scss/breakpoints/_768up.scss */
 .NewsCats h3 {
   font-size: 14px;
   margin: 0px;
   font-weight: bold;
 }
 
-/* line 330, ../scss/breakpoints/_768up.scss */
+/* line 334, ../scss/breakpoints/_768up.scss */
 .NewsCats p {
   margin-bottom: 10px;
 }
 
-/* line 335, ../scss/breakpoints/_768up.scss */
+/* line 339, ../scss/breakpoints/_768up.scss */
 .NewsCats .entry {
   font-size: 12px;
   padding: 0px;
@@ -550,12 +550,12 @@ HOME STYLES
   border-bottom: 1px solid #e3e3e3;
 }
 
-/* line 342, ../scss/breakpoints/_768up.scss */
+/* line 346, ../scss/breakpoints/_768up.scss */
 .NewsCats .entry p {
   margin: 0px;
 }
 
-/* line 348, ../scss/breakpoints/_768up.scss */
+/* line 352, ../scss/breakpoints/_768up.scss */
 .NewsCats .more_stories {
   float: right;
   background: #4dae36;
@@ -565,28 +565,28 @@ HOME STYLES
   margin-top: -5px;
 }
 
-/* line 360, ../scss/breakpoints/_768up.scss */
+/* line 364, ../scss/breakpoints/_768up.scss */
 .banner {
   margin-top: 10px;
   display: none;
 }
 
-/* line 368, ../scss/breakpoints/_768up.scss */
+/* line 372, ../scss/breakpoints/_768up.scss */
 #Hero {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-/* line 373, ../scss/breakpoints/_768up.scss */
+/* line 377, ../scss/breakpoints/_768up.scss */
 #Hero h1 {
   font-size: 24px;
 }
 
-/* line 378, ../scss/breakpoints/_768up.scss */
+/* line 382, ../scss/breakpoints/_768up.scss */
 .overlay {
   /*top:150px;*/
 }
-/* line 381, ../scss/breakpoints/_768up.scss */
+/* line 385, ../scss/breakpoints/_768up.scss */
 .overlay span {
   display: block;
   font-size: 28px;
@@ -595,7 +595,7 @@ HOME STYLES
 /*********************
 SINGLE POST / PAGE STYLES
 *********************/
-/* line 399, ../scss/breakpoints/_768up.scss */
+/* line 403, ../scss/breakpoints/_768up.scss */
 article header h1 {
   font-size: 26px !important;
   margin: 0px;
@@ -606,7 +606,7 @@ article header h1 {
 /*********************
 CATEGORY STYLES
 *********************/
-/* line 417, ../scss/breakpoints/_768up.scss */
+/* line 421, ../scss/breakpoints/_768up.scss */
 article.top header h2 {
   font-size: 27px;
   margin-left: 26px;
@@ -622,7 +622,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 441, ../scss/breakpoints/_768up.scss */
+/* line 445, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
