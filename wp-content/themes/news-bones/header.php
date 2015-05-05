@@ -27,7 +27,14 @@
 		<?php // or, set /favicon.ico for IE10 win ?>
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-            <meta name="theme-color" content="#121212">
+        <meta name="theme-color" content="#121212">
+        <?php 
+			$metaTagline =  rwmb_meta( 'rw_tagline');
+		if (!empty($metaTagline)){ ?>
+		<meta property="article:subtitle" content="<?php echo $metaTagline; ?>">
+		<?php } ?>
+        
+        
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
