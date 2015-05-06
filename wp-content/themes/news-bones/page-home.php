@@ -30,7 +30,7 @@
 									  $split_arr = split("/", $parent_cats);
 									  $exclude_cat = get_cat_id($split_arr[0]);
 									  
-									  $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+									  $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' );
 									  ?>
                                       <div id="Hero">
                                       	<div class="m-all t-1of2 d-1of2 cf herotext">
