@@ -372,10 +372,18 @@ width:200px;
 #Hero{
 	width:100%;
 	overflow:hidden;
-	position:relative;	
+	position:relative;
+	
+	span{
+	 color:$green;
+	 font-size:24px;
+	 font-weight:bold;		
+	}
+		
 	
 	h1{
 	    font-size: 24px;
+		color:#666;
 	}
 }
 

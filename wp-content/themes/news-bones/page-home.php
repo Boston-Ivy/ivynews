@@ -30,17 +30,22 @@
 									  $split_arr = split("/", $parent_cats);
 									  $exclude_cat = get_cat_id($split_arr[0]);
 									  
-									  $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-600' );
+									  $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
 									  ?>
                                       <div id="Hero">
+                                      	<div class="m-all t-1of2 d-1of2 cf herotext">
                                       <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>">
-                                      	<img alt="<?php echo $post->post_title ?>" src="<?php echo $feat_image[0] ?>" />
-                                      <div class="overlay">
-                                      <span> <?php echo rwmb_meta( 'rw_tagline'); ?></span>
-                                      <h1><?php echo $post->post_title ?></h1>
+                                     	 <span> <?php echo rwmb_meta( 'rw_tagline'); ?></span>
+                                      	 <h1><?php echo $post->post_title ?></h1>
+                                      </a>
+                                      <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
                                       
                                       </div>
-                                      </a>
+                                      <div class="m-all t-1of2 d-1of2 last-col cf">
+                                       <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>">
+                                      	<img alt="<?php echo $post->post_title ?>" src="<?php echo $feat_image[0] ?>" />
+                                       </a>
+                                      </div>
 									  </div>
 									
 									<?php }

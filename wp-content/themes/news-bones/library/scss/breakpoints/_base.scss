@@ -316,25 +316,41 @@ HOME STYLES
 #Hero{
 	width:100%;
 	overflow:hidden;
-	position:relative;	
+	position:relative;
+	background:#FFFFFF;
+	margin-bottom:10px;
+	border: 1px solid #e3e3e3;
 	
 	img{
 		width:100%;	
+		float:right;
 	}
 	a{
 		color:$white;
 		display:block;	
 	}
 	
+	span{
+	 color:$green;
+	 font-size:24px;
+	 font-weight:bold;		
+	}
+		
+		
 	h1{
 	
-    color: $green;
-    font-size: 17px;
+    color:#666 !important;
+    font-size: 24px;
 	color:$white;
 	margin:0px;
     
 			
 	}
+}
+
+.herotext{
+	padding-left:10px;
+	padding-top:10px;
 }
 
 .overlay{
@@ -375,7 +391,7 @@ HOME STYLES
 	
 }
 .subscribe-form .inner{
-	padding:0 5px;
+	padding:8px 0  5px;
 	margin:2px;
 }
 .subscribe-form span{
