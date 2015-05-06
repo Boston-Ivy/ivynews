@@ -2578,6 +2578,15 @@ SIDEBARS & ASIDES
 }
 
 /* line 1298, ../scss/breakpoints/_base.scss */
+.textwidget {
+  padding: 10px;
+}
+/* line 1300, ../scss/breakpoints/_base.scss */
+.textwidget img {
+  width: 100%;
+}
+
+/* line 1304, ../scss/breakpoints/_base.scss */
 .widgettitle {
   /*border-top: 2px solid $black;*/
   border-bottom: 1px solid #eaedf2;
@@ -2585,16 +2594,16 @@ SIDEBARS & ASIDES
   text-indent: 10px;
 }
 
-/* line 1306, ../scss/breakpoints/_base.scss */
+/* line 1312, ../scss/breakpoints/_base.scss */
 .widget {
   background: #fff;
 }
-/* line 1311, ../scss/breakpoints/_base.scss */
+/* line 1317, ../scss/breakpoints/_base.scss */
 .widget ul li {
   /* deep nesting */
 }
 
-/* line 1328, ../scss/breakpoints/_base.scss */
+/* line 1334, ../scss/breakpoints/_base.scss */
 .no-widgets {
   background-color: #fff;
   padding: 1.5em;
@@ -2607,22 +2616,22 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1341, ../scss/breakpoints/_base.scss */
+/* line 1347, ../scss/breakpoints/_base.scss */
 .footer {
   clear: both;
   background-color: #000;
   color: #f8f9fa;
 }
-/* line 1346, ../scss/breakpoints/_base.scss */
+/* line 1352, ../scss/breakpoints/_base.scss */
 .footer nav {
   float: left;
 }
-/* line 1349, ../scss/breakpoints/_base.scss */
+/* line 1355, ../scss/breakpoints/_base.scss */
 .footer nav li {
   float: left;
   margin: 0 10px;
 }
-/* line 1352, ../scss/breakpoints/_base.scss */
+/* line 1358, ../scss/breakpoints/_base.scss */
 .footer nav li a {
   text-decoration: none;
   color: #fff;
@@ -2638,29 +2647,29 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
-/* line 1382, ../scss/breakpoints/_base.scss */
+/* line 1388, ../scss/breakpoints/_base.scss */
 .copyright {
   float: left;
 }
 
-/* line 1385, ../scss/breakpoints/_base.scss */
+/* line 1391, ../scss/breakpoints/_base.scss */
 .clear {
   clear: both;
 }
 
 /* search widget */
-/* line 1392, ../scss/breakpoints/_base.scss */
+/* line 1398, ../scss/breakpoints/_base.scss */
 .widget_search {
   /*float:left;*/
   padding: 0px;
 }
 
-/* line 1399, ../scss/breakpoints/_base.scss */
+/* line 1405, ../scss/breakpoints/_base.scss */
 .widget_wp_auth0_popup_widget {
   /*float:right;*/
 }
 
-/* line 1402, ../scss/breakpoints/_base.scss */
+/* line 1408, ../scss/breakpoints/_base.scss */
 .form-signin button {
   background: #4dae36 !important;
   border: 0 none;
@@ -2677,43 +2686,43 @@ view.
   transition: background-color 0.14s ease-in-out 0s;
 }
 
-/* line 1419, ../scss/breakpoints/_base.scss */
+/* line 1425, ../scss/breakpoints/_base.scss */
 .recent-posts-extended div {
   padding: 0 7px;
 }
 
-/* line 1423, ../scss/breakpoints/_base.scss */
+/* line 1429, ../scss/breakpoints/_base.scss */
 .nc_pixel {
   width: 1px !important;
 }
 
-/* line 1425, ../scss/breakpoints/_base.scss */
+/* line 1431, ../scss/breakpoints/_base.scss */
 .single article {
   margin-bottom: 0px !important;
 }
 
-/* line 1430, ../scss/breakpoints/_base.scss */
+/* line 1436, ../scss/breakpoints/_base.scss */
 .sd-social-icon .sd-content ul li[class*="share-"] a, .sd-social-icon .sd-content ul li[class*="share-"] a:hover, .sd-social-icon .sd-content ul li[class*="share-"] div.option a {
   border-radius: 0 !important;
   margin: 0px 4px !important;
 }
 
-/* line 1436, ../scss/breakpoints/_base.scss */
+/* line 1442, ../scss/breakpoints/_base.scss */
 .pagination {
   clear: both;
 }
 
-/* line 1440, ../scss/breakpoints/_base.scss */
+/* line 1446, ../scss/breakpoints/_base.scss */
 .twitter-timeline {
   padding: 0 10px !important;
 }
 
-/* line 1444, ../scss/breakpoints/_base.scss */
+/* line 1450, ../scss/breakpoints/_base.scss */
 .contactform11 input[type="text"] {
   line-height: 22px;
 }
 
-/* line 1450, ../scss/breakpoints/_base.scss */
+/* line 1456, ../scss/breakpoints/_base.scss */
 .ticker-stocks-container {
   display: none;
 }
