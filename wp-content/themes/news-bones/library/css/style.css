@@ -1774,7 +1774,7 @@ HOME STYLES
 }
 
 /* line 357, ../scss/breakpoints/_base.scss */
-heroimg {
+.heroimg {
   height: 240px;
 }
 
@@ -3161,7 +3161,7 @@ you can add resource intensive styles.
     position: relative;
   }
   /* line 377, ../scss/breakpoints/_768up.scss */
-  #Hero heroimg {
+  #Hero .heroimg {
     height: 300px;
   }
   /* line 381, ../scss/breakpoints/_768up.scss */

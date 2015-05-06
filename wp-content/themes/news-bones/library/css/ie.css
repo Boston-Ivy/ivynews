@@ -578,7 +578,7 @@ HOME STYLES
   position: relative;
 }
 /* line 377, ../scss/breakpoints/_768up.scss */
-#Hero heroimg {
+#Hero .heroimg {
   height: 300px;
 }
 /* line 381, ../scss/breakpoints/_768up.scss */
