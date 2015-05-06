@@ -41,11 +41,13 @@
                                       <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
                                       
                                       </div>
-                                      <div class="m-all t-1of2 d-1of2 last-col cf">
-                                       <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>">
-                                      	<img alt="<?php echo $post->post_title ?>" src="<?php echo $feat_image[0] ?>" />
-                                       </a>
+                                      <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>">
+                                      <div class="m-all t-1of2 d-1of2 last-col cf" style="background:url(<?php echo $feat_image[0] ?>) no-repeat">
+                                       
+                                      	
+                                       
                                       </div>
+                                      </a>
 									  </div>
 									
 									<?php }
