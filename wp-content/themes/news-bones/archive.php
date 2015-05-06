@@ -14,26 +14,30 @@
 									$lastCol = '';
                                    if ($i % 2 == 0){ 
 								   		$lastCol="last-col";
-										
 								   }
 								 
 								  if($i<1):?>
                                 <article id="post-<?php the_ID(); ?>" <?php post_class("cf top "); ?> role="article">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                <header class="entry-header article-header">
-									<div class="overlay">
-                                       <span> <?php echo rwmb_meta( 'rw_tagline'); ?></span>
-    	                                <h1 class="h3 entry-title"><?php the_title(); ?></h1>
-	    		                       
-                                    </div>
-                                    
-								<?php the_post_thumbnail( 'bones-thumb-600' ); ?>
-								</header>
-								</a>
-								<section class="entry-content first cf">
+                               
+                                <header class="entry-header article-header cf">
+                                   <div class="m-all t-1of2 d-1of2 cf herotext">
+                                       <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                                       		<span class="tagline"> <?php echo rwmb_meta( 'rw_tagline'); ?></span>
+                                      		<h1 class="entry-title single"  itemprop="headline" rel="bookmark">
+                                          		<?php the_title(); ?>
+                                     		</h1>
+                                      </a>
+                                     <section class="entry-content first cf">
 									<?php the_excerpt(); ?>
 
 								</section>
+                                   </div>
+                                    <div class="m-all t-1of2 d-1of2 last-col cf">
+                                           <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">    <?php the_post_thumbnail( 'medium' ); ?>	</a>
+                                    </div>
+								</header>
+							
+								
 
 								<footer class="article-footer">
 										<p class="byline entry-meta vcard">
