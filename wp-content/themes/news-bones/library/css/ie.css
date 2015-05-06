@@ -577,27 +577,23 @@ HOME STYLES
   overflow: hidden;
   position: relative;
 }
-/* line 377, ../scss/breakpoints/_768up.scss */
-#Hero .heroimg {
-  height: 300px;
-}
-/* line 381, ../scss/breakpoints/_768up.scss */
+/* line 379, ../scss/breakpoints/_768up.scss */
 #Hero span {
   color: #4dae36;
   font-size: 24px;
   font-weight: bold;
 }
-/* line 388, ../scss/breakpoints/_768up.scss */
+/* line 386, ../scss/breakpoints/_768up.scss */
 #Hero h1 {
   font-size: 24px;
   color: #666;
 }
 
-/* line 394, ../scss/breakpoints/_768up.scss */
+/* line 392, ../scss/breakpoints/_768up.scss */
 .overlay {
   /*top:150px;*/
 }
-/* line 397, ../scss/breakpoints/_768up.scss */
+/* line 395, ../scss/breakpoints/_768up.scss */
 .overlay span {
   display: block;
   font-size: 28px;
@@ -606,7 +602,7 @@ HOME STYLES
 /*********************
 SINGLE POST / PAGE STYLES
 *********************/
-/* line 415, ../scss/breakpoints/_768up.scss */
+/* line 413, ../scss/breakpoints/_768up.scss */
 article header h1 {
   font-size: 24px !important;
   margin: 0px;
@@ -617,7 +613,7 @@ article header h1 {
 /*********************
 CATEGORY STYLES
 *********************/
-/* line 433, ../scss/breakpoints/_768up.scss */
+/* line 431, ../scss/breakpoints/_768up.scss */
 article.top header h2 {
   font-size: 27px;
   margin-left: 26px;
@@ -633,7 +629,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 457, ../scss/breakpoints/_768up.scss */
+/* line 455, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -666,6 +662,11 @@ be seen on the Desktop.
 /* line 20, ../scss/breakpoints/_1030up.scss */
 .banner {
   display: block;
+}
+
+/* line 24, ../scss/breakpoints/_1030up.scss */
+.heroimg {
+  height: 300px;
 }
 
 /*
