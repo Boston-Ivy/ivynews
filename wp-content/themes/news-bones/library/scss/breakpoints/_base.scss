@@ -624,13 +624,10 @@ padding:10px 17px;
 			
 			 }
 			header{
-				padding:0;
+			
 				/*border-top:2px solid $black;*/
 				background:$white;
 
-				position:relative;
-				
-				
 			}
 			section.first{
 
@@ -676,15 +673,28 @@ padding:10px 17px;
 		
 		header{
 			min-height:	126px;
-			padding:0;
+			padding-left:12px;
+			padding-bottom:20px;
 			
-			h1{
-				font-size:16px !important;
-				color:$white !important;
-				a{
-					color:$white !important;	
-				}
+			span{
+				 color:$green;
 			}
+			span.tagline{
+			
+				 font-size:24px;
+				 font-weight:bold;		
+				}
+					
+					
+				h1{
+				
+				color:#666 !important;
+				font-size: 24px;
+				color:$white;
+				margin:0px;
+				
+						
+				}
 			
 			h3,h2,h1{
 				/*margin:25px;
@@ -698,8 +708,9 @@ padding:10px 17px;
 				}
 				
 			}
-			
-				
+			.vcard{
+				margin-top:90px;	
+			}
 				
 				
 			}
@@ -741,8 +752,7 @@ padding:10px 17px;
 
 		/* post meta */
 		.byline {
-			color: $meta-gray;
-			font-style: italic;
+			color: #666;
 			margin: 0;
 
 			time {}
@@ -1057,6 +1067,9 @@ COMMENT STYLES
 
 	/* vcard */
 	.vcard {
+		p{
+			margin:0px;
+		}
 		margin-left: 50px;
 
 		cite.fn {
@@ -1070,7 +1083,7 @@ COMMENT STYLES
 		time {
 			display: block;
 			font-size: 0.9em;
-			font-style: italic;
+			
 
 			a {
 				color: $meta-gray;

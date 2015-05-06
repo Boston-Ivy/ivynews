@@ -15,15 +15,27 @@
               ?>
 
               <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-				<header class="entry-header article-header">
-					<div class="overlay">
-                    	<span> <?php echo rwmb_meta( 'rw_tagline'); ?></span>
+				<header class="entry-header article-header cf">
+					<div class="m-all t-1of2 d-1of2 cf herotext">
+                    	<span class="tagline"> <?php echo rwmb_meta( 'rw_tagline'); ?></span>
                         <h1 class="entry-title single"  itemprop="headline" rel="bookmark">
-                        	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                        	<?php the_title(); ?>
                        </h1>
-                        
-					</div>
-								<?php the_post_thumbnail( 'bones-thumb-600' ); ?>
+                       <div class="byline entry-meta vcard">
+                       <p class="tags"><?php printf( __( 'Posted by: %1$s', 'bonestheme' ),
+                       /* the author of the post */
+      		           '<span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'); ?></p>
+                       <p class="tags">
+					   <time class="updated entry-time" datetime="<?php echo get_the_time('Y-m-d')?>" itemprop="datePublished"><?php echo get_the_time(get_option('date_format'))?></time>
+                   	   </p>
+                       <p class="tags"><?php printf(__( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?></p>
+                       
+                       <?php the_tags( '<p class="tags">' . __( 'Tags: ', 'bonestheme' ), ', ', '</p>' ); ?>
+                       </div>
+					 </div>
+                      <div class="m-all t-1of2 d-1of2 last-col cf">
+								<?php the_post_thumbnail( 'medium' ); ?>
+                      </div>
 				</header>
                 
 				<?php 
@@ -60,20 +72,7 @@
                 </section> <?php // end article section ?>
 
                 <footer class="article-footer">
-                <?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
-
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
                 
-					 <p class="byline entry-meta vcard">
-
-                    <?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
-                       /* the time the post was published */
-                       '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                       /* the author of the post */
-                       ' <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    ); ?>
-
-                  </p>
                   
 
                 </footer> <?php // end article footer ?>
