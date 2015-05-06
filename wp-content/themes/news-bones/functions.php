@@ -81,6 +81,9 @@ add_image_size( 'bones-thumb-800', 800, 200, true );
 add_image_size( 'bones-thumb-600', 680, 250, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'category', 250, 200, true );
+add_image_size( 'bones-thumb-450', 450, 300, true );
+
+
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
@@ -109,6 +112,7 @@ function bones_custom_image_sizes( $sizes ) {
         'bones-thumb-600' => __('680px by 250px'),
         'bones-thumb-300' => __('300px by 100px'),
 		'bones-thumb-250' => __('250px by 200px'),
+		'bones-thumb-450' => __('450px by 350px'),
     ) );
 }
 
