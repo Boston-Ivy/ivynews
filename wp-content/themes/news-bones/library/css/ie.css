@@ -578,22 +578,26 @@ HOME STYLES
   position: relative;
 }
 /* line 377, ../scss/breakpoints/_768up.scss */
+#Hero heroimg {
+  height: 300px;
+}
+/* line 381, ../scss/breakpoints/_768up.scss */
 #Hero span {
   color: #4dae36;
   font-size: 24px;
   font-weight: bold;
 }
-/* line 384, ../scss/breakpoints/_768up.scss */
+/* line 388, ../scss/breakpoints/_768up.scss */
 #Hero h1 {
   font-size: 24px;
   color: #666;
 }
 
-/* line 390, ../scss/breakpoints/_768up.scss */
+/* line 394, ../scss/breakpoints/_768up.scss */
 .overlay {
   /*top:150px;*/
 }
-/* line 393, ../scss/breakpoints/_768up.scss */
+/* line 397, ../scss/breakpoints/_768up.scss */
 .overlay span {
   display: block;
   font-size: 28px;
@@ -602,7 +606,7 @@ HOME STYLES
 /*********************
 SINGLE POST / PAGE STYLES
 *********************/
-/* line 411, ../scss/breakpoints/_768up.scss */
+/* line 415, ../scss/breakpoints/_768up.scss */
 article header h1 {
   font-size: 24px !important;
   margin: 0px;
@@ -613,7 +617,7 @@ article header h1 {
 /*********************
 CATEGORY STYLES
 *********************/
-/* line 429, ../scss/breakpoints/_768up.scss */
+/* line 433, ../scss/breakpoints/_768up.scss */
 article.top header h2 {
   font-size: 27px;
   margin-left: 26px;
@@ -629,7 +633,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 453, ../scss/breakpoints/_768up.scss */
+/* line 457, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
