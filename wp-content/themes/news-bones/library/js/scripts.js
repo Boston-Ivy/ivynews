@@ -41,7 +41,7 @@ var waitForFinalEvent = (function () {
 })();
 
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
-var timeToWaitForLast = 100;
+var timeToWaitForLast = 50;
 
 
 /*
@@ -55,6 +55,30 @@ var timeToWaitForLast = 100;
  *
  * When the window is resized, we perform this function
  */
+ 
+ viewport = updateViewportDimensions();
+ 
+       // if we're above or equal to 768 fire this off
+       if( viewport.width <= 1030 && viewport.width >= 768 ) {
+		   jQuery(".NewsCats:eq(1)").addClass('last-col');
+		   jQuery(".NewsCats:first").removeClass('last-col');
+		   jQuery(".NewsCats:eq(5)").addClass('last-col');
+		   jQuery(".NewsCats:last").removeClass('last-col');
+		   
+         console.log('On home page and window sized to 768 width or more.');
+       } else {
+         // otherwise, let's do this instead
+		 	jQuery(".NewsCats:eq(1)").removeClass('last-col');
+		    jQuery(".NewsCats:first").addClass('last-col');
+			jQuery(".NewsCats:eq(5)").removeClass('last-col');
+		    jQuery(".NewsCats:last").addClass('last-col');
+			
+         console.log('Not on home page, or window sized to less than 768.');
+       }
+ 
+ 
+ 
+ 
  jQuery(window).resize(function () {
  
  // if we're on the home page, we wait the set amount (in function above) then fire the function
@@ -68,12 +92,17 @@ if( is_home ) { waitForFinalEvent( function() {
        if( viewport.width <= 1030 && viewport.width >= 768 ) {
 		   jQuery(".NewsCats:eq(1)").addClass('last-col');
 		   jQuery(".NewsCats:first").removeClass('last-col');
+		   jQuery(".NewsCats:eq(5)").addClass('last-col');
+		   jQuery(".NewsCats:last").removeClass('last-col');
 		   
          console.log('On home page and window sized to 768 width or more.');
        } else {
          // otherwise, let's do this instead
 		 	jQuery(".NewsCats:eq(1)").removeClass('last-col');
 		    jQuery(".NewsCats:first").addClass('last-col');
+			jQuery(".NewsCats:eq(5)").removeClass('last-col');
+		    jQuery(".NewsCats:last").addClass('last-col');
+			
          console.log('Not on home page, or window sized to less than 768.');
        }
  
@@ -114,17 +143,7 @@ jQuery(document).ready(function($) {
    * Let's fire off the gravatar function
    * You can remove this if you don't need it
   */
-   if (jQuery(window).width() <= 1030 && jQuery(window).width() >= 768 ) {
-		  // jQuery(".NewsCats:eq(1)").addClass('last-col');
-		  // jQuery(".NewsCats:first").removeClass('last-col');
-		   
-         console.log('On home page and window sized to 768 width or more.');
-       } else {
-         // otherwise, let's do this instead
-		 	//jQuery(".NewsCats:eq(1)").removeClass('last-col');
-		    //jQuery(".NewsCats:first").addClass('last-col');
-         console.log('Not on home page, or window sized to less than 768.');
-       }
+  
 	   
 	   
   loadGravatars();
