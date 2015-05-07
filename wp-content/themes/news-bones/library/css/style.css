@@ -2810,7 +2810,7 @@ tweeners.
   *********************/
   /* line 57, ../scss/breakpoints/_481up.scss */
   .widget_search {
-    display: block;
+    display: none;
   }
 
   /* .menu is clearfixed inside mixins.scss */
@@ -2965,23 +2965,27 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* line 60, ../scss/breakpoints/_768up.scss */
+  /* line 61, ../scss/breakpoints/_768up.scss */
   header {
     /* end .nav */
   }
-  /* line 61, ../scss/breakpoints/_768up.scss */
+  /* line 62, ../scss/breakpoints/_768up.scss */
+  header .widget_search {
+    display: block;
+  }
+  /* line 63, ../scss/breakpoints/_768up.scss */
   header .nav {
     border: 0;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 63, ../scss/breakpoints/_768up.scss */
+  /* line 65, ../scss/breakpoints/_768up.scss */
   header .nav ul {
     background: #000;
     margin-top: 0;
   }
-  /* line 67, ../scss/breakpoints/_768up.scss */
+  /* line 69, ../scss/breakpoints/_768up.scss */
   header .nav li {
     float: left;
     position: relative;
@@ -2991,13 +2995,13 @@ you can add resource intensive styles.
     */
     /* showing sub-menus */
   }
-  /* line 72, ../scss/breakpoints/_768up.scss */
+  /* line 74, ../scss/breakpoints/_768up.scss */
   header .nav li:hover, header .nav li:focus {
     color: #fff;
     background: #4dae36;
     /*border:none;*/
   }
-  /* line 79, ../scss/breakpoints/_768up.scss */
+  /* line 81, ../scss/breakpoints/_768up.scss */
   header .nav li a {
     border-bottom: 0;
     /*
@@ -3005,11 +3009,11 @@ you can add resource intensive styles.
     has the possibility of being a mobile device.
     */
   }
-  /* line 87, ../scss/breakpoints/_768up.scss */
+  /* line 89, ../scss/breakpoints/_768up.scss */
   header .nav li a:hover, header .nav li a:focus {
     /*border:none;*/
   }
-  /* line 103, ../scss/breakpoints/_768up.scss */
+  /* line 105, ../scss/breakpoints/_768up.scss */
   header .nav li ul.sub-menu,
   header .nav li ul.children {
     margin-top: 0;
@@ -3020,7 +3024,7 @@ you can add resource intensive styles.
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 112, ../scss/breakpoints/_768up.scss */
+  /* line 114, ../scss/breakpoints/_768up.scss */
   header .nav li ul.sub-menu li,
   header .nav li ul.children li {
     /*
@@ -3029,7 +3033,7 @@ you can add resource intensive styles.
     for usability. k, bai.
     */
   }
-  /* line 114, ../scss/breakpoints/_768up.scss */
+  /* line 116, ../scss/breakpoints/_768up.scss */
   header .nav li ul.sub-menu li a,
   header .nav li ul.children li a {
     padding-left: 10px;
@@ -3038,29 +3042,29 @@ you can add resource intensive styles.
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 131, ../scss/breakpoints/_768up.scss */
+  /* line 133, ../scss/breakpoints/_768up.scss */
   header .nav li ul.sub-menu li:last-child a,
   header .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 141, ../scss/breakpoints/_768up.scss */
+  /* line 143, ../scss/breakpoints/_768up.scss */
   header .nav li ul.sub-menu li ul,
   header .nav li ul.children li ul {
     top: 0;
     left: 100%;
   }
-  /* line 156, ../scss/breakpoints/_768up.scss */
+  /* line 158, ../scss/breakpoints/_768up.scss */
   header .nav li:hover > ul {
     top: auto;
     visibility: visible;
   }
-  /* line 164, ../scss/breakpoints/_768up.scss */
+  /* line 166, ../scss/breakpoints/_768up.scss */
   header .nav li.current-menu-item,
   header .nav li.current_page_item,
   header .nav li.current_page_ancestor {
     background: #4dae36;
   }
-  /* line 168, ../scss/breakpoints/_768up.scss */
+  /* line 170, ../scss/breakpoints/_768up.scss */
   header .nav li.current-menu-item a,
   header .nav li.current_page_item a,
   header .nav li.current_page_ancestor a {
@@ -3070,21 +3074,21 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 183, ../scss/breakpoints/_768up.scss */
+  /* line 185, ../scss/breakpoints/_768up.scss */
   .widgettitle {
     margin-top: 0px;
   }
 
-  /* line 188, ../scss/breakpoints/_768up.scss */
+  /* line 190, ../scss/breakpoints/_768up.scss */
   .widget {
     /*padding: 0 10px;*/
   }
-  /* line 193, ../scss/breakpoints/_768up.scss */
+  /* line 195, ../scss/breakpoints/_768up.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 201, ../scss/breakpoints/_768up.scss */
+  /* line 203, ../scss/breakpoints/_768up.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
@@ -3100,7 +3104,7 @@ you can add resource intensive styles.
   /* category widget */
   /* recent-comments widget */
   /* search widget */
-  /* line 289, ../scss/breakpoints/_768up.scss */
+  /* line 291, ../scss/breakpoints/_768up.scss */
   .widget_search {
     float: left;
     margin-left: 75px;
@@ -3111,40 +3115,40 @@ you can add resource intensive styles.
   /*********************
   HOME STYLES
   *********************/
-  /* line 305, ../scss/breakpoints/_768up.scss */
+  /* line 307, ../scss/breakpoints/_768up.scss */
   #s {
     float: left;
     width: 200px;
   }
 
-  /* line 309, ../scss/breakpoints/_768up.scss */
+  /* line 311, ../scss/breakpoints/_768up.scss */
   #searchsubmit {
     float: left;
   }
 
-  /* line 313, ../scss/breakpoints/_768up.scss */
+  /* line 315, ../scss/breakpoints/_768up.scss */
   .NewsCats {
     margin-bottom: 10px;
   }
 
-  /* line 317, ../scss/breakpoints/_768up.scss */
+  /* line 319, ../scss/breakpoints/_768up.scss */
   .NewsCats .cat {
     border: 1px solid #e3e3e3;
   }
 
-  /* line 325, ../scss/breakpoints/_768up.scss */
+  /* line 327, ../scss/breakpoints/_768up.scss */
   .NewsCats h3 {
     font-size: 14px;
     margin: 0px;
     font-weight: bold;
   }
 
-  /* line 334, ../scss/breakpoints/_768up.scss */
+  /* line 336, ../scss/breakpoints/_768up.scss */
   .NewsCats p {
     margin-bottom: 10px;
   }
 
-  /* line 339, ../scss/breakpoints/_768up.scss */
+  /* line 341, ../scss/breakpoints/_768up.scss */
   .NewsCats .entry {
     font-size: 12px;
     padding: 0px;
@@ -3152,12 +3156,12 @@ you can add resource intensive styles.
     border-bottom: 1px solid #e3e3e3;
   }
 
-  /* line 346, ../scss/breakpoints/_768up.scss */
+  /* line 348, ../scss/breakpoints/_768up.scss */
   .NewsCats .entry p {
     margin: 0px;
   }
 
-  /* line 352, ../scss/breakpoints/_768up.scss */
+  /* line 354, ../scss/breakpoints/_768up.scss */
   .NewsCats .more_stories {
     float: right;
     background: #4dae36;
@@ -3167,35 +3171,35 @@ you can add resource intensive styles.
     margin-top: -5px;
   }
 
-  /* line 364, ../scss/breakpoints/_768up.scss */
+  /* line 366, ../scss/breakpoints/_768up.scss */
   .banner {
     margin-top: 10px;
     display: none;
   }
 
-  /* line 372, ../scss/breakpoints/_768up.scss */
+  /* line 374, ../scss/breakpoints/_768up.scss */
   #Hero {
     width: 100%;
     overflow: hidden;
     position: relative;
   }
-  /* line 379, ../scss/breakpoints/_768up.scss */
+  /* line 381, ../scss/breakpoints/_768up.scss */
   #Hero span {
     color: #4dae36;
     font-size: 24px;
     font-weight: bold;
   }
-  /* line 386, ../scss/breakpoints/_768up.scss */
+  /* line 388, ../scss/breakpoints/_768up.scss */
   #Hero h1 {
     font-size: 24px;
     color: #666;
   }
 
-  /* line 392, ../scss/breakpoints/_768up.scss */
+  /* line 394, ../scss/breakpoints/_768up.scss */
   .overlay {
     /*top:150px;*/
   }
-  /* line 395, ../scss/breakpoints/_768up.scss */
+  /* line 397, ../scss/breakpoints/_768up.scss */
   .overlay span {
     display: block;
     font-size: 28px;
@@ -3204,14 +3208,14 @@ you can add resource intensive styles.
   /*********************
   SINGLE POST / PAGE STYLES
   *********************/
-  /* line 413, ../scss/breakpoints/_768up.scss */
+  /* line 415, ../scss/breakpoints/_768up.scss */
   article header h1 {
     font-size: 24px !important;
     margin: 0px;
     padding: 0px;
     display: inline-block;
   }
-  /* line 421, ../scss/breakpoints/_768up.scss */
+  /* line 423, ../scss/breakpoints/_768up.scss */
   article header .vcard {
     margin-top: 90px;
   }
@@ -3219,7 +3223,7 @@ you can add resource intensive styles.
   /*********************
   CATEGORY STYLES
   *********************/
-  /* line 436, ../scss/breakpoints/_768up.scss */
+  /* line 438, ../scss/breakpoints/_768up.scss */
   article.top header h2 {
     font-size: 27px;
     margin-left: 26px;
@@ -3235,7 +3239,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 460, ../scss/breakpoints/_768up.scss */
+  /* line 462, ../scss/breakpoints/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.
