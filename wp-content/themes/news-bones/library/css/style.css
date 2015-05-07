@@ -2810,7 +2810,7 @@ tweeners.
   *********************/
   /* line 57, ../scss/breakpoints/_481up.scss */
   #click-menu {
-    top: 30px;
+    top: 30px !important;
   }
 
   /* line 59, ../scss/breakpoints/_481up.scss */
