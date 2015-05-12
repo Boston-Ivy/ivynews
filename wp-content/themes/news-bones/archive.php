@@ -54,19 +54,30 @@
                                     
                                   <?php else: ?>
                                     
-							<article id="post-<?php the_ID(); ?>" <?php post_class( "m-all t-1of2 d-1of2 $lastCol cf" ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( "m-all t-1of2 d-1of2 $lastCol cf grid" ); ?> role="article">
 							   <inner>
-                               <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                             
 								<header class="entry-header   article-header">
-                                <div class="overlay">
-								<h2 class="h3 margin entry-title"><?php the_title(); ?></h2>
-                               </div>
-                                     <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+										<?php the_post_thumbnail( 'bones-thumb-300' ); ?>       
+                                 </a>
+                                
+								  <?php 	$tagline =  rwmb_meta('rw_tagline');
+												
+												if( !empty($tagline)) { ?>
+										   			
+                                                    <span class="tagline"><?php echo $tagline ?></span>
+                                                    
+                                                 <?php } ?>
+								
+								 <h2 class="h3 margin entry-title">
+											<?php the_title(); ?>
+                                </h2>
 								</header>	
-                               </a>
+                        
 								<section class="entry-content cf">
-                               
-									<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
+                              	<p><?php echo rwmb_meta( 'rw_intro'); ?>  <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
+									
 								</section>
 
 								<footer class="article-footer">

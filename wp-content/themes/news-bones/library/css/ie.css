@@ -207,7 +207,7 @@ img {
 /* line 45, ../scss/breakpoints/_481up.scss */
 .overlay span {
   display: block;
-  font-size: 25px;
+  /*font-size:25px;*/
 }
 
 /*********************
@@ -262,18 +262,22 @@ POSTS & CONTENT STYLES
   width: auto;
 }
 /* line 118, ../scss/breakpoints/_481up.scss */
+.entry-content .grid inner section {
+  min-height: 120px !important;
+}
+/* line 127, ../scss/breakpoints/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
-/* line 123, ../scss/breakpoints/_481up.scss */
+/* line 132, ../scss/breakpoints/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
-/* line 128, ../scss/breakpoints/_481up.scss */
+/* line 137, ../scss/breakpoints/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -285,27 +289,27 @@ POSTS & CONTENT STYLES
 /*********************
 HOMEPAGE STYLES
 *********************/
-/* line 142, ../scss/breakpoints/_481up.scss */
+/* line 151, ../scss/breakpoints/_481up.scss */
 .NewsCats:first-child {
   padding-right: 0.75em;
 }
 
-/* line 145, ../scss/breakpoints/_481up.scss */
+/* line 154, ../scss/breakpoints/_481up.scss */
 .banner {
   display: none;
 }
 
-/* line 155, ../scss/breakpoints/_481up.scss */
+/* line 164, ../scss/breakpoints/_481up.scss */
 article header h1 {
   font-size: 26px !important;
 }
 
-/* line 163, ../scss/breakpoints/_481up.scss */
+/* line 172, ../scss/breakpoints/_481up.scss */
 .stories {
   height: 310px;
 }
 
-/* line 167, ../scss/breakpoints/_481up.scss */
+/* line 176, ../scss/breakpoints/_481up.scss */
 .NewsCats .entry {
   height: 80px;
 }
@@ -318,7 +322,7 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 /* end .footer-links */
-/* line 190, ../scss/breakpoints/_481up.scss */
+/* line 199, ../scss/breakpoints/_481up.scss */
 h1.single {
   font-size: 36px;
 }
@@ -604,8 +608,8 @@ HOME STYLES
 }
 /* line 397, ../scss/breakpoints/_768up.scss */
 .overlay span {
-  display: block;
-  font-size: 28px;
+  /*		display:block;*/
+  color: #4dae36;
 }
 
 /*********************
@@ -634,6 +638,15 @@ article.top header h2 {
   margin-top: 27px;
 }
 
+/* line 451, ../scss/breakpoints/_768up.scss */
+.grid header {
+  min-height: 170px;
+}
+/* line 454, ../scss/breakpoints/_768up.scss */
+.grid section {
+  min-height: 105px;
+}
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -642,7 +655,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 462, ../scss/breakpoints/_768up.scss */
+/* line 472, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -680,6 +693,31 @@ be seen on the Desktop.
 /* line 24, ../scss/breakpoints/_1030up.scss */
 .heroimg {
   height: 240px;
+}
+
+/* line 30, ../scss/breakpoints/_1030up.scss */
+.grid header {
+  min-height: 220px;
+}
+/* line 33, ../scss/breakpoints/_1030up.scss */
+.grid header span {
+  color: #4dae36;
+}
+/* line 36, ../scss/breakpoints/_1030up.scss */
+.grid header span.tagline {
+  padding: 0px 10px;
+  font-size: 20px;
+}
+/* line 41, ../scss/breakpoints/_1030up.scss */
+.grid header h2 {
+  font-size: 18px;
+  color: #666;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+/* line 49, ../scss/breakpoints/_1030up.scss */
+.grid section {
+  min-height: 110px;
 }
 
 /*

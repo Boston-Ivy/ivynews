@@ -395,8 +395,8 @@ width:200px;
 	/*top:150px;*/
 	
 	span{
-		display:block;
-		font-size:28px;
+/*		display:block;*/
+		color:$green;
 		
 
 	}
@@ -445,6 +445,16 @@ article.top header{
 
 }
 
+
+.grid{
+
+		header{
+			min-height:170px;
+		}
+		section{
+			min-height:105px;	
+		}
+}
 
 
 

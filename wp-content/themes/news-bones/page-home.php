@@ -42,8 +42,8 @@
                                       
                                       </div>
                                       
-                                      <div class="m-all t-1of2 d-1of2 last-col cf heroimg" style="background:url(<?php echo $feat_image[0] ?>) no-repeat; background-position:center center;">
-                                       <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>">
+                                      <div class="m-all t-1of2 d-1of2 last-col cf heroimg">
+                                       <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>" style="background:url(<?php echo $feat_image[0] ?>) no-repeat; background-position:center center;">
                                       	
                                         </a>
                                       </div>
