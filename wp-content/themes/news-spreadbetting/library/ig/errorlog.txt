@@ -1,0 +1,2 @@
+* Protocol   https not supported or disabled in libcurl
+* Closing connection -1
