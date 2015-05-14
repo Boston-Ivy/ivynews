@@ -67,6 +67,101 @@ function bones_ahoy() {
 // let's get this party started
 add_action( 'after_setup_theme', 'bones_ahoy' );
 
+function bones_customise_register( $wp_customize ) {
+
+/*******************************************
+Color scheme
+********************************************/
+ 
+// add the section to contain the settings
+$wp_customize->add_section( 'textcolors' , array(
+    'title' =>  'Color Scheme',
+) );
+
+// main color ( site title, h1, h2, h4. h6, widget headings, nav links, footer headings )
+$txtcolors[] = array(
+    'slug'=>'color_scheme_1', 
+    'default' => '#4DAE36',
+    'label' => 'Main (menu, headlines, footer)'
+);
+ 
+
+
+// add the settings and controls for each color
+foreach( $txtcolors as $txtcolor ) {
+ 
+    // SETTINGS
+    $wp_customize->add_setting(
+        $txtcolor['slug'], array(
+            'default' => $txtcolor['default'],
+            'type' => 'option', 
+            'capability' => 
+            'edit_theme_options'
+        )
+    );
+    // CONTROLS
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            $txtcolor['slug'], 
+            array('label' => $txtcolor['label'], 
+            'section' => 'textcolors',
+            'settings' => $txtcolor['slug'])
+        )
+    );
+}
+
+$wp_customize->add_setting( 'bones_logo' ); // Add setting for logo uploader
+// Add control for logo uploader (actual uploader)
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bones_logo', array(
+        'label'    => __( 'Upload Logo (replaces text)', 'bones' ),
+        'section'  => 'title_tagline',
+        'settings' => 'bones_logo',
+    ) ) );
+
+}
+add_action( 'customize_register', 'bones_customise_register' );
+
+
+// Adding the color customisation above
+function bones_customise_colors() {
+
+/**********************
+text colors
+**********************/
+// main color
+$color_scheme_1 = get_option( 'color_scheme_1' );
+ 
+
+
+/****************************************
+styling
+****************************************/
+?>
+<style>
+ 
+ 
+/* color scheme */
+ 
+/* main color */
+
+.excerpt-read-more, .tagline a, .NewsCats h3 span,  #Hero span, article header span.tagline, #breadcrumbs a, p a, article header span{
+  color: <?php echo $color_scheme_1; ?> !important;
+
+}
+
+.NewsCats .more_stories, .subscribe-form, header .nav li.current-menu-item, header .nav li.current_page_item, header .nav li.current_page_ancestor, header .nav li:hover, header .nav li:focus, button, input#submit{
+	background:	<?php echo $color_scheme_1; ?> !important;
+}
+
+</style>
+
+<?php
+
+}
+add_action( 'wp_head', 'bones_customise_colors' );
+
+
 
 /************* OEMBED SIZE OPTIONS *************/
 
