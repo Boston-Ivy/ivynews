@@ -54,13 +54,14 @@
 				<div id="inner-header" class="wrap cf">
 
 					<div class="m-2of3 t-1of3 d-2of7 cf">
+
                         <div id="logo">
                             <?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
                             <a href="<?php echo home_url(); ?>" rel="nofollow">
                                 <img src="/wp-content/uploads/2015/04/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
                             </a>
                         </div>
-                    
+
                         <div id="mlogo">
                             <?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
                             <a href="<?php echo home_url(); ?>" rel="nofollow">

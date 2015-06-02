@@ -200,6 +200,7 @@
 
                         <?php
                         while (have_posts()) : the_post(); ?>
+
                             <div class="entry">
 
                                 <h3>
