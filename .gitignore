@@ -99,3 +99,7 @@ wp-content/mysql.sql
 /dev/.sass-cache
 /dev/node_modules
 /dev/node_modules/*
+
+# codekit
+###########
+wp-content/themes/news-bones/.sass-cache/*
