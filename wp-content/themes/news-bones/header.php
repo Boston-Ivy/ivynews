@@ -33,10 +33,8 @@
 		if (!empty($metaTagline)){ ?>
 		<meta property="article:subtitle" content="<?php echo $metaTagline; ?>">
 		<?php } ?>
-        
-        
 
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
@@ -44,7 +42,6 @@
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
-       
 
 	</head>
 
@@ -55,64 +52,59 @@
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div id="inner-header" class="wrap cf">
+
 					<div class="m-2of3 t-1of3 d-2of7 cf">
-                    <div id="logo">
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<a href="<?php echo home_url(); ?>" rel="nofollow">
-                    	<img src="/wp-content/uploads/2015/04/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" /> 
-                    </a>
+                        <div id="logo">
+                            <?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+                            <a href="<?php echo home_url(); ?>" rel="nofollow">
+                                <img src="/wp-content/uploads/2015/04/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                            </a>
+                        </div>
+                    
+                        <div id="mlogo">
+                            <?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+                            <a href="<?php echo home_url(); ?>" rel="nofollow">
+                                <img src="/wp-content/uploads/2015/04/mlogo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                            </a>
+                        </div>
+
                     </div>
                     
-                    
-                    <div id="mlogo">
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<a href="<?php echo home_url(); ?>" rel="nofollow">
-                    	<img src="/wp-content/uploads/2015/04/mlogo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" /> 
-                    </a>
-                    </div>
-                    </div>
-                    
-                   
                     <div class=" m-all t-2of3 d-5of7 last-col cf header-right">
                     	<?php if ( is_active_sidebar( 'header-right' ) ) : ?>
 							<?php dynamic_sidebar( 'header-right' ); ?>
 						<?php endif; ?>
                     </div>
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
-
 					<div class="m-all t-all d-all">
                     	<?php echo do_shortcode('[s_ticker_display]'); ?>
                     </div>
 					
 				</div>
+
                 <nav role="navigation" class="m-all cf" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav wrap cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-
-					</nav>
-
-				
+                    <?php wp_nav_menu(array(
+                        'container' => false,                           // remove nav container
+                        'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+                        'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+                        'menu_class' => 'nav top-nav wrap cf',          // adding custom nav class
+                        'theme_location' => 'main-nav',                 // where it's located in the theme
+                        'before' => '',                                 // before the menu
+                        'after' => '',                                  // after the menu
+                        'link_before' => '',                            // before each link
+                        'link_after' => '',                             // after each link
+                        'depth' => 0,                                   // limit the depth of the nav
+                        'fallback_cb' => ''                             // fallback function (if there is one)
+                    )); ?>
+                </nav>
 
 			</header>
             
-				<?php 
-				if (!is_front_page()){
-					
-					if ( function_exists('yoast_breadcrumb') ) {
-							yoast_breadcrumb('<div id="breadcrumbs" class="wrap cf">','</div>');
-					} 
-				}
-				?>
+            <?php
+            if (!is_front_page()){
+
+                if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb('<div id="breadcrumbs" class="wrap cf">','</div>');
+                }
+            }
+            ?>
