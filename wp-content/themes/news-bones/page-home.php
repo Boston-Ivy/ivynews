@@ -52,8 +52,6 @@
                             <?php echo do_shortcode($newsletter_shortcode); ?>
                         </div>
 
-                        <div class="clearfix"></div>
-
                     </div>
 
                     <?php

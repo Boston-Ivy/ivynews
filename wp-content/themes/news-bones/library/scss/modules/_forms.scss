@@ -126,4 +126,8 @@ select {
   background-position: 97.5% center;
 }
 
+.field-group:after {
+  @extend .clear;
+}
+
 

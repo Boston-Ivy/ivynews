@@ -285,20 +285,52 @@ HOME STYLES
 }
 
 .subscribe-form {
-  background: $green;
-  margin-top: 5px;
-  padding: 3px 0 12px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 
-  .inner {
-    padding: 8px 0 5px;
-    margin: 2px;
+  &:after {
+    @extend .clear;
   }
 
-  span {
-    font-size: 25px;
-    color: $white;
-    float: left;
+  .inner {
+    padding: 15px;
+    background-color: $green;
+
+    .field-group {
+
+      label {
+        font-size: 24px;
+        line-height: 34px;
+        color: $white;
+        float: left;
+
+        @media screen and (max-width: 767px) {
+          margin-bottom: 10px;
+          float: none;
+          display: block;
+        }
+
+      }
+
+      .search-field {
+        max-width: 280px;
+        margin: 0;
+        float: right;
+
+        @media screen and (max-width: 767px) {
+          max-width: 100%;
+          margin: 0 -64px 0 0;
+          float: left;
+          padding-right: 76px;
+        }
+
+      }
+
+      .btn {
+        float: right;
+      }
+
+    }
+
   }
 
 }

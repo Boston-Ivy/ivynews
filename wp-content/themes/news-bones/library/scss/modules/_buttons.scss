@@ -92,4 +92,22 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
   }
 
+  &.btn-grey {
+    background-color: $mid-grey;
+
+    &:hover {
+      background-color: $black;
+    }
+
+  }
+
+  &.btn-black {
+    background-color: $black;
+
+    &:hover {
+      background-color: $mid-grey;
+    }
+
+  }
+
 }

@@ -50,9 +50,12 @@ $off-white: #f1f1f1;
 $mid-grey: #666666;
 $border-grey: #e3e3e3;
 
+/*********************
+STYLES
+*********************/
 
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
+.clear {
+  content: "";
+  display: table;
+  clear: both;
+}

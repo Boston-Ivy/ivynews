@@ -475,11 +475,11 @@ function theme_front_page_settings() {
 
 <style type="text/css">
 	.box{
-		    background: none repeat scroll 0 0 #ffffff;
-		    border: 1px solid #e5e5e5;
-		    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-		    position: relative;
-			padding:20px;
+        background: none repeat scroll 0 0 #ffffff;
+        border: 1px solid #e5e5e5;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+        position: relative;
+        padding:20px;
 	}
 </style>
      

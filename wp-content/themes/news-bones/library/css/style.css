@@ -454,11 +454,14 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
+/*********************
+STYLES
+*********************/
+.clear, .field-group:after, .subscribe-form:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /******************************************************************
 Site Name:
 Author:
@@ -953,6 +956,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     background-color: #4dae36; }
     .btn.btn-green:hover {
       background-color: #666666; }
+  .btn.btn-grey {
+    background-color: #666666; }
+    .btn.btn-grey:hover {
+      background-color: #000; }
+  .btn.btn-black {
+    background-color: #000; }
+    .btn.btn-black:hover {
+      background-color: #666666; }
 
 /******************************************************************
 Site Name:
@@ -1442,17 +1453,32 @@ HOME STYLES
   width: 295px; }
 
 .subscribe-form {
-  background: #4dae36;
-  margin-top: 5px;
-  padding: 3px 0 12px;
-  margin-bottom: 10px; }
+  margin: 0 0 10px 0; }
   .subscribe-form .inner {
-    padding: 8px 0 5px;
-    margin: 2px; }
-  .subscribe-form span {
-    font-size: 25px;
-    color: #fff;
-    float: left; }
+    padding: 15px;
+    background-color: #4dae36; }
+    .subscribe-form .inner .field-group label {
+      font-size: 24px;
+      line-height: 34px;
+      color: #fff;
+      float: left; }
+      @media screen and (max-width: 767px) {
+        .subscribe-form .inner .field-group label {
+          margin-bottom: 10px;
+          float: none;
+          display: block; } }
+    .subscribe-form .inner .field-group .search-field {
+      max-width: 280px;
+      margin: 0;
+      float: right; }
+      @media screen and (max-width: 767px) {
+        .subscribe-form .inner .field-group .search-field {
+          max-width: 100%;
+          margin: 0 -64px 0 0;
+          float: left;
+          padding-right: 76px; } }
+    .subscribe-form .inner .field-group .btn {
+      float: right; }
 
 .epm-sign-up-form {
   padding: 7px 10px; }
@@ -1950,7 +1976,7 @@ FOOTER STYLES
 .copyright {
   float: left; }
 
-.clear {
+.clear, .field-group:after, .subscribe-form:after {
   clear: both; }
 
 .widget_search {
