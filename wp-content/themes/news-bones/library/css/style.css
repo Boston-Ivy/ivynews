@@ -931,6 +931,29 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .green-btn:active, .comment-reply-link:active, #submit:active {
     background-color: #449b30; }
 
+.btn {
+  width: auto;
+  height: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 6px 20px;
+  cursor: pointer;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  touch-action: manipulation;
+  background-image: none;
+  border: none;
+  white-space: nowrap; }
+  .btn.btn-green {
+    background-color: #4dae36; }
+    .btn.btn-green:hover {
+      background-color: #666666; }
+
 /******************************************************************
 Site Name:
 Author:
@@ -1358,7 +1381,7 @@ header .nav {
   header .nav li ul.sub-menu li a,
   header .nav li ul.children li a {
     padding-left: 30px; }
-header .searchform input {
+header .searchform input.search-field {
   width: 240px;
   float: left; }
 
