@@ -2031,8 +2031,10 @@ FOOTER STYLES
 .contactform11 input[type="text"] {
   line-height: 22px; }
 
-.ticker-stocks-container {
-  display: none; }
+.ticker-stocks-container .simply-scroll {
+  padding: 0;
+  border-bottom: none;
+  background: #fff; }
 
 .video-container {
   position: relative;

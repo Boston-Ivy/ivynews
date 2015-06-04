@@ -1201,7 +1201,13 @@ FOOTER STYLES
 }
 
 .ticker-stocks-container {
-  display: none;
+
+  .simply-scroll {
+    padding: 0;
+    border-bottom: none;
+    background: $white;
+  }
+
 }
 
 .video-container {
