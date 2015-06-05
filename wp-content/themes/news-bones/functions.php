@@ -882,6 +882,15 @@ function alx_embed_html( $html ) {
 add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
 
+// enqueue custom scripts
+function theme_js(){
+
+    wp_register_script( 'retina', get_template_directory_uri() . '/library/js/libs/retina.js', array('jquery'), '1.0.0' );
+    wp_enqueue_script( 'retina' );
+
+}
+add_action( 'wp_enqueue_scripts', 'theme_js' );
+
 
 
 

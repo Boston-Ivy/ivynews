@@ -25,10 +25,6 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header-right {
-  margin-top: 45px;
-}
-
 .ticker-stocks-container{
   display:block;
 }
@@ -38,7 +34,7 @@ NAVIGATION STYLES
 *********************/
 
 header .widget_search {
-  display:block;
+  display: block;
 }
 
 .nav {
@@ -163,10 +159,6 @@ HOME STYLES
 .NewsCats {
   margin-bottom: 10px;
 
-  .cat {
-    border:1px solid #e3e3e3;
-  }
-
   h3 {
     font-size: 14px;
     margin: 0;
@@ -179,23 +171,11 @@ HOME STYLES
 
   .entry {
     font-size: 12px;
-    padding: 0;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #e3e3e3;
 
     p {
       margin: 0;
     }
 
-  }
-
-  .more_stories {
-    float: right;
-    background: $green;
-    color: $white;
-    padding: 3px 7px;
-    text-decoration: none;
-    margin-top: -5px;
   }
 
 }

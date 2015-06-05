@@ -457,7 +457,7 @@ http://0to255.com/
 /*********************
 STYLES
 *********************/
-.clear, .field-group:after, .subscribe-form:after {
+.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after {
   content: "";
   display: table;
   clear: both; }
@@ -941,7 +941,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   vertical-align: middle;
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   padding: 6px 20px;
   cursor: pointer;
@@ -1003,12 +1003,12 @@ select,
 textarea,
 .field {
   display: block;
-  height: 34px;
-  line-height: 34px;
+  height: 30px;
+  line-height: 30px;
   padding: 0 12px;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   font-size: 1em;
-  color: #5c6b80;
+  color: #333333;
   -webkit-appearance: none;
   /* border-radius: 3px;*/
   -webkit-border-radius: 0px;
@@ -1277,10 +1277,10 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Source Sans Pro";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
-  line-height: 1.5;
-  color: #5c6b80;
+  line-height: 1.4;
+  color: #333333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f1f1f1; }
@@ -1346,13 +1346,97 @@ HEADER STYLES
 .header {
   background-color: #fff;
   border-bottom: #eaedf2 1px solid; }
+  .header #inner-header {
+    padding-top: 35px; }
   .header .widget {
-    background: none;
-    float: right;
-    margin-left: 35px;
-    margin-top: 10px; }
-  .header .widget:first-child {
-    margin-right: 0px; }
+    background: none; }
+    .header .widget.widget_search {
+      height: 30px;
+      margin: 0 0 10px 0;
+      float: none; }
+      .header .widget.widget_search form {
+        width: 100%;
+        display: block; }
+        .header .widget.widget_search form .search-icon {
+          width: 25px;
+          height: 30px;
+          display: inline-block;
+          text-indent: -999px;
+          overflow: hidden;
+          vertical-align: bottom;
+          background-image: url("../images/icon-search.png");
+          background-position: left center;
+          cursor: pointer;
+          float: right; }
+          @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+            .header .widget.widget_search form .search-icon {
+              background-image: url("../images/icon-search@2x.png");
+              background-size: 50px 25px;
+              background-repeat: no-repeat; } }
+          .header .widget.widget_search form .search-icon:hover {
+            background-position: right center; }
+        .header .widget.widget_search form .field-group {
+          width: 0;
+          height: 30px;
+          overflow: hidden;
+          float: right; }
+          .header .widget.widget_search form .field-group input {
+            margin-bottom: 0; }
+            .header .widget.widget_search form .field-group input#searchsubmit {
+              width: 55px;
+              padding-left: 0;
+              padding-right: 0;
+              margin-left: 1px; }
+              .header .widget.widget_search form .field-group input#searchsubmit:focus {
+                outline: none; }
+    .header .widget.widget_nav_menu h4 {
+      display: none; }
+    .header .widget.widget_nav_menu > div {
+      width: 100%;
+      display: table; }
+    .header .widget.widget_nav_menu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+      float: right; }
+      .header .widget.widget_nav_menu ul li {
+        display: inline-block;
+        float: left;
+        margin: 0 8px 0 0; }
+        .header .widget.widget_nav_menu ul li:last-child {
+          margin-right: 0; }
+        .header .widget.widget_nav_menu ul li.facebook a {
+          background-position: left 0; }
+          .header .widget.widget_nav_menu ul li.facebook a:hover {
+            background-position: right 0; }
+        .header .widget.widget_nav_menu ul li.twitter a {
+          background-position: left -25px; }
+          .header .widget.widget_nav_menu ul li.twitter a:hover {
+            background-position: right -25px; }
+        .header .widget.widget_nav_menu ul li.google a {
+          background-position: left -50px; }
+          .header .widget.widget_nav_menu ul li.google a:hover {
+            background-position: right -50px; }
+        .header .widget.widget_nav_menu ul li.linkedin a {
+          background-position: left -75px; }
+          .header .widget.widget_nav_menu ul li.linkedin a:hover {
+            background-position: right -75px; }
+        .header .widget.widget_nav_menu ul li a {
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          text-indent: -999px;
+          overflow: hidden;
+          vertical-align: bottom;
+          background-image: url("../images/icon-social.png"); }
+          @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+            .header .widget.widget_nav_menu ul li a {
+              background-image: url("../images/icon-social@2x.png");
+              background-size: 50px 100px;
+              background-repeat: no-repeat; } }
+          .header .widget.widget_nav_menu ul li a:focus {
+            outline: none; }
 
 #logo {
   display: none;
@@ -1383,15 +1467,19 @@ header .nav {
   margin: auto;
   background: #000;
   clear: both; }
-  header .nav li a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 0 15px;
-    border-right: 1px solid #666666; }
-  header .nav li ul.sub-menu li a,
-  header .nav li ul.children li a {
-    padding-left: 30px; }
+  header .nav li {
+    padding: 0; }
+    header .nav li:hover a {
+      border-right: 1px solid transparent; }
+    header .nav li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 15px;
+      border-right: 1px solid #666666; }
+    header .nav li ul.sub-menu li a,
+    header .nav li ul.children li a {
+      padding-left: 30px; }
 header .searchform input.search-field {
   width: 240px;
   float: left; }
@@ -1403,27 +1491,32 @@ HOME STYLES
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: #fff;
-  margin-bottom: 10px;
-  border: 1px solid #e3e3e3; }
+  margin-bottom: 25px; }
   #Hero img {
     width: 100%;
     float: right; }
   #Hero a {
-    color: #fff;
-    display: block; }
+    color: #4dae36;
+    display: inline-block;
+    font-weight: bold; }
+    #Hero a:hover {
+      text-decoration: underline; }
   #Hero span {
     color: #4dae36;
     font-size: 24px;
     font-weight: bold; }
   #Hero h1 {
-    color: #666666 !important;
+    color: #333333 !important;
     font-size: 24px;
     margin: 0; }
+  #Hero p {
+    margin-top: 0; }
 
-.herotext {
-  padding-left: 10px;
-  padding-top: 10px; }
+.herotext a {
+  margin-bottom: 10px; }
+  .herotext a span,
+  .herotext a h1 {
+    display: inline-block; }
 
 .heroimg {
   height: 240px; }
@@ -1453,32 +1546,26 @@ HOME STYLES
   width: 295px; }
 
 .subscribe-form {
-  margin: 0 0 10px 0; }
+  margin: 15px 0 10px 0; }
   .subscribe-form .inner {
     padding: 15px;
-    background-color: #4dae36; }
+    background-color: #333333; }
     .subscribe-form .inner .field-group label {
-      font-size: 24px;
-      line-height: 34px;
+      font-size: 16px;
+      line-height: 16px;
       color: #fff;
-      float: left; }
-      @media screen and (max-width: 767px) {
-        .subscribe-form .inner .field-group label {
-          margin-bottom: 10px;
-          float: none;
-          display: block; } }
+      display: block;
+      margin-bottom: 15px; }
     .subscribe-form .inner .field-group .search-field {
-      max-width: 280px;
-      margin: 0;
-      float: right; }
-      @media screen and (max-width: 767px) {
-        .subscribe-form .inner .field-group .search-field {
-          max-width: 100%;
-          margin: 0 -64px 0 0;
-          float: left;
-          padding-right: 76px; } }
+      max-width: 100%;
+      margin: 0 -64px 0 0;
+      float: left;
+      padding-right: 76px; }
     .subscribe-form .inner .field-group .btn {
-      float: right; }
+      float: right;
+      background-color: #4dae36; }
+      .subscribe-form .inner .field-group .btn:hover {
+        background-color: #666666; }
 
 .textwidget .subscribe-form .inner .field-group label {
   margin-bottom: 10px;
@@ -1529,47 +1616,46 @@ HOME STYLES
 /*CATEGORY BOXES ON HOME */
 .NewsCats {
   margin-bottom: 10px; }
-  .NewsCats .cat {
-    border: 1px solid #e3e3e3; }
-  .NewsCats .title {
-    width: 100%;
-    padding-bottom: 120px; }
-    .NewsCats .title span {
-      font-size: 18px;
-      color: #fff;
-      margin-left: 20px;
-      padding: 8px;
-      background: rgba(0, 0, 0, 0.4);
-      font-weight: bold;
-      float: left; }
   .NewsCats h3 {
     font-size: 14px;
-    margin: 0;
+    margin: 0 0 5px 0;
     font-weight: bold; }
     .NewsCats h3 a {
-      color: #666666; }
+      color: #333333; }
     .NewsCats h3 span {
       color: #4dae36; }
   .NewsCats p {
     margin-bottom: 10px; }
+  .NewsCats .title {
+    height: 100px;
+    position: relative;
+    margin-bottom: 10px; }
+    .NewsCats .title span {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 5px 10px;
+      color: #fff;
+      display: inline-block; }
   .NewsCats .entry {
     font-size: 12px;
-    padding: 0;
     margin-bottom: 10px;
-    border-bottom: 1px solid #e3e3e3; }
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000; }
+    .NewsCats .entry:last-child {
+      border-bottom: none; }
     .NewsCats .entry p {
       margin: 0; }
+      .NewsCats .entry p a:hover {
+        text-decoration: underline; }
   .NewsCats .more_stories {
     float: right;
     background: #4dae36;
     color: #fff;
     padding: 3px 7px;
     text-decoration: none;
-    margin-top: -5px; }
-
-.stories {
-  background: #fff;
-  padding: 10px; }
+    margin-top: 0; }
 
 .learn {
   float: left;
@@ -1814,10 +1900,10 @@ PAGE NAVI STYLES
       color: #fff; }
   .pagination .current {
     cursor: default;
-    color: #5c6b80; }
+    color: #333333; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: #fff;
-      color: #5c6b80; }
+      color: #333333; }
 
 .wp-prev-next .prev-link {
   float: left; }
@@ -1915,7 +2001,7 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #5c6b80; }
+    color: #333333; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }
@@ -1943,10 +2029,6 @@ SIDEBARS & ASIDES
 *********************/
 .sidebar img {
   width: auto; }
-.sidebar .stories {
-  height: auto; }
-  .sidebar .stories .entry {
-    height: auto; }
 
 .textwidget img {
   width: 100%; }
@@ -1986,7 +2068,7 @@ FOOTER STYLES
 .copyright {
   float: left; }
 
-.clear, .field-group:after, .subscribe-form:after {
+.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after {
   clear: both; }
 
 .widget_search {
@@ -2031,10 +2113,12 @@ FOOTER STYLES
 .contactform11 input[type="text"] {
   line-height: 22px; }
 
-.ticker-stocks-container .simply-scroll {
-  padding: 0;
-  border-bottom: none;
-  background: #fff; }
+.ticker-stocks-container {
+  margin-top: 35px; }
+  .ticker-stocks-container .simply-scroll {
+    padding: 0;
+    border-bottom: none;
+    background: #fff; }
 
 .video-container {
   position: relative;
@@ -2140,12 +2224,6 @@ tweeners.
   article header h1 {
     font-size: 26px !important; }
 
-  .stories {
-    height: 310px; }
-
-  .NewsCats .entry {
-    height: 80px; }
-
   /*********************
   FOOTER STYLES
   *********************/
@@ -2180,9 +2258,6 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
-  .header-right {
-    margin-top: 45px; }
-
   .ticker-stocks-container {
     display: block; }
 
@@ -2269,8 +2344,6 @@ you can add resource intensive styles.
 
   .NewsCats {
     margin-bottom: 10px; }
-    .NewsCats .cat {
-      border: 1px solid #e3e3e3; }
     .NewsCats h3 {
       font-size: 14px;
       margin: 0;
@@ -2278,19 +2351,9 @@ you can add resource intensive styles.
     .NewsCats p {
       margin-bottom: 10px; }
     .NewsCats .entry {
-      font-size: 12px;
-      padding: 0;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #e3e3e3; }
+      font-size: 12px; }
       .NewsCats .entry p {
         margin: 0; }
-    .NewsCats .more_stories {
-      float: right;
-      background: #4dae36;
-      color: #fff;
-      padding: 3px 7px;
-      text-decoration: none;
-      margin-top: -5px; }
 
   .banner {
     margin-top: 10px;
@@ -2402,13 +2465,8 @@ This is for the larger monitors and possibly full screen viewers.
   .wrap {
     width: 1280px; }
 
-  .stories {
-    height: 390px; }
-
-  .NewsCats .entry {
-    height: 105px; }
-    .NewsCats .entry p {
-      font-size: 14px; }
+  .NewsCats .entry p {
+    font-size: 14px; }
 
   .heroimg {
     height: 300px; }

@@ -16,9 +16,9 @@ GENERAL STYLES
 *********************/
 
 body {
-  font-family: $metro;
+  font-family: $sans-serif;
   font-size: 100%;
-  line-height: 1.5;
+  line-height: 1.4;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -105,16 +105,167 @@ HEADER STYLES
 .header {
   background-color: $white;
   border-bottom: $gray 1px solid;
-	
-  .widget {
-    background: none;
-    float: right;
-    margin-left: 35px;
-    margin-top: 10px;
+
+  #inner-header {
+    padding-top: 35px;
   }
 
-  .widget:first-child{
-    margin-right:0px;
+  .widget {
+    background: none;
+
+    &.widget_search {
+      height: 30px;
+      margin: 0 0 10px 0;
+      float: none;
+
+      form {
+        width: 100%;
+        display: block;
+
+        &:after {
+          @extend .clear;
+        }
+
+        .search-icon {
+          width: 25px;
+          height: 30px;
+          display: inline-block;
+          text-indent: -999px;
+          overflow: hidden;
+          vertical-align: bottom;
+          @include at2x('../images/icon-search', png, 50px, 25px, no-repeat);
+          background-position: left center;
+          cursor: pointer;
+          float: right;
+
+          &:hover {
+            background-position: right center;
+          }
+
+        }
+
+        .field-group {
+          width: 0;
+          height: 30px;
+          overflow: hidden;
+          float: right;
+
+          &:after {
+            @extend .clear;
+          }
+
+          input {
+            margin-bottom: 0;
+
+            &#searchsubmit {
+              width: 55px;
+              padding-left: 0;
+              padding-right: 0;
+              margin-left: 1px;
+
+              &:focus {
+                outline: none;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &.widget_nav_menu {
+
+      h4 {
+        display: none;
+      }
+
+      &> div {
+        width: 100%;
+        display: table;
+        @extend .clear;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        float: right;
+
+        &:after {
+          @extend .clear;
+        }
+
+        li {
+          display: inline-block;
+          float: left;
+          margin: 0 8px 0 0;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.facebook a {
+            background-position: left 0;
+
+            &:hover {
+              background-position: right 0;
+            }
+
+          }
+
+          &.twitter a {
+            background-position: left -25px;
+
+            &:hover {
+              background-position: right -25px;
+            }
+
+          }
+
+          &.google a {
+            background-position: left -50px;
+
+            &:hover {
+              background-position: right -50px;
+            }
+
+          }
+
+          &.linkedin a {
+            background-position: left -75px;
+
+            &:hover {
+              background-position: right -75px;
+            }
+
+          }
+
+          a {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            text-indent: -999px;
+            overflow: hidden;
+            vertical-align: bottom;
+            @include at2x('../images/icon-social', png, 50px, 100px, no-repeat);
+
+            &:focus {
+              outline: none;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
   }
 
 }
@@ -169,12 +320,17 @@ header {
 	clear: both;
 
 	li {
+      padding: 0;
+
+      &:hover a {
+        border-right: 1px solid transparent;
+      }
 
       a {
         display: block;
         color: $white;
         text-decoration: none;
-        padding: 0 15px;
+        padding: 5px 15px;
         border-right: 1px solid $mid-grey;
       }
 
@@ -214,9 +370,7 @@ HOME STYLES
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: $white;
-  margin-bottom: 10px;
-  border: 1px solid $border-grey;
+  margin-bottom: 25px;
 
   img {
     width: 100%;
@@ -224,8 +378,14 @@ HOME STYLES
   }
 
   a {
-    color: $white;
-    display: block;
+    color: $green;
+    display: inline-block;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
   }
 
   span {
@@ -235,16 +395,29 @@ HOME STYLES
   }
 
   h1 {
-    color: $mid-grey !important;
+    color: $text-color !important;
     font-size: 24px;
     margin: 0;
+  }
+
+  p {
+    margin-top: 0;
   }
 
 }
 
 .herotext {
-  padding-left: 10px;
-  padding-top: 10px;
+
+  a {
+    margin-bottom: 10px;
+
+    span,
+    h1 {
+      display: inline-block;
+    }
+
+  }
+
 }
 
 .heroimg {
@@ -285,7 +458,7 @@ HOME STYLES
 }
 
 .subscribe-form {
-  margin: 0 0 10px 0;
+  margin: 15px 0 10px 0;
 
   &:after {
     @extend .clear;
@@ -293,40 +466,33 @@ HOME STYLES
 
   .inner {
     padding: 15px;
-    background-color: $green;
+    background-color: $dark-grey;
 
     .field-group {
 
       label {
-        font-size: 24px;
-        line-height: 34px;
+        font-size: 16px;
+        line-height: 16px;
         color: $white;
-        float: left;
-
-        @media screen and (max-width: 767px) {
-          margin-bottom: 10px;
-          float: none;
-          display: block;
-        }
-
+        display: block;
+        margin-bottom: 15px;
       }
 
       .search-field {
-        max-width: 280px;
-        margin: 0;
-        float: right;
-
-        @media screen and (max-width: 767px) {
-          max-width: 100%;
-          margin: 0 -64px 0 0;
-          float: left;
-          padding-right: 76px;
-        }
-
+        max-width: 100%;
+        margin: 0 -64px 0 0;
+        float: left;
+        padding-right: 76px;
       }
 
       .btn {
         float: right;
+        background-color: $green;
+
+        &:hover {
+          background-color: $mid-grey;
+        }
+
       }
 
     }
@@ -410,36 +576,16 @@ HOME STYLES
 .NewsCats {
   margin-bottom: 10px;
 
-  .cat {
-    border: 1px solid $border-grey;
-  }
-
-  .title {
-    width: 100%;
-    padding-bottom: 120px;
-
-    span {
-      font-size: 18px;
-      color: $white;
-      margin-left: 20px;
-      padding: 8px;
-      background: rgba(0, 0, 0, 0.4);
-      font-weight: bold;
-      float: left;
-    }
-
-  }
-
   h3 {
     font-size: 14px;
-    margin: 0;
+    margin: 0 0 5px 0;
     font-weight: bold;
 
     a {
-      color: $mid-grey;
+      color: $text-color;
     }
 
-    span{
+    span {
       color: $green;
     }
 
@@ -449,14 +595,40 @@ HOME STYLES
     margin-bottom: 10px;
   }
 
+  .title {
+    height: 100px;
+    position: relative;
+    margin-bottom: 10px;
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 5px 10px;
+      color: $white;
+      display: inline-block;
+    }
+
+  }
+
   .entry {
     font-size: 12px;
-    padding: 0;
     margin-bottom: 10px;
-    border-bottom: 1px solid $border-grey;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black;
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     p {
       margin: 0;
+
+      a:hover {
+        text-decoration: underline;
+      }
+
     }
 
   }
@@ -467,14 +639,9 @@ HOME STYLES
     color: $white;
     padding: 3px 7px;
     text-decoration: none;
-    margin-top: -5px;
+    margin-top: 0;
   }
 
-}
-
-.stories {
-  background: $white;
-  padding: 10px;
 }
 
 .learn {
@@ -1075,15 +1242,6 @@ SIDEBARS & ASIDES
   img {
     width: auto;
   }
-		
-  .stories {
-    height: auto;
-
-    .entry {
-      height: auto;
-    }
-
-  }
 
 }
 	
@@ -1201,6 +1359,7 @@ FOOTER STYLES
 }
 
 .ticker-stocks-container {
+  margin-top: 35px;
 
   .simply-scroll {
     padding: 0;

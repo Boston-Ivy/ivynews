@@ -25,37 +25,25 @@
 
                     <div id="Hero">
 
-                        <div class="m-all t-1of2 d-1of2 cf herotext">
+                        <div class="m-all t-2of2 d-2of2 cf herotext">
                             <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>">
-                                <span> <?php echo rwmb_meta( 'rw_tagline'); ?></span>
+                                <span> <?php echo rwmb_meta( 'rw_tagline'); _e(': '); ?></span>
                                 <h1><?php echo $post->post_title ?></h1>
                             </a>
+                        </div>
+
+                        <div class="m-all t-1of2 d-1of2 cf herotext">
                             <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
+                            <p><a href="<?php echo get_permalink($post->ID); ?>"><?php _e('Read more &raquo;'); ?></a></p>
                         </div>
 
                         <div class="m-all t-1of2 d-1of2 last-col cf heroimg">
-                            <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>" style="background:url(<?php echo $feat_image[0] ?>) no-repeat; background-position:center center;"></a>
+                            <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>" style="background:url(<?php echo $feat_image[0] ?>) no-repeat center center;"></a>
                         </div>
 
                     </div>
 
                     <?php }
-
-                        $newsletter_shortcode = get_option("front_page_newsletter_shortcode");
-                        if($newsletter_shortcode){
-
-                    ?>
-
-                    <div class="subscribe-form">
-
-                        <div class="inner">
-                            <?php echo do_shortcode($newsletter_shortcode); ?>
-                        </div>
-
-                    </div>
-
-                    <?php
-                    }
 
                     $small_banner_url = get_option("front_page_small_banner");
 
@@ -66,27 +54,21 @@
                         $small_banner_link_url = "#";
                     }
 
-                    $small_banner_link_target = get_option("front_page_small_banner_link_target");
-                    if(empty($small_banner_link_target)){
-                        $small_banner_link_target = "_self";
-                    }
-                    ?>
-
-                    <div class="banner">
-
-                        <a href="<?php echo $small_banner_link_url ?>" target="<?php echo $small_banner_link_target ?>">
-                            <img width="680px" src="<?php echo $small_banner_url?>"/>
-                        </a>
-
-                    </div>
+//                    $small_banner_link_target = get_option("front_page_small_banner_link_target");
+//                    if(empty($small_banner_link_target)){
+//                        $small_banner_link_target = "_self";
+//                    }
+//                    ?>
+<!---->
+<!--                    <div class="banner">-->
+<!--                        <a href="--><?php //echo $small_banner_link_url ?><!--" target="--><?php //echo $small_banner_link_target ?><!--">-->
+<!--                            <img width="680px" src="--><?php //echo $small_banner_url?><!--"/>-->
+<!--                        </a>-->
+<!--                    </div>-->
 
                     <?php } ?>
 
                 </section>
-
-<!--                <section class=" m-all t-1of3 d-1of3 last-col cf"></section> -->
-<!--                <div class="clearfix"></div>-->
-<!--                <section class="NewsCats" class="m-all cf">-->
 
                 <script type="text/javascript">
                     var _ipc = {
@@ -109,21 +91,32 @@
 
                 <section class="m-all t-1of2 d-1of3 last-col cf NewsCats" id='idio'>
                     <div class="cat">
-                        <div class="title" style='background-size:cover;'>
-                            <span>Recommended</span>
-                        </div>
                         <div class='stories'>
                             <script class="idio-recommendations" type="text/x-mustache" data-rpp="3" data-fallback-section="1">
                                 {{#content}}
                                     <div class="entry idio__entry" {{#main_image_url}}data-image="{{main_image_url}}?w=300&amp;h=100" {{/main_image_url}}>
-                                        <h3><a href="{{link_url}}" rel="bookmark" title="{{title}}">{{title}}</a></h3>
-                                        <p><font class="idio__p">{{abstract}}</font>
-                                        <a class="excerpt-read-more" href="{{link_url}}">Read&nbsp;more&nbsp;&raquo;</a></p>
+                                        <h3><span>Recommended:</span> <a href="{{link_url}}" rel="bookmark" title="{{title}}">{{title}}</a></h3>
+                                        <p><font class="idio__p">{{abstract}}</font></p>
                                     </div>
                                 {{/content}}
                             </script>
                         </div>
                     </div>
+                    <?php
+
+                    $newsletter_shortcode = get_option("front_page_newsletter_shortcode");
+
+                    if($newsletter_shortcode) {
+
+                        ?>
+
+                        <div class="subscribe-form">
+                            <div class="inner">
+                                <?php echo do_shortcode($newsletter_shortcode); ?>
+                            </div>
+                        </div>
+
+                    <?php } ?>
                 </section>
 
                 <script>idio.render()</script>
@@ -247,7 +240,7 @@
 
                         </div>
 
-                   </div>
+                    </div>
 
                 </section>
 

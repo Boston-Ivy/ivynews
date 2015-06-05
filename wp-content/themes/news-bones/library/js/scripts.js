@@ -139,15 +139,43 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
+    /*
+    * Let's fire off the gravatar function
+    * You can remove this if you don't need it
+    */
   
-	   
-	   
-  loadGravatars();
+    loadGravatars();
+    search();
 
+    function search() {
+
+        var $search = $('#searchform');
+        var $btn = $search.find('.search-icon'),
+            $field = $search.find('.field-group');
+
+        $btn.on('click', function(e){
+
+            e.stopPropagation();
+            $(this).hide();
+            $field.animate({ width: '280px' }, 'medium').show();
+
+        });
+
+        $field.on('click', function(e){
+
+            e.stopPropagation();
+
+        });
+
+        $(document).on('click', function(e){
+
+            e.stopPropagation();
+            $field.animate({ width: 0 }, 'medium').hide();
+            $btn.show();
+
+        });
+
+    }
 
 }); /* end of as page load scripts */
 
