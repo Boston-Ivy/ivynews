@@ -18,17 +18,36 @@
 		<meta name="MobileOptimized" content="320">
 		<!--<meta name="viewport" content="width=device-width, initial-scale=1"/>-->
 		<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
-		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<?php // or, set /favicon.ico for IE10 win ?>
-		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-        <meta name="theme-color" content="#121212">
-        <?php 
+
+        <!-- Standard browser icon -->
+        <link href="<?php bloginfo('template_directory');?>/library/images/icon-browser-favicon_32x32.png" rel="shortcut icon" sizes="32x32">
+
+        <!-- iOS 2.0+ and Android 2.1+ -->
+        <link href="<?php bloginfo('template_directory');?>/library/images/icon-browser-iphone_152x152.png" rel="apple-touch-icon-precomposed" />
+
+        <!-- IE 10 -->
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="<?php bloginfo('template_directory');?>/library/images/icon-browser-ie_144x144.png">
+
+        <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+        <link href="<?php bloginfo('template_directory');?>/library/images/icon-browser-ipad_152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+
+        <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+        <link href="<?php bloginfo('template_directory');?>/library/images/icon-browser-ipad3_144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+
+        <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+        <link href="<?php bloginfo('template_directory');?>/library/images/icon-browser-iphone_120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"">
+
+        <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+        <link href="<?php bloginfo('template_directory');?>/library/images/icon-browser-iphone4_114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+
+        <!-- For first- and second-generation iPad: -->
+        <link href="<?php bloginfo('template_directory');?>/library/images/icon-browser-ipad_72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+
+        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+        <link href="<?php bloginfo('template_directory');?>/library/images/icon-browser-iphone_57x57.png" rel="apple-touch-icon-precomposed">
+
+        <?php
 			$metaTagline =  rwmb_meta( 'rw_tagline');
 		if (!empty($metaTagline)){ ?>
 		<meta property="article:subtitle" content="<?php echo $metaTagline; ?>">

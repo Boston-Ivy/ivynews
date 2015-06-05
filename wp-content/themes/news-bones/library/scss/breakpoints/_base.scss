@@ -372,6 +372,10 @@ header {
 
 }
 
+#main {
+  margin-bottom: 60px;
+}
+
 /*********************
 HOME STYLES
 *********************/
@@ -1298,9 +1302,26 @@ FOOTER STYLES
   nav {
     float: left;
 
+    &:after {
+      @extend .clear;
+    }
+
     li {
       float: left;
-      margin: 0 10px;
+      margin: 0 15px 0 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background-color: transparent;
+
+        a {
+          text-decoration: underline;
+        }
+
+      }
 
       a {
         text-decoration: none;
@@ -1314,7 +1335,13 @@ FOOTER STYLES
 }
 
 .copyright {
-  float: left;
+  float: right;
+  margin: 0;
+  line-height: 64px;
+}
+
+#infinite-footer {
+  display: none;
 }
 
 .clear {

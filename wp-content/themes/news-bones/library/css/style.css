@@ -457,7 +457,7 @@ http://0to255.com/
 /*********************
 STYLES
 *********************/
-.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after, .NewsCats .stories:after {
+.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after, .NewsCats .stories:after, .footer nav:after {
   content: "";
   display: table;
   clear: both; }
@@ -1497,6 +1497,9 @@ header .searchform input.search-field {
   width: 240px;
   float: left; }
 
+#main {
+  margin-bottom: 60px; }
+
 /*********************
 HOME STYLES
 *********************/
@@ -2073,15 +2076,26 @@ FOOTER STYLES
     float: left; }
     .footer nav li {
       float: left;
-      margin: 0 10px; }
+      margin: 0 15px 0 0; }
+      .footer nav li:last-child {
+        margin-right: 0; }
+      .footer nav li:hover {
+        background-color: transparent; }
+        .footer nav li:hover a {
+          text-decoration: underline; }
       .footer nav li a {
         text-decoration: none;
         color: #fff; }
 
 .copyright {
-  float: left; }
+  float: right;
+  margin: 0;
+  line-height: 64px; }
 
-.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after, .NewsCats .stories:after {
+#infinite-footer {
+  display: none; }
+
+.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after, .NewsCats .stories:after, .footer nav:after {
   clear: both; }
 
 .widget_search {
