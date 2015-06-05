@@ -110,6 +110,16 @@ HEADER STYLES
     padding-top: 35px;
   }
 
+  .logo {
+    width: 220px;
+    height: 65px;
+    display: inline-block;
+    text-indent: -999px;
+    overflow: hidden;
+    vertical-align: bottom;
+    @include at2x('../images/logo-220x65', png, 220px, 65px, no-repeat);
+  }
+
   .widget {
     background: none;
 
@@ -610,6 +620,10 @@ HOME STYLES
       display: inline-block;
     }
 
+  }
+
+  .stories:after {
+    @extend .clear;
   }
 
   .entry {

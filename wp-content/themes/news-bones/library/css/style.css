@@ -457,7 +457,7 @@ http://0to255.com/
 /*********************
 STYLES
 *********************/
-.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after {
+.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after, .NewsCats .stories:after {
   content: "";
   display: table;
   clear: both; }
@@ -1348,6 +1348,19 @@ HEADER STYLES
   border-bottom: #eaedf2 1px solid; }
   .header #inner-header {
     padding-top: 35px; }
+  .header .logo {
+    width: 220px;
+    height: 65px;
+    display: inline-block;
+    text-indent: -999px;
+    overflow: hidden;
+    vertical-align: bottom;
+    background-image: url("../images/logo-220x65.png"); }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .header .logo {
+        background-image: url("../images/logo-220x65@2x.png");
+        background-size: 220px 65px;
+        background-repeat: no-repeat; } }
   .header .widget {
     background: none; }
     .header .widget.widget_search {
@@ -2068,7 +2081,7 @@ FOOTER STYLES
 .copyright {
   float: left; }
 
-.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after {
+.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after, .NewsCats .stories:after {
   clear: both; }
 
 .widget_search {
