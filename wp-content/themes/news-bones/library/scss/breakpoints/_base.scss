@@ -420,6 +420,42 @@ HOME STYLES
 
 }
 
+.secondary-posts {
+
+  .entry {
+
+    &:before {
+      content: "";
+      width: 100%;
+      display: table;
+      border-top: 1px solid $dark-grey;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    h3 {
+      margin-top: 10px;
+
+      span {
+        color: $green;
+      }
+
+      a {
+        color: $text-color;
+      }
+
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+  }
+
+}
+
 .herotext {
 
   a {
@@ -459,6 +495,10 @@ HOME STYLES
     display: none;
   }
 
+}
+
+#Insights {
+  clear: both;
 }
 
 /* NEWSLETTER FORM HOME */

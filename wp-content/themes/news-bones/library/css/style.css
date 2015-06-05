@@ -1528,6 +1528,22 @@ HOME STYLES
   #Hero p {
     margin-top: 0; }
 
+.secondary-posts .entry:before {
+  content: "";
+  width: 100%;
+  display: table;
+  border-top: 1px solid #333333; }
+.secondary-posts .entry:last-child {
+  padding-right: 0; }
+.secondary-posts .entry h3 {
+  margin-top: 10px; }
+  .secondary-posts .entry h3 span {
+    color: #4dae36; }
+  .secondary-posts .entry h3 a {
+    color: #333333; }
+.secondary-posts .entry p {
+  font-size: 14px; }
+
 .herotext a {
   margin-bottom: 10px; }
   .herotext a span,
@@ -1552,6 +1568,9 @@ HOME STYLES
     color: #4dae36;
     font-weight: bold;
     display: none; }
+
+#Insights {
+  clear: both; }
 
 /* NEWSLETTER FORM HOME */
 .NewsText {

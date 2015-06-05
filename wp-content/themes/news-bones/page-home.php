@@ -19,7 +19,6 @@
                         $parent_cats = get_category_parents($hero_cat[0]->cat_ID);
                         $split_arr = split("/", $parent_cats);
                         $exclude_cat = get_cat_id($split_arr[0]);
-
                         $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' );
                     ?>
 
@@ -43,6 +42,20 @@
 
                     </div>
 
+                    <div class="secondary-posts">
+
+                        <?php $args = array( 'posts_per_page' => 2, 'offset'=> 1 ); ?>
+                        <?php $loop = new WP_Query($args); while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+                            <div class="m-all t-1of2 d-1of2 entry">
+                                <h3><span><?php _e('Tagline: '); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
+                            </div>
+
+                        <?php endwhile; wp_reset_query(); ?>
+
+                    </div>
+
                     <?php }
 
                     $small_banner_url = get_option("front_page_small_banner");
@@ -52,19 +65,7 @@
                     $small_banner_link_url = get_option("front_page_small_banner_link_url");
                     if(empty($small_banner_link_url)){
                         $small_banner_link_url = "#";
-                    }
-
-//                    $small_banner_link_target = get_option("front_page_small_banner_link_target");
-//                    if(empty($small_banner_link_target)){
-//                        $small_banner_link_target = "_self";
-//                    }
-//                    ?>
-<!---->
-<!--                    <div class="banner">-->
-<!--                        <a href="--><?php //echo $small_banner_link_url ?><!--" target="--><?php //echo $small_banner_link_target ?><!--">-->
-<!--                            <img width="680px" src="--><?php //echo $small_banner_url?><!--"/>-->
-<!--                        </a>-->
-<!--                    </div>-->
+                    } ?>
 
                     <?php } ?>
 
@@ -168,7 +169,7 @@
 
                     endwhile;
                 endif;
-                wp_reset_query; ?>
+                wp_reset_query(); ?>
 
                 <section id='<?php echo $cat_name ?>' class="m-all t-1of2 d-1of3 <?php echo $lastCol?> cf NewsCats">
 
