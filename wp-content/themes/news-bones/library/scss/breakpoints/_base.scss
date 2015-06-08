@@ -145,6 +145,7 @@ HEADER STYLES
           vertical-align: bottom;
           @include at2x('../images/icon-search', png, 50px, 25px, no-repeat);
           background-position: left center;
+          background-repeat: no-repeat;
           cursor: pointer;
           float: right;
 
