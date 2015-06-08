@@ -1349,17 +1349,17 @@ HEADER STYLES
   .header #inner-header {
     padding-top: 35px; }
   .header .logo {
-    width: 220px;
+    width: 246px;
     height: 65px;
     display: inline-block;
     text-indent: -999px;
     overflow: hidden;
     vertical-align: bottom;
-    background-image: url("../images/logo-220x65.png"); }
+    background-image: url("../images/logo-header.png"); }
     @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
       .header .logo {
-        background-image: url("../images/logo-220x65@2x.png");
-        background-size: 220px 65px;
+        background-image: url("../images/logo-header@2x.png");
+        background-size: 246px 65px;
         background-repeat: no-repeat; } }
   .header .widget {
     background: none; }
@@ -1450,22 +1450,6 @@ HEADER STYLES
               background-repeat: no-repeat; } }
           .header .widget.widget_nav_menu ul li a:focus {
             outline: none; }
-
-#logo {
-  display: none;
-  margin: 0.75em 0; }
-  #logo a {
-    color: #000; }
-    #logo a img {
-      width: 320px; }
-
-#mlogo {
-  display: block;
-  margin-top: 15px; }
-  #mlogo a {
-    color: #000; }
-    #mlogo a img {
-      width: 250px; }
 
 #breadcrumbs {
   margin-top: 10px; }
@@ -1581,7 +1565,7 @@ HOME STYLES
   width: 295px; }
 
 .subscribe-form {
-  margin: 15px 0 10px 0; }
+  margin: 0 0 10px 0; }
   .subscribe-form .inner {
     padding: 15px;
     background-color: #333333; }

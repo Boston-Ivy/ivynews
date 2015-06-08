@@ -90,10 +90,10 @@
 
                 <script type="text/javascript" src="//s.idio.co/ip.js"></script>
 
-                <section class="m-all t-1of2 d-1of3 last-col cf NewsCats" id='idio'>
+                <section class="m-all t-2of2 d-1of3 last-col cf NewsCats" id='idio'>
                     <div class="cat">
                         <div class='stories'>
-                            <script class="idio-recommendations" type="text/x-mustache" data-rpp="3" data-fallback-section="1">
+                            <script class="idio-recommendations" type="text/x-mustache" data-rpp="4" data-fallback-section="1">
                                 {{#content}}
                                     <div class="entry idio__entry" {{#main_image_url}}data-image="{{main_image_url}}?w=300&amp;h=100" {{/main_image_url}}>
                                         <h3><span>Recommended:</span> <a href="{{link_url}}" rel="bookmark" title="{{title}}">{{title}}</a></h3>

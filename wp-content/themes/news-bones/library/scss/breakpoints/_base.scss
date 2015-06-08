@@ -111,13 +111,13 @@ HEADER STYLES
   }
 
   .logo {
-    width: 220px;
+    width: 246px;
     height: 65px;
     display: inline-block;
     text-indent: -999px;
     overflow: hidden;
     vertical-align: bottom;
-    @include at2x('../images/logo-220x65', png, 220px, 65px, no-repeat);
+    @include at2x('../images/logo-header', png, 246px, 65px, no-repeat);
   }
 
   .widget {
@@ -274,35 +274,6 @@ HEADER STYLES
 
       }
 
-    }
-
-  }
-
-}
-
-#logo {
-  display: none;
-  margin: 0.75em 0;
-
-  a {
-    color: $black;
-
-    img {
-      width: 320px;
-    }
-
-  }
-}
-	
-#mlogo {
-  display: block;
-  margin-top: 15px;
-
-  a {
-    color: $black;
-
-    img {
-      width: 250px;
     }
 
   }
@@ -512,7 +483,7 @@ HOME STYLES
 }
 
 .subscribe-form {
-  margin: 15px 0 10px 0;
+  margin: 0 0 10px 0;
 
   &:after {
     @extend .clear;
