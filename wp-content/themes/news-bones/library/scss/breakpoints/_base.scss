@@ -201,7 +201,7 @@ HEADER STYLES
       }
 
       ul {
-        margin: 0;
+        margin: 30px 0 0 0;
         padding: 0;
         list-style: none;
         display: inline-block;
@@ -655,8 +655,8 @@ HOME STYLES
     padding-bottom: 10px;
     border-bottom: 1px solid $black;
 
-    &:last-child {
-      border-bottom: none;
+    &:nth-child(4) {
+      display: none;
     }
 
     p {
@@ -1465,7 +1465,7 @@ FOOTER STYLES
             width: 280px !important;
             display: block !important;
           }
-          
+
 
         }
 
@@ -1475,4 +1475,11 @@ FOOTER STYLES
 
   }
 
+}
+
+#click-menu {
+  top: 30px !important;
+  right: 0;
+  left: auto;
+  width: 45px;
 }

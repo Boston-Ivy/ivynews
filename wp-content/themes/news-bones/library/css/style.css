@@ -1409,7 +1409,7 @@ HEADER STYLES
       width: 100%;
       display: table; }
     .header .widget.widget_nav_menu ul {
-      margin: 0;
+      margin: 30px 0 0 0;
       padding: 0;
       list-style: none;
       display: inline-block;
@@ -1667,8 +1667,8 @@ HOME STYLES
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #000; }
-    .NewsCats .entry:last-child {
-      border-bottom: none; }
+    .NewsCats .entry:nth-child(4) {
+      display: none; }
     .NewsCats .entry p {
       margin: 0; }
       .NewsCats .entry p a:hover {
@@ -2177,6 +2177,12 @@ FOOTER STYLES
   width: 280px !important;
   display: block !important; }
 
+#click-menu {
+  top: 30px !important;
+  right: 0;
+  left: auto;
+  width: 45px; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2223,12 +2229,6 @@ tweeners.
   /*********************
   NAVIGATION STYLES
   *********************/
-  #click-menu {
-    top: 30px !important;
-    right: 0;
-    left: auto;
-    width: 45px; }
-
   .widget_search {
     display: none; }
 
@@ -2310,6 +2310,9 @@ you can add resource intensive styles.
   *********************/
   header .widget_search {
     display: block; }
+
+  .header .widget.widget_nav_menu ul {
+    margin-top: 0; }
 
   .nav {
     border: 0; }

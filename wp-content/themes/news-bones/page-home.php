@@ -46,13 +46,14 @@
 
                         <?php $args = array( 'posts_per_page' => 2, 'offset'=> 1 ); ?>
                         <?php $loop = new WP_Query($args); while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <?php $do_not_duplicate[] = $post->ID; ?>
 
                             <div class="m-all t-1of2 d-1of2 entry">
                                 <h3><span><?php _e('Tagline: '); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
                             </div>
 
-                        <?php endwhile; wp_reset_query(); ?>
+                        <?php endwhile; ?>
 
                     </div>
 
@@ -171,12 +172,12 @@
                 endif;
                 wp_reset_query(); ?>
 
-                <section id='<?php echo $cat_name ?>' class="m-all t-1of2 d-1of3 <?php echo $lastCol?> cf NewsCats">
+                <section id="<?php echo $cat_name ?>" class="m-all t-1of2 d-1of3 <?php echo $lastCol?> cf NewsCats">
 
                     <div class="cat">
 
                     <?php
-                    $args = array('posts_per_page' => 3,'cat' => $cat_ID );
+                    $args = array( 'posts_per_page' => 4, 'cat' => $cat_ID );
                     if($cat_ID == $exclude_cat){
                         $args['post__not_in'] = array($hero_post);
                     }
@@ -184,7 +185,7 @@
 
                     if (have_posts()) : ?>
 
-                        <div class="title" style='background: url(<?php echo $feat_image[0]?>) no-repeat; background-size:cover; '>
+                        <div class="title" style='background: url(<?php echo $feat_image[0]?>) no-repeat; background-size: cover; '>
                             <span><?php echo $cat_name;?></span>
                         </div>
 
@@ -192,6 +193,8 @@
 
                         <?php
                         while (have_posts()) : the_post(); ?>
+
+                            <?php if ( in_array( $post->ID, $do_not_duplicate ) ) continue; ?>
 
                             <div class="entry">
 
@@ -235,9 +238,9 @@
 
                             <?php $category_link = get_category_link( $cat_ID ); ?>
 
-                            <a class="more_stories" href="<?php echo $category_link ?>" rel="bookmark" title="View all stories in <?php echo $cat_name;?>">More stories &raquo;</a>
-
                         </div>
+
+                        <a class="more_stories" href="<?php echo $category_link ?>" rel="bookmark" title="View all stories in <?php echo $cat_name;?>">More stories &raquo;</a>
 
                     </div>
 
