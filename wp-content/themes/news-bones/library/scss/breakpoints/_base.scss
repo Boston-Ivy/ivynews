@@ -468,7 +468,8 @@ HOME STYLES
 
 }
 
-#Insights {
+/* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
+#Shares {
   clear: both;
 }
 
@@ -637,8 +638,14 @@ HOME STYLES
 
   }
 
-  .stories:after {
-    @extend .clear;
+  .stories {
+    border-top: 1px solid $black;
+    padding-top: 10px;
+
+    &:after {
+      @extend .clear;
+    }
+
   }
 
   .entry {

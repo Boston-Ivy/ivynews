@@ -1553,7 +1553,8 @@ HOME STYLES
     font-weight: bold;
     display: none; }
 
-#Insights {
+/* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
+#Shares {
   clear: both; }
 
 /* NEWSLETTER FORM HOME */
@@ -1657,6 +1658,9 @@ HOME STYLES
       padding: 5px 10px;
       color: #fff;
       display: inline-block; }
+  .NewsCats .stories {
+    border-top: 1px solid #000;
+    padding-top: 10px; }
   .NewsCats .entry {
     font-size: 12px;
     margin-bottom: 10px;
@@ -2213,7 +2217,10 @@ tweeners.
   NAVIGATION STYLES
   *********************/
   #click-menu {
-    top: 30px !important; }
+    top: 30px !important;
+    right: 0;
+    left: auto;
+    width: 45px; }
 
   .widget_search {
     display: none; }
@@ -2470,7 +2477,17 @@ you can add resource intensive styles.
       font-weight: bold;
       padding-bottom: 10px; }
   .grid section {
-    min-height: 110px; } }
+    min-height: 110px; }
+
+  .NewsCats .stories {
+    border-top: none;
+    padding-top: 0; }
+
+  #Shares {
+    clear: none; }
+
+  #Insights {
+    clear: both; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
