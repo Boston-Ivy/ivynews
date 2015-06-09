@@ -828,6 +828,16 @@ h1.single {
 
   }
 
+  .NewsCats {
+    background-color: $white;
+
+    .entry {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+  }
+
 }
 
 article {

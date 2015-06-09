@@ -1769,6 +1769,11 @@ h1.single {
 .single article header {
   min-height: 126px;
   padding: 20px; }
+.single .NewsCats {
+  background-color: #fff; }
+  .single .NewsCats .entry {
+    margin-left: 10px;
+    margin-right: 10px; }
 
 article header {
   min-height: 170px;
