@@ -433,7 +433,6 @@ HOME STYLES
   a {
     margin-bottom: 10px;
 
-    span,
     h1 {
       display: inline-block;
     }
@@ -776,6 +775,12 @@ h1.single {
 
 .single .entry-content {
   padding: 10px 17px;
+
+  h2,
+  h3 {
+    margin-left: 0;
+  }
+
 }
 
 .page .entry-content {
@@ -787,8 +792,22 @@ article {
   &.hentry {
     margin-bottom: 10px;
 
+    &:nth-child(2n+4) {
+      clear: both;
+    }
+
     header {
       background-color: $white;
+
+      section.entry-content {
+        padding: 0;
+
+        .excerpt-read-more {
+          margin-left: 0;
+        }
+
+      }
+
     }
 
     section {
@@ -886,11 +905,18 @@ article {
 
       span {
          color: $green;
-      }
 
-      span.tagline {
-        padding: 0 10px;
-        font-size: 16px;
+        &.tagline {
+          margin-top: 10px;
+          font-size: 16px;
+          display: block;
+
+          &+ h2 {
+            margin-top: 0;
+          }
+
+        }
+
       }
 
       h2 {
@@ -1033,6 +1059,11 @@ article {
 
 .tags {
   margin: 0;
+
+  a {
+    display: inline-block;
+  }
+
 }
 	
 .excerpt-read-more {

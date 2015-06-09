@@ -22,10 +22,8 @@
                         <header class="entry-header article-header cf">
                             <div class="m-all t-1of2 d-1of2 cf herotext">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                    <span class="tagline"> <?php echo rwmb_meta( 'rw_tagline'); ?></span>
-                                    <h1 class="entry-title single"  itemprop="headline" rel="bookmark">
-                                        <?php the_title(); ?>
-                                    </h1>
+                                    <span class="tagline"><?php echo rwmb_meta( 'rw_tagline'); ?></span>
+                                    <h1 class="entry-title single"  itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                                 </a>
                                 <section class="entry-content first cf">
                                     <?php the_excerpt(); ?>

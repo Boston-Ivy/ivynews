@@ -1531,7 +1531,6 @@ HOME STYLES
 
 .herotext a {
   margin-bottom: 10px; }
-  .herotext a span,
   .herotext a h1 {
     display: inline-block; }
 .herotext h1 a {
@@ -1742,14 +1741,23 @@ h1.single {
 
 .single .entry-content {
   padding: 10px 17px; }
+  .single .entry-content h2,
+  .single .entry-content h3 {
+    margin-left: 0; }
 
 .page .entry-content {
   padding: 10px 17px; }
 
 article.hentry {
   margin-bottom: 10px; }
+  article.hentry:nth-child(2n+4) {
+    clear: both; }
   article.hentry header {
     background-color: #fff; }
+    article.hentry header section.entry-content {
+      padding: 0; }
+      article.hentry header section.entry-content .excerpt-read-more {
+        margin-left: 0; }
   article.hentry section {
     background-color: #fff; }
     article.hentry section.first {
@@ -1802,9 +1810,12 @@ article header {
 
 .grid header span {
   color: #4dae36; }
-.grid header span.tagline {
-  padding: 0 10px;
-  font-size: 16px; }
+  .grid header span.tagline {
+    margin-top: 10px;
+    font-size: 16px;
+    display: block; }
+    .grid header span.tagline + h2 {
+      margin-top: 0; }
 .grid header h2 {
   font-size: 16px;
   color: #666666;
@@ -1893,6 +1904,8 @@ article header {
 
 .tags {
   margin: 0; }
+  .tags a {
+    display: inline-block; }
 
 .excerpt-read-more {
   text-decoration: none;
