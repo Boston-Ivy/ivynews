@@ -742,82 +742,8 @@ HOME STYLES
 POSTS & CONTENT STYLES
 *********************/
 
-#content {
-  margin-top: 20px;
-}
-
-h1.single {
-  font-size: 26px;
-}
-
-.single .entry-content {
-  padding: 10px 17px;
-}
-
-.page .entry-content {
-  padding: 10px 17px;
-}
-
-.hentry {
-  margin-bottom: 10px;
-		
-  img {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0;
-  }
-
-  header {
-    background: $white;
-  }
-
-  section.first {
-    min-height: 90px !important;
-
-    p {
-      padding: 0;
-    }
-
-  }
-
-  section {
-    background:$white;
-
-    p {
-      padding: 0 5px;
-    }
-
-    ul {
-      padding-left: 45px;
-
-      li {
-        list-style-type: disc;
-      }
-
-    }
-
-  }
-
-  footer {
-    border-top: 1px solid $gray;
-    background: $white;
-    padding: 20px;
-
-    p {
-      font-size: 13px;
-      margin: 0;
-    }
-
-  }
-
-}
-		
-.entry-header h2 {
-  padding: 0 10px;
-}
-
-.single {
+.single,
+.archive {
 
   article {
 
@@ -840,7 +766,78 @@ h1.single {
 
 }
 
+#content {
+  margin-top: 20px;
+}
+
+h1.single {
+  font-size: 26px;
+}
+
+.single .entry-content {
+  padding: 10px 17px;
+}
+
+.page .entry-content {
+  padding: 10px 17px;
+}
+
 article {
+
+  &.hentry {
+    margin-bottom: 10px;
+
+    header {
+      background-color: $white;
+    }
+
+    section {
+      background-color: $white;
+
+      &.first {
+        min-height: 90px;
+      }
+
+      &.entry-content {
+        padding: 0 20px;
+      }
+
+      h3 {
+        margin: 10px 0 20px 0;
+      }
+
+      ul {
+        padding-left: 45px;
+
+        li {
+          list-style-type: disc;
+        }
+
+      }
+
+    }
+
+    footer {
+      border-top: 1px solid $gray;
+      background: $white;
+      padding: 20px;
+
+      p {
+        font-size: 13px;
+        margin: 0;
+      }
+
+    }
+
+    img {
+      width: 100%;
+      height: inherit;
+      padding: 0;
+      margin: 0;
+      vertical-align: middle;
+    }
+
+  }
 
   header {
     min-height: 170px;
@@ -849,11 +846,12 @@ article {
 
     span {
       color: $green;
-    }
 
-    span.tagline {
-      font-size: 24px;
-      font-weight: bold;
+      &.tagline {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
     }
 
     h1 {
@@ -862,9 +860,11 @@ article {
       margin: 0;
     }
 
-    h3,h2,h1 {
+    h3,
+    h2,
+    h1 {
       font-size: 20px;
-      margin: 0;
+      margin: 10px 0 0 0;
 
       a {
         color: $white;
@@ -872,17 +872,8 @@ article {
 
     }
 
-  }
-
-  &.hentry section {
-    padding: 0 20px !important;
-
-    p {
-      padding: 0;
-    }
-
-    h3 {
-      margin: 10px 0 20px 0;
+    a {
+      display: block;
     }
 
   }
@@ -906,7 +897,6 @@ article {
         font-size: 16px;
         color: $mid-grey;
         font-weight: bold;
-        padding-bottom: 10px;
       }
 
   }
@@ -927,12 +917,10 @@ article {
 }
 
 .entry-content {
-  padding: 0 5px 5px;
 
   h2, h3 {
     font-weight: 800;
     margin-bottom: 0;
-    margin-left: 5px;
   }
 
   p {

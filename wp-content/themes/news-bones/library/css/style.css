@@ -1722,6 +1722,18 @@ HOME STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.single article header,
+.archive article header {
+  min-height: 126px;
+  padding: 20px; }
+.single .NewsCats,
+.archive .NewsCats {
+  background-color: #fff; }
+  .single .NewsCats .entry,
+  .archive .NewsCats .entry {
+    margin-left: 10px;
+    margin-right: 10px; }
+
 #content {
   margin-top: 20px; }
 
@@ -1734,71 +1746,59 @@ h1.single {
 .page .entry-content {
   padding: 10px 17px; }
 
-.hentry {
+article.hentry {
   margin-bottom: 10px; }
-  .hentry img {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0; }
-  .hentry header {
-    background: #fff; }
-  .hentry section.first {
-    min-height: 90px !important; }
-    .hentry section.first p {
-      padding: 0; }
-  .hentry section {
-    background: #fff; }
-    .hentry section p {
-      padding: 0 5px; }
-    .hentry section ul {
+  article.hentry header {
+    background-color: #fff; }
+  article.hentry section {
+    background-color: #fff; }
+    article.hentry section.first {
+      min-height: 90px; }
+    article.hentry section.entry-content {
+      padding: 0 20px; }
+    article.hentry section h3 {
+      margin: 10px 0 20px 0; }
+    article.hentry section ul {
       padding-left: 45px; }
-      .hentry section ul li {
+      article.hentry section ul li {
         list-style-type: disc; }
-  .hentry footer {
+  article.hentry footer {
     border-top: 1px solid #eaedf2;
     background: #fff;
     padding: 20px; }
-    .hentry footer p {
+    article.hentry footer p {
       font-size: 13px;
       margin: 0; }
-
-.entry-header h2 {
-  padding: 0 10px; }
-
-.single article header {
-  min-height: 126px;
-  padding: 20px; }
-.single .NewsCats {
-  background-color: #fff; }
-  .single .NewsCats .entry {
-    margin-left: 10px;
-    margin-right: 10px; }
-
+  article.hentry img {
+    width: 100%;
+    height: inherit;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle; }
 article header {
   min-height: 170px;
   position: relative;
   padding: 10px 20px; }
   article header span {
     color: #4dae36; }
-  article header span.tagline {
-    font-size: 24px;
-    font-weight: bold; }
+    article header span.tagline {
+      font-size: 24px;
+      font-weight: bold; }
   article header h1 {
     color: #666666;
     font-size: 24px;
     margin: 0; }
-  article header h3, article header h2, article header h1 {
+  article header h3,
+  article header h2,
+  article header h1 {
     font-size: 20px;
-    margin: 0; }
-    article header h3 a, article header h2 a, article header h1 a {
+    margin: 10px 0 0 0; }
+    article header h3 a,
+    article header h2 a,
+    article header h1 a {
       color: #fff; }
-article.hentry section {
-  padding: 0 20px !important; }
-  article.hentry section p {
-    padding: 0; }
-  article.hentry section h3 {
-    margin: 10px 0 20px 0; }
+  article header a {
+    display: block; }
 
 .grid header span {
   color: #4dae36; }
@@ -1808,8 +1808,7 @@ article.hentry section {
 .grid header h2 {
   font-size: 16px;
   color: #666666;
-  font-weight: bold;
-  padding-bottom: 10px; }
+  font-weight: bold; }
 .grid section {
   min-height: 80px; }
 
@@ -1820,67 +1819,64 @@ article.hentry section {
   color: #666666;
   margin: 0; }
 
-.entry-content {
-  padding: 0 5px 5px; }
-  .entry-content h2, .entry-content h3 {
-    font-weight: 800;
-    margin-bottom: 0;
-    margin-left: 5px; }
-  .entry-content p {
-    margin: 0 0 1.5em; }
-  .entry-content table {
-    width: 100%;
-    border: 1px solid #eaedf2;
-    margin-bottom: 1.5em; }
-    .entry-content table caption {
-      margin: 0 0 7px;
-      font-size: 0.75em;
-      color: #9fa6b4;
-      text-transform: uppercase;
-      letter-spacing: 1px; }
-  .entry-content tr {
-    border-bottom: 1px solid #eaedf2; }
-    .entry-content tr:nth-child(even) {
-      background-color: #f8f9fa; }
-  .entry-content td {
-    padding: 7px;
-    border-right: 1px solid #eaedf2; }
-    .entry-content td:last-child {
-      border-right: 0; }
-  .entry-content th {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #eaedf2;
-    border-right: 1px solid #eaedf2; }
-    .entry-content th:last-child {
-      border-right: 0; }
-  .entry-content blockquote {
-    margin: 0 0 1.5em 0.75em;
-    padding: 0 0 0 0.75em;
-    border-left: 3px solid #2980b9;
-    font-style: italic;
-    color: #9fa6b4; }
-  .entry-content dd {
-    margin-left: 0;
-    font-size: 0.9em;
-    color: #787878;
-    margin-bottom: 1.5em; }
-  .entry-content img {
-    max-width: 100%;
-    height: auto; }
-  .entry-content .size-auto,
-  .entry-content .size-full,
-  .entry-content .size-large,
-  .entry-content .size-medium,
-  .entry-content .size-thumbnail {
-    max-width: 100%;
-    height: auto; }
-  .entry-content pre {
-    background: #000;
-    color: #f8f9fa;
-    font-size: 0.9em;
-    padding: 1.5em;
-    margin: 0 0 1.5em;
-    border-radius: 3px; }
+.entry-content h2, .entry-content h3 {
+  font-weight: 800;
+  margin-bottom: 0; }
+.entry-content p {
+  margin: 0 0 1.5em; }
+.entry-content table {
+  width: 100%;
+  border: 1px solid #eaedf2;
+  margin-bottom: 1.5em; }
+  .entry-content table caption {
+    margin: 0 0 7px;
+    font-size: 0.75em;
+    color: #9fa6b4;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+.entry-content tr {
+  border-bottom: 1px solid #eaedf2; }
+  .entry-content tr:nth-child(even) {
+    background-color: #f8f9fa; }
+.entry-content td {
+  padding: 7px;
+  border-right: 1px solid #eaedf2; }
+  .entry-content td:last-child {
+    border-right: 0; }
+.entry-content th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaedf2;
+  border-right: 1px solid #eaedf2; }
+  .entry-content th:last-child {
+    border-right: 0; }
+.entry-content blockquote {
+  margin: 0 0 1.5em 0.75em;
+  padding: 0 0 0 0.75em;
+  border-left: 3px solid #2980b9;
+  font-style: italic;
+  color: #9fa6b4; }
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em; }
+.entry-content img {
+  max-width: 100%;
+  height: auto; }
+.entry-content .size-auto,
+.entry-content .size-full,
+.entry-content .size-large,
+.entry-content .size-medium,
+.entry-content .size-thumbnail {
+  max-width: 100%;
+  height: auto; }
+.entry-content pre {
+  background: #000;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px; }
 
 .wp-caption {
   max-width: 100%;
@@ -2510,8 +2506,7 @@ you can add resource intensive styles.
     .grid header h2 {
       font-size: 18px;
       color: #666;
-      font-weight: bold;
-      padding-bottom: 10px; }
+      font-weight: bold; }
   .grid section {
     min-height: 110px; }
 
