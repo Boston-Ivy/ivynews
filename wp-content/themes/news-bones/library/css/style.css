@@ -1766,6 +1766,8 @@ article.hentry {
       padding: 0 20px; }
     article.hentry section h3 {
       margin: 10px 0 20px 0; }
+    article.hentry section p {
+      padding: 0; }
     article.hentry section ul {
       padding-left: 45px; }
       article.hentry section ul li {
@@ -1903,7 +1905,8 @@ article header {
     text-align: center; }
 
 .tags {
-  margin: 0; }
+  margin: 0;
+  font-size: 0.857em; }
   .tags a {
     display: inline-block; }
 
