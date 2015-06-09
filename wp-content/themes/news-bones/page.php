@@ -12,7 +12,7 @@
 
                     <header class="entry-header article-header">
                         <div class="overlay">
-                            <h1 class="h3 entry-title"  itemprop="headline" rel="bookmark">
+                            <h1 class="h3 entry-title" itemprop="headline" rel="bookmark">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                             </h1>
                             <span> <?php echo rwmb_meta( 'rw_tagline'); ?></span>

@@ -802,7 +802,7 @@ h1.single {
   footer {
     border-top: 1px solid $gray;
     background: $white;
-    padding: 0 5px;
+    padding: 20px;
 
     p {
       font-size: 13px;
@@ -821,10 +821,9 @@ h1.single {
 
   article {
 
-    header{
-      min-height:	126px;
-      padding-left: 12px;
-      padding-bottom: 20px;
+    header {
+      min-height: 126px;
+      padding: 20px;
     }
 
   }
@@ -836,6 +835,7 @@ article {
   header {
     min-height: 170px;
     position: relative;
+    padding: 10px 20px;
 
     span {
       color: $green;
@@ -860,6 +860,19 @@ article {
         color: $white;
       }
 
+    }
+
+  }
+
+  &.hentry section {
+    padding: 0 20px !important;
+
+    p {
+      padding: 0;
+    }
+
+    h3 {
+      margin: 10px 0 20px 0;
     }
 
   }
@@ -1233,7 +1246,7 @@ COMMENT FORM STYLES
 
 .comment-respond {
   @extend .cf;
-  padding: 1.5em;
+  padding: 20px;
   background: $white;
   margin-bottom: 40px;
 }

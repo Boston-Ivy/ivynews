@@ -1758,7 +1758,7 @@ h1.single {
   .hentry footer {
     border-top: 1px solid #eaedf2;
     background: #fff;
-    padding: 0 5px; }
+    padding: 20px; }
     .hentry footer p {
       font-size: 13px;
       margin: 0; }
@@ -1768,12 +1768,12 @@ h1.single {
 
 .single article header {
   min-height: 126px;
-  padding-left: 12px;
-  padding-bottom: 20px; }
+  padding: 20px; }
 
 article header {
   min-height: 170px;
-  position: relative; }
+  position: relative;
+  padding: 10px 20px; }
   article header span {
     color: #4dae36; }
   article header span.tagline {
@@ -1788,6 +1788,12 @@ article header {
     margin: 0; }
     article header h3 a, article header h2 a, article header h1 a {
       color: #fff; }
+article.hentry section {
+  padding: 0 20px !important; }
+  article.hentry section p {
+    padding: 0; }
+  article.hentry section h3 {
+    margin: 10px 0 20px 0; }
 
 .grid header span {
   color: #4dae36; }
@@ -2018,7 +2024,7 @@ COMMENT STYLES
 COMMENT FORM STYLES
 ******************************************************************/
 .comment-respond {
-  padding: 1.5em;
+  padding: 20px;
   background: #fff;
   margin-bottom: 40px; }
 
