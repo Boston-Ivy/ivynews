@@ -392,9 +392,9 @@ HOME STYLES
 
 }
 
-.secondary-posts {
+.secondary-post {
 
-  .entry {
+  &.entry {
 
     &:before {
       content: "";
@@ -408,7 +408,7 @@ HOME STYLES
     }
 
     h3 {
-      margin-top: 10px;
+      margin: 10px 0;
 
       span {
         color: $green;
@@ -438,6 +438,10 @@ HOME STYLES
       display: inline-block;
     }
 
+  }
+
+  h1 a {
+    color: $text-color !important;
   }
 
 }
@@ -470,8 +474,16 @@ HOME STYLES
 }
 
 /* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
-#Shares {
-  clear: both;
+#Insights {
+  padding-right: 0 !important;
+}
+
+#Bonds {
+  padding-right: 0 !important;
+}
+
+#Tech {
+  padding-right: 0 !important;
 }
 
 /* NEWSLETTER FORM HOME */
@@ -640,8 +652,6 @@ HOME STYLES
   }
 
   .stories {
-    border-top: 1px solid $black;
-    padding-top: 10px;
 
     &:after {
       @extend .clear;
@@ -649,11 +659,12 @@ HOME STYLES
 
   }
 
+
   .entry {
     font-size: 12px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid $black;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid $black;
 
     &:nth-child(4) {
       display: none;
@@ -732,7 +743,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 h1.single {

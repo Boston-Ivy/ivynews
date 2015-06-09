@@ -1513,20 +1513,20 @@ HOME STYLES
   #Hero p {
     margin-top: 0; }
 
-.secondary-posts .entry:before {
+.secondary-post.entry:before {
   content: "";
   width: 100%;
   display: table;
   border-top: 1px solid #333333; }
-.secondary-posts .entry:last-child {
+.secondary-post.entry:last-child {
   padding-right: 0; }
-.secondary-posts .entry h3 {
-  margin-top: 10px; }
-  .secondary-posts .entry h3 span {
+.secondary-post.entry h3 {
+  margin: 10px 0; }
+  .secondary-post.entry h3 span {
     color: #4dae36; }
-  .secondary-posts .entry h3 a {
+  .secondary-post.entry h3 a {
     color: #333333; }
-.secondary-posts .entry p {
+.secondary-post.entry p {
   font-size: 14px; }
 
 .herotext a {
@@ -1534,6 +1534,8 @@ HOME STYLES
   .herotext a span,
   .herotext a h1 {
     display: inline-block; }
+.herotext h1 a {
+  color: #333333 !important; }
 
 .heroimg {
   height: 240px; }
@@ -1555,8 +1557,14 @@ HOME STYLES
     display: none; }
 
 /* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
-#Shares {
-  clear: both; }
+#Insights {
+  padding-right: 0 !important; }
+
+#Bonds {
+  padding-right: 0 !important; }
+
+#Tech {
+  padding-right: 0 !important; }
 
 /* NEWSLETTER FORM HOME */
 .NewsText {
@@ -1659,14 +1667,11 @@ HOME STYLES
       padding: 5px 10px;
       color: #fff;
       display: inline-block; }
-  .NewsCats .stories {
-    border-top: 1px solid #000;
-    padding-top: 10px; }
   .NewsCats .entry {
     font-size: 12px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #000; }
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #000; }
     .NewsCats .entry:nth-child(4) {
       display: none; }
     .NewsCats .entry p {
@@ -1718,7 +1723,7 @@ HOME STYLES
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 10px; }
+  margin-top: 20px; }
 
 h1.single {
   font-size: 26px; }
@@ -2268,6 +2273,13 @@ tweeners.
   article header h1 {
     font-size: 26px !important; }
 
+  /* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
+  #Insights {
+    padding-right: 0.75em !important; }
+
+  #Bonds {
+    padding-right: 0.75em !important; }
+
   /*********************
   FOOTER STYLES
   *********************/
@@ -2382,6 +2394,9 @@ you can add resource intensive styles.
   /*********************
   HOME STYLES
   *********************/
+  .secondary-post.entry:nth-child(2) {
+    padding-right: 0; }
+
   #s {
     float: left;
     width: 200px; }
@@ -2489,15 +2504,8 @@ you can add resource intensive styles.
   .grid section {
     min-height: 110px; }
 
-  .NewsCats .stories {
-    border-top: none;
-    padding-top: 0; }
-
-  #Shares {
-    clear: none; }
-
-  #Insights {
-    clear: both; } }
+  .secondary-post.entry:nth-child(2) {
+    padding-right: 0.75em; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

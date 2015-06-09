@@ -386,6 +386,7 @@ function theme_front_page_settings() {
 	'post_status'      => 'publish',
 	'suppress_filters' => true ));
 	$front_page_elements = get_option("theme_name_front_page_elements");
+    $front_page_editors_choice = get_option("front_page_editors_choice");
 	$small_banner = get_option("front_page_small_banner");
 	$small_banner_link_url = get_option("front_page_small_banner_link_url");
 	$small_banner_link_target = get_option("front_page_small_banner_link_target");
@@ -417,6 +418,11 @@ function theme_front_page_settings() {
 	
 			update_option("front_page_hero_story",$_POST['hero_story']);
 		}
+
+        if(isset($_POST['editors_choice'])){
+
+            update_option("front_page_editors_choice",$_POST['editors_choice']);
+        }
 		
 		if(isset($_POST['newsletter_shortcode'])){
 	
@@ -459,17 +465,11 @@ function theme_front_page_settings() {
 			update_option("ideo_tracking", $_POST['ideo_tracking']);
 		}
 		
-		
-		
+		?>
 
-		
-		
-		
-		
-		
-		
-		?><div id="message" class="updated">Settings saved</div><?php
-	}
+        <div id="message" class="updated">Settings saved</div>
+
+        <?php }
 	
 ?>
 
@@ -489,80 +489,94 @@ function theme_front_page_settings() {
     <?php screen_icon('themes'); ?> <h2>Home Settings</h2>
  
     <form method="POST" action="">
+
         <div style="margin-top:30px;">
-         <h3>Hero Story</h3>
-    		<table>
-            	<tr>
-                	<td>
-			            <label for="hero_story">Select Post:</label>
+            <h3>Hero Story</h3>
+            <table>
+                <tr>
+                    <td>
+                        <label for="hero_story">Select Post:</label>
                     </td>
                     <td>
-			   			<select name="hero_story">
-        				<?php foreach ($posts as $post) : 
-						$post_cat =	get_the_category( $post->ID );
-						?>
-		            	<?php $selected = ($post->ID == $hero_story) ? "selected" : ""; ?>
-        		    		<option value="<?php echo $post->ID; ?>" <?php echo $selected; ?>>
-			                	<?php echo  $post_cat[0]->name ?> - <?php echo  $post->post_title; ?>
-		    		        </option>
-		        	    <?php endforeach; ?>
-               	       </select>       
+                        <select name="hero_story">
+                            <?php foreach ($posts as $post) :
+                                $post_cat =	get_the_category( $post->ID );
+                            ?>
+                            <?php $selected = ($post->ID == $hero_story) ? "selected" : ""; ?>
+                            <option value="<?php echo $post->ID; ?>" <?php echo $selected; ?>>
+                            <?php echo $post_cat[0]->name ?> - <?php echo  $post->post_title; ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
                     </td>
-                 </tr>
-               </table>
-           </div>
+                </tr>
+            </table>
+
+            <h3>Editor's Choice</h3>
+            <table>
+                <tr>
+                    <td>
+                        <label for="editors_choice">Select Post:</label>
+                    </td>
+                    <td>
+                        <select name="editors_choice">
+                            <?php foreach ($posts as $post) :
+                                $post_cat =	get_the_category( $post->ID );
+                                ?>
+                                <?php $selected = ($post->ID == $front_page_editors_choice) ? "selected" : ""; ?>
+                                <option value="<?php echo $post->ID; ?>" <?php echo $selected; ?>>
+                                    <?php echo $post_cat[0]->name ?> - <?php echo  $post->post_title; ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
        
-       
-       
-       
-       <div id="featuredCats">
+        <div id="featuredCats">
  
         <h3>Featured Categories on Home</h3>
-       
- 
+
         <ul id="featured-posts-list">
         		
-                 <li class="front-page-element" id="front-page-element-placeholder" style="display:none">
-    				<label for="element-page-id">Featured Category:</label>
-   					 <select name="element-page-id">
-                   
-       				 <?php foreach ($cats as $cat) : ?>
-			            <option value="<?php echo $cat->cat_ID; ?>">
-            			    <?php echo $cat->name; ?>
-			            </option>
-			        <?php endforeach; ?>
-				    </select>
-				    <a href="#">Remove</a>
-				</li>
+        <li class="front-page-element" id="front-page-element-placeholder" style="display:none">
+            <label for="element-page-id">Featured Category:</label>
+            <select name="element-page-id">
+            <?php foreach ($cats as $cat) : ?>
+            <option value="<?php echo $cat->cat_ID; ?>">
+            <?php echo $cat->name; ?>
+            </option>
+            <?php endforeach; ?>
+            </select>
+            <a href="#">Remove</a>
+        </li>
                 
-        
-        	
-            	<?php $element_counter = 0; 
-				foreach ($front_page_elements as $element) : ?>
-    			<li class="front-page-element" id="front-page-element-<?php echo $element_counter; ?>">
-        		<label for="element-page-id-<?php echo $element_counter; ?>">Featured Cateogry:</label>
-        		<select name="element-page-id-<?php echo $element_counter; ?>">
-        		<?php foreach ($cats as $cat) : ?>
-		            <?php $selected = ($cat->cat_ID == $element) ? "selected" : ""; ?>
-        		    <option value="<?php echo $cat->cat_ID; ?>" <?php echo $selected; ?>>
-                	<?php echo $cat->name; ?>
-		            </option>
-        	    <?php endforeach; ?>
-             
-	          </select>
- 
-        			<a href="#" onclick="removeElement(jQuery(this).closest('.front-page-element'));">Remove</a>
-   				</li>
+        <?php $element_counter = 0;
+        foreach ($front_page_elements as $element) : ?>
+        <li class="front-page-element" id="front-page-element-<?php echo $element_counter; ?>">
+            <label for="element-page-id-<?php echo $element_counter; ?>">Featured Cateogry:</label>
+            <select name="element-page-id-<?php echo $element_counter; ?>">
+                <?php foreach ($cats as $cat) : ?>
+                <?php $selected = ($cat->cat_ID == $element) ? "selected" : ""; ?>
+                <option value="<?php echo $cat->cat_ID; ?>" <?php echo $selected; ?>>
+                <?php echo $cat->name; ?>
+                </option>
+                <?php endforeach; ?>
+            </select>
+            <a href="#" onclick="removeElement(jQuery(this).closest('.front-page-element'));">Remove</a>
+        </li>
 		      
 		<?php
-		
-		 $element_counter++; 
+
+        $element_counter++;
 
 		endforeach; ?>
-            
-            
+
         </ul>
-        <a href="#" id="add-featured-post">Add featured Category</a> 
+
+        <a href="#" id="add-featured-post">Add featured Category</a>
+
         </div>
         
          <div style="margin-top:30px;">

@@ -10,52 +10,108 @@
 
             <main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-                <section id="slider" class="m-all t-all d-2of3 cf">
-                    <?php
-                        $hero_post = get_option("front_page_hero_story");
-                        if($hero_post){
-                        $post = get_post($hero_post);
-                        $hero_cat = get_the_category($hero_post);
-                        $parent_cats = get_category_parents($hero_cat[0]->cat_ID);
-                        $split_arr = split("/", $parent_cats);
-                        $exclude_cat = get_cat_id($split_arr[0]);
-                        $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' );
-                    ?>
+                <section class="m-all t-all d-all cf">
 
-                    <div id="Hero">
+                    <div class="m-all t-all d-2of3">
 
-                        <div class="m-all t-2of2 d-2of2 cf herotext">
-                            <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>">
+                        <?php
+                            $hero_post = get_option("front_page_hero_story");
+                            if($hero_post){
+                            $post = get_post($hero_post);
+                            $hero_cat = get_the_category($hero_post);
+                            $parent_cats = get_category_parents($hero_cat[0]->cat_ID);
+                            $split_arr = split("/", $parent_cats);
+                            $exclude_cat = get_cat_id($split_arr[0]);
+                            $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' );
+                        ?>
+
+                        <div id="Hero">
+
+                            <div class="m-all t-1of2 d-1of2 cf herotext">
                                 <span> <?php echo rwmb_meta( 'rw_tagline'); _e(': '); ?></span>
-                                <h1><?php echo $post->post_title ?></h1>
-                            </a>
-                        </div>
-
-                        <div class="m-all t-1of2 d-1of2 cf herotext">
-                            <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
-                            <p><a href="<?php echo get_permalink($post->ID); ?>"><?php _e('Read more &raquo;'); ?></a></p>
-                        </div>
-
-                        <div class="m-all t-1of2 d-1of2 last-col cf heroimg">
-                            <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>" style="background:url(<?php echo $feat_image[0] ?>) no-repeat center center;"></a>
-                        </div>
-
-                    </div>
-
-                    <div class="secondary-posts">
-
-                        <?php $args = array( 'posts_per_page' => 2, 'offset'=> 1 ); ?>
-                        <?php $loop = new WP_Query($args); while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                        <?php $do_not_duplicate[] = $post->ID; ?>
-
-                            <div class="m-all t-1of2 d-1of2 entry">
-                                <h3><span><?php _e('Tagline: '); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <h1><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title ?></a></h1>
                                 <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
+                                <p><a href="<?php echo get_permalink($post->ID); ?>"><?php _e('Read more &raquo;'); ?></a></p>
                             </div>
 
-                        <?php endwhile; ?>
+                            <div class="m-all t-1of2 d-1of2 last-col cf heroimg">
+                                <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>" style="background:url(<?php echo $feat_image[0] ?>) no-repeat center center;"></a>
+                            </div>
+
+                        </div>
 
                     </div>
+
+                    <div class="m-all t-all d-1of3 last-col">
+
+                        <script type="text/javascript">
+                            var _ipc = {
+                                api_key: '02F55TD5SZYNPCN7BONR',
+                                complete: function(){
+                                    jQuery(".idio__p").each(function(){
+                                        _this = jQuery(this);
+                                        _this.text(_this.text().substring(0, 118) + "...");
+                                    });
+                                    jQuery("#idio .title").css({
+                                        "background-image": "url(" + jQuery(".idio__entry[data-image]").first().data('image') + ")",
+                                        "background-repeat": "no-repeat",
+                                        "background-size": "cover"
+                                    });
+                                }
+                            };
+                        </script>
+
+                        <script type="text/javascript" src="//s.idio.co/ip.js"></script>
+
+                        <section id="idio" class="m-all t-all d-all cf NewsCats">
+
+                            <div class="cat">
+                                <div class="stories">
+                                    <script class="idio-recommendations" type="text/x-mustache" data-rpp="2" data-fallback-section="1">
+                                    {{#content}}
+                                        <div class="entry idio__entry" {{#main_image_url}}data-image="{{main_image_url}}?w=300&amp;h=100" {{/main_image_url}}>
+                                            <h3><span>Recommended:</span> <a href="{{link_url}}" rel="bookmark" title="{{title}}">{{title}}</a></h3>
+                                            <p><font class="idio__p">{{abstract}}</font></p>
+                                        </div>
+                                    {{/content}}
+                                    </script>
+
+                                    <?php
+                                    $editors_choice = get_option("front_page_editors_choice");
+                                    if($editors_choice){
+                                    $post = get_post($editors_choice);
+                                    ?>
+
+                                    <div class="entry">
+                                        <h3><span><?php _e("Editor's choice: "); ?></span><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title ?></a></h3>
+                                        <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
+                                    </div>
+
+                                    <?php } ?>
+
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <script>idio.render()</script>
+
+                    </div>
+
+                </section>
+
+                <section class="m-all t-all d-all">
+
+                    <?php $args = array( 'posts_per_page' => 2, 'offset'=> 1 ); ?>
+                    <?php $loop = new WP_Query($args); while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <?php $do_not_duplicate[] = $post->ID; ?>
+
+                        <div class="m-all t-1of2 d-1of3 secondary-post entry">
+                            <h3><span><?php _e('Tagline: '); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
+                        </div>
+
+                    <?php endwhile; ?>
 
                     <?php }
 
@@ -63,65 +119,36 @@
 
                     if(isset($small_banner_url)){
 
-                    $small_banner_link_url = get_option("front_page_small_banner_link_url");
-                    if(empty($small_banner_link_url)){
-                        $small_banner_link_url = "#";
-                    } ?>
+                        $small_banner_link_url = get_option("front_page_small_banner_link_url");
+                        if(empty($small_banner_link_url)){
+                            $small_banner_link_url = "#";
+                        } ?>
 
                     <?php } ?>
 
-                </section>
+                    <div class="m-all t-all d-1of3 last-col">
 
-                <script type="text/javascript">
-                    var _ipc = {
-                        api_key: '02F55TD5SZYNPCN7BONR',
-                        complete: function(){
-                            jQuery(".idio__p").each(function(){
-                                _this = jQuery(this);
-                                _this.text(_this.text().substring(0, 118) + "...");
-                            });
-                            jQuery("#idio .title").css({
-                                "background-image": "url(" + jQuery(".idio__entry[data-image]").first().data('image') + ")",
-                                "background-repeat": "no-repeat",
-                                "background-size": "cover"
-                            });
-                        }
-                    };
-                </script>
+                        <?php
 
-                <script type="text/javascript" src="//s.idio.co/ip.js"></script>
+                        $newsletter_shortcode = get_option("front_page_newsletter_shortcode");
 
-                <section class="m-all t-1of2 d-1of3 last-col cf NewsCats" id='idio'>
-                    <div class="cat">
-                        <div class='stories'>
-                            <script class="idio-recommendations" type="text/x-mustache" data-rpp="4" data-fallback-section="1">
-                                {{#content}}
-                                    <div class="entry idio__entry" {{#main_image_url}}data-image="{{main_image_url}}?w=300&amp;h=100" {{/main_image_url}}>
-                                        <h3><span>Recommended:</span> <a href="{{link_url}}" rel="bookmark" title="{{title}}">{{title}}</a></h3>
-                                        <p><font class="idio__p">{{abstract}}</font></p>
-                                    </div>
-                                {{/content}}
-                            </script>
-                        </div>
-                    </div>
-                    <?php
+                        if($newsletter_shortcode) {
 
-                    $newsletter_shortcode = get_option("front_page_newsletter_shortcode");
+                            ?>
 
-                    if($newsletter_shortcode) {
-
-                        ?>
-
-                        <div class="subscribe-form">
-                            <div class="inner">
-                                <?php echo do_shortcode($newsletter_shortcode); ?>
+                            <div class="subscribe-form">
+                                <div class="inner">
+                                    <?php echo do_shortcode($newsletter_shortcode); ?>
+                                </div>
                             </div>
-                        </div>
 
-                    <?php } ?>
+                        <?php } ?>
+
+                    </div>
+
                 </section>
 
-                <script>idio.render()</script>
+                <section class="m-all t-all d-all">
 
                 <?php
                 $cats = get_option("theme_name_front_page_elements");
@@ -148,15 +175,16 @@
                     if(empty($banner_text_url)){ $banner_text_url = "#";}
                     if(empty($banner_text_target)){ $banner_text_target = "_self";}
                 ?>
-                    <div class="clearfix"></div>
-                    <a href="<?php echo $banner_text_url ?>" target="<?php echo $banner_text_target ?>" title="<?php echo $banner_text ?>">
-                        <div class="mid-home-banner m-all cf">
-                            <h2><?php echo $banner_text ?></h2>
-                        </div>
-                    </a>
+                    <section class="m-all t-all d-all">
+                        <a href="<?php echo $banner_text_url ?>" target="<?php echo $banner_text_target ?>" title="<?php echo $banner_text ?>">
+                            <div class="mid-home-banner m-all cf">
+                                <h2><?php echo $banner_text ?></h2>
+                            </div>
+                        </a>
+                    </section>
                 <?php }
 
-                $args = array('posts_per_page' => 1,'cat' => $cat_ID );
+                $args = array( 'posts_per_page' => 1, 'cat' => $cat_ID );
 
                 if($cat_ID == $exclude_cat){
                     $args['post__not_in'] = array($hero_post);
@@ -172,7 +200,7 @@
                 endif;
                 wp_reset_query(); ?>
 
-                <section id="<?php echo $cat_name ?>" class="m-all t-1of2 d-1of3 <?php echo $lastCol?> cf NewsCats">
+                <section class="m-all t-1of3 d-1of3 cf NewsCats <?php echo $lastCol?>" id="<?php echo $cat_name ?>">
 
                     <div class="cat">
 
@@ -253,6 +281,8 @@
                     break;
                 }
                 endforeach; ?>
+
+                </section>
 
             </main>
 

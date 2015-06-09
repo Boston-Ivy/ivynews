@@ -55,15 +55,10 @@ be seen on the Desktop.
 
 }
 
-.NewsCats .stories {
-  border-top: none;
-  padding-top: 0;
-}
+.secondary-post {
 
-#Shares {
-  clear: none;
-}
+  &.entry:nth-child(2) {
+    padding-right: 0.75em;
+  }
 
-#Insights {
-  clear: both;
 }

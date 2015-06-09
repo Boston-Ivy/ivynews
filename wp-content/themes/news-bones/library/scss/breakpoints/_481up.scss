@@ -112,6 +112,15 @@ article header h1 {
   font-size: 26px !important;
 }
 
+/* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
+#Insights {
+  padding-right: 0.75em !important;
+}
+
+#Bonds {
+  padding-right: 0.75em !important;
+}
+
 /*********************
 FOOTER STYLES
 *********************/
