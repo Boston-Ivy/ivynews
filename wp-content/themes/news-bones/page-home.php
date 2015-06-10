@@ -27,9 +27,12 @@
 
                         <div id="Hero">
 
-                            <div class="m-all t-1of2 d-1of2 cf herotext">
+                            <div class="m-all t2of2 d2of2 herotext">
                                 <span> <?php echo rwmb_meta( 'rw_tagline'); _e(': '); ?></span>
                                 <h1><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title ?></a></h1>
+                            </div>
+
+                            <div class="m-all t-1of2 d-1of2 cf herotext">
                                 <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
                                 <p><a href="<?php echo get_permalink($post->ID); ?>"><?php _e('Read more &raquo;'); ?></a></p>
                             </div>
