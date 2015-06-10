@@ -696,12 +696,19 @@ HOME STYLES
   }
 
   .more_stories {
+    font-size: 12px;
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
     float: right;
     background: $green;
-    color: $white;
-    padding: 3px 7px;
-    text-decoration: none;
+    padding: 6px 10px;
     margin-top: 0;
+
+    &:hover {
+      background-color: $dark-grey;
+    }
+
   }
 
 }

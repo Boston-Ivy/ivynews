@@ -1677,12 +1677,16 @@ HOME STYLES
       .NewsCats .entry p a:hover {
         text-decoration: underline; }
   .NewsCats .more_stories {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
     float: right;
     background: #4dae36;
-    color: #fff;
-    padding: 3px 7px;
-    text-decoration: none;
+    padding: 6px 10px;
     margin-top: 0; }
+    .NewsCats .more_stories:hover {
+      background-color: #333333; }
 
 .learn {
   float: left;
