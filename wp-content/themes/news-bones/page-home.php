@@ -216,10 +216,8 @@
 
                     if (have_posts()) : ?>
 
-                        <div class="title" style='background: url(<?php echo $feat_image[0]?>) no-repeat; background-size: cover; '>
-                            <span><?php echo $cat_name;?></span>
-                        </div>
-
+                        <h3 class="cat-title"><?php echo $cat_name;?></h3>
+                        <div class="cat-thumb" style="background-image: url(<?php echo $feat_image[0]?>);"></div>
                         <div class='stories'>
 
                         <?php

@@ -1639,18 +1639,19 @@ HOME STYLES
       color: #4dae36; }
   .NewsCats p {
     margin-bottom: 10px; }
-  .NewsCats .title {
+  .NewsCats .cat-title {
+    font-size: 1.125em;
+    color: #4dae36;
+    margin: 0 0 10px 0; }
+  .NewsCats .cat-thumb {
+    width: 100%;
     height: 100px;
-    position: relative;
-    margin-bottom: 10px; }
-    .NewsCats .title span {
-      position: absolute;
-      top: 0;
-      left: 15px;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 5px 10px;
-      color: #fff;
-      display: inline-block; }
+    margin-bottom: 10px;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
   .NewsCats .entry {
     font-size: 12px;
     margin-bottom: 20px;
