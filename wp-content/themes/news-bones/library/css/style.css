@@ -1593,16 +1593,6 @@ HOME STYLES
       .subscribe-form .inner .field-group .btn:hover {
         background-color: #666666; }
 
-.textwidget .subscribe-form .inner .field-group label {
-  margin-bottom: 10px;
-  float: none;
-  display: block; }
-.textwidget .subscribe-form .inner .field-group .search-field {
-  max-width: 100%;
-  margin: 0 -64px 0 0;
-  float: left;
-  padding-right: 76px; }
-
 .epm-sign-up-form {
   padding: 7px 10px; }
 
@@ -2088,6 +2078,11 @@ SIDEBARS & ASIDES
 
 .textwidget img {
   width: 100%; }
+.textwidget .NewsCats {
+  float: none; }
+  .textwidget .NewsCats .cat-title {
+    padding: 15px;
+    margin-bottom: 0; }
 
 .widgettitle {
   border-bottom: 1px solid #eaedf2;
@@ -2486,7 +2481,10 @@ you can add resource intensive styles.
   .grid header {
     min-height: 170px; }
   .grid section {
-    min-height: 105px; } }
+    min-height: 105px; }
+
+  #click-menu {
+    display: none !important; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
