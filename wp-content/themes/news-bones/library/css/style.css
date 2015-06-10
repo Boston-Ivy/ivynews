@@ -1332,7 +1332,7 @@ HEADER STYLES
   background-color: #fff;
   border-bottom: #eaedf2 1px solid; }
   .header #inner-header {
-    padding-top: 35px; }
+    padding-top: 20px; }
   .header .logo {
     width: 246px;
     height: 65px;
@@ -2179,7 +2179,7 @@ FOOTER STYLES
   line-height: 22px; }
 
 .ticker-stocks-container {
-  margin-top: 35px; }
+  margin-top: 20px; }
   .ticker-stocks-container .simply-scroll {
     padding: 0;
     border-bottom: none;
