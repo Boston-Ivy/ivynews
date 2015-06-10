@@ -608,6 +608,11 @@ HOME STYLES
 
 /*CATEGORY BOXES ON HOME */
 
+.NewsCats .idio-recommendations .entry:first-child {
+  border-top: 1px solid $black;
+  padding-top: 10px;
+}
+
 .NewsCats {
   margin-bottom: 10px;
 
@@ -634,6 +639,8 @@ HOME STYLES
     font-size: 1.125em;
     color: $green;
     margin: 0 0 10px 0;
+    border-bottom: 1px solid $black;
+    padding-bottom: 10px;
   }
 
   .cat-thumb {
