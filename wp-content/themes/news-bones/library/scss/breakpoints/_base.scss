@@ -742,14 +742,15 @@ HOME STYLES
 }
 
 .mid-home-banner {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background :#c1377f;
-  padding: 10px;
+  padding: 20px;
 
   h2 {
     color: $white;
     text-decoration: none;
     text-align: center;
+    margin: 0;
 
     a {
       color: $white;

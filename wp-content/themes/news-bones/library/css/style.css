@@ -1711,13 +1711,14 @@ HOME STYLES
   background: #f05e32; }
 
 .mid-home-banner {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background: #c1377f;
-  padding: 10px; }
+  padding: 20px; }
   .mid-home-banner h2 {
     color: #fff;
     text-decoration: none;
-    text-align: center; }
+    text-align: center;
+    margin: 0; }
     .mid-home-banner h2 a {
       color: #fff; }
 
