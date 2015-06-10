@@ -1346,15 +1346,24 @@ SIDEBARS & ASIDES
 	
 .textwidget {
 
+  a {
+
+    &.external {
+      display: block;
+    }
+
+  }
+
   img {
     width: 100%;
+    vertical-align: bottom;
   }
 
   .NewsCats {
     float: none;
 
     .cat-title {
-      padding: 15px;
+      padding: 15px 10px;
       margin-bottom: 0;
     }
 

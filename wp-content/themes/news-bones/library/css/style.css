@@ -2076,12 +2076,15 @@ SIDEBARS & ASIDES
 .sidebar img {
   width: auto; }
 
+.textwidget a.external {
+  display: block; }
 .textwidget img {
-  width: 100%; }
+  width: 100%;
+  vertical-align: bottom; }
 .textwidget .NewsCats {
   float: none; }
   .textwidget .NewsCats .cat-title {
-    padding: 15px;
+    padding: 15px 10px;
     margin-bottom: 0; }
 
 .widgettitle {
