@@ -1561,22 +1561,35 @@ HOME STYLES
 .subscribe-form {
   margin: 0 0 10px 0; }
   .subscribe-form .inner {
-    padding: 15px;
+    padding: 11px;
     background-color: #333333; }
+    .subscribe-form .inner .field-group h3 {
+      color: #fff;
+      margin: 0 0 10px 0; }
     .subscribe-form .inner .field-group label {
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 14px;
       color: #fff;
       display: block;
-      margin-bottom: 15px; }
+      margin-bottom: 10px; }
     .subscribe-form .inner .field-group .search-field {
       max-width: 100%;
-      margin: 0 -64px 0 0;
+      height: 38px;
+      margin: 0 -130px 0 0;
       float: left;
-      padding-right: 76px; }
+      padding-right: 142px;
+      font-size: 12px; }
     .subscribe-form .inner .field-group .btn {
+      width: 130px;
+      height: 38px;
       float: right;
-      background-color: #4dae36; }
+      background-color: #4dae36;
+      font-size: 12px;
+      font-weight: bold;
+      border-left: 10px solid #333333;
+      -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      -o-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3); }
       .subscribe-form .inner .field-group .btn:hover {
         background-color: #666666; }
 
