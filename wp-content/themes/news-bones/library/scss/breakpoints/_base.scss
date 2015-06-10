@@ -661,6 +661,11 @@ HOME STYLES
     padding-top: 10px;
     border-top: 1px solid $black;
 
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
     &:nth-child(4) {
       display: none;
     }
