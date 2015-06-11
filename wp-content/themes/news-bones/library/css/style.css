@@ -1474,7 +1474,7 @@ header .searchform input.search-field {
 MAIN STYLES
 *********************/
 #main {
-  margin-bottom: 60px; }
+  margin-bottom: 30px; }
 
 /*********************
 HOME STYLES
@@ -1724,7 +1724,6 @@ HOME STYLES
   background: #f05e32; }
 
 .mid-home-banner {
-  margin-bottom: 20px;
   background: #c1377f;
   padding: 20px; }
   .mid-home-banner h2 {
