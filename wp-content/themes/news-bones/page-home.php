@@ -28,7 +28,20 @@
                         <div id="Hero">
 
                             <div class="m-all t2of2 d2of2 herotext">
-                                <h1><a href="<?php echo get_permalink($post->ID); ?>"><span><?php echo rwmb_meta( 'rw_tagline'); _e(': '); ?></span><?php echo $post->post_title ?></a></h1>
+                                <h1>
+                                    <a href="<?php echo get_permalink($post->ID); ?>">
+                                        <?php
+                                        $intro = rwmb_meta( 'rw_tagline');
+
+                                        if (!empty($intro)) {
+                                            _e('<span>'); echo $excerpt = $intro; _e(': </span>');
+                                        } else {
+                                            // do nothing
+                                        }
+                                        ?>
+                                        <?php echo $post->post_title ?>
+                                    </a>
+                                </h1>
                             </div>
 
                             <div class="m-all t-1of2 d-1of2 cf herotext">
@@ -37,7 +50,7 @@
                             </div>
 
                             <div class="m-all t-1of2 d-1of2 last-col cf heroimg">
-                                <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>" style="background:url(<?php echo $feat_image[0] ?>) no-repeat center center;"></a>
+                                <a href="<?php echo get_permalink($post->ID); ?>" class="hero-thumb" title="<?php echo $post->post_title ?>" style="background-image: url(<?php echo $feat_image[0] ?>);"></a>
                             </div>
 
                         </div>
@@ -110,7 +123,17 @@
 
                         <div class="m-all t-1of2 d-1of3 secondary-post entry">
                             <h3><span><?php _e('Tagline: '); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
+                            <?php
+                            $intro = rwmb_meta( 'rw_intro');
+
+                            if(!empty($intro)){
+                                $excerpt = $intro;
+                            }else{
+                                $excerpt = get_the_excerpt();
+                            }
+                            ?>
+
+                            <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 24); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
                         </div>
 
                     <?php endwhile; ?>
@@ -234,7 +257,7 @@
                                 }
                                 ?>
 
-                                <p><?php  echo string_limit_words($excerpt,18);  ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
+                                <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 18); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
 
                             </div>
 
