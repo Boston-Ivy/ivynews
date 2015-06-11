@@ -203,7 +203,7 @@
                 if (have_posts()) :
                     while (have_posts()) : the_post();
 
-                    $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-300' );
+                    $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-800' );
 
                     endwhile;
                 endif;
