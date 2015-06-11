@@ -364,7 +364,7 @@ HOME STYLES
   width: 100%;
   overflow: hidden;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   img {
     width: 100%;
@@ -451,10 +451,19 @@ HOME STYLES
     color: $text-color !important;
   }
 
+  p:last-child {
+    margin-bottom: 0;
+
+    a {
+      margin-bottom: 0;
+    }
+
+  }
+
 }
 
 .heroimg {
-  height: 240px;
+  height: 220px;
 
   a {
     width: 100%;

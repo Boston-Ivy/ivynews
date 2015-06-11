@@ -86,7 +86,7 @@
 
                                     <div class="entry">
                                         <h3><span><?php _e("Editor's choice: "); ?></span><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title ?></a></h3>
-                                        <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
+                                        <p><?php $string = rwmb_meta( 'rw_intro'); $trimmedText = shorten_string($string, 22); echo $trimmedText ?></p>
                                     </div>
 
                                     <?php } ?>

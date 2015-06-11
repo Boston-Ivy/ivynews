@@ -296,6 +296,25 @@ function bones_register_sidebars() {
 	*/
 } // don't remove this bracket!
 
+// Shorten string function
+function shorten_string($oldstring, $wordsreturned)
+{
+    $retval = $string;
+    $string = preg_replace('/(?<=\S,)(?=\S)/', ' ', $oldstring);
+    $string = str_replace("\n", " ", $string);
+    $array = explode(" ", $string);
+    if (count($array)<=$wordsreturned)
+    {
+        $retval = $string;
+    }
+    else
+    {
+        array_splice($array, $wordsreturned);
+        $retval = implode(" ", $array)."&hellip;";
+    }
+    return $retval;
+}
+
 
 /************* COMMENT LAYOUT *********************/
 
