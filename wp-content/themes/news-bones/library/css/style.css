@@ -1295,6 +1295,9 @@ a:visited {
   a:visited:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
+.current-post-ancestor {
+  background-color: #4dae36; }
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -1683,7 +1686,8 @@ HOME STYLES
     float: right;
     background: #4dae36;
     padding: 6px 10px;
-    margin-top: 0; }
+    margin-top: 0;
+    display: inline-block; }
     .NewsCats .more_stories:hover {
       background-color: #333333; }
 
@@ -2091,7 +2095,8 @@ SIDEBARS & ASIDES
   float: none; }
   .textwidget .NewsCats .cat-title {
     padding: 15px 10px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    border-bottom: none; }
 
 .widgettitle {
   border-bottom: 1px solid #eaedf2;
@@ -2249,15 +2254,8 @@ tweeners.
   them in here, they won't work.
   */
   img {
-    width: 100%; }
-
-  #logo {
-    display: block; }
-    #logo a img {
-      width: 230px; }
-
-  #mlogo {
-    display: none !important; }
+    max-width: 100%;
+    height: inherit; }
 
   .overlay span {
     display: block; }
@@ -2467,9 +2465,9 @@ you can add resource intensive styles.
   .overlay span {
     color: #4dae36; }
 
-  /*********************
+  /************************
   SINGLE POST / PAGE STYLES
-  *********************/
+  ************************/
   article header h1 {
     font-size: 24px !important;
     margin: 0;
