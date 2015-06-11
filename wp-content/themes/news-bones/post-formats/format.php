@@ -3,9 +3,7 @@
     <header class="entry-header article-header cf">
         <div class="m-all t-1of2 d-1of2 cf herotext">
             <span class="tagline"><?php echo rwmb_meta('rw_tagline'); ?></span>
-
             <h1 class="entry-title single" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
-
             <div class="byline entry-meta vcard">
                 <p class="tags"><?php printf(__('Posted by: %1$s', 'bonestheme'),
                         /* the author of the post */
