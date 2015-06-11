@@ -285,7 +285,7 @@ HEADER STYLES
 
 }
 	
-#breadcrumbs{
+#breadcrumbs {
   margin-top: 10px;
 }
 
@@ -347,6 +347,10 @@ header {
   }
 
 }
+
+/*********************
+MAIN STYLES
+*********************/
 
 #main {
   margin-bottom: 60px;
@@ -746,7 +750,7 @@ HOME STYLES
 
 .mid-home-banner {
   margin-bottom: 20px;
-  background :#c1377f;
+  background: #c1377f;
   padding: 20px;
 
   h2 {
@@ -928,27 +932,27 @@ article {
 
   header {
 
-      span {
-         color: $green;
+    span {
+      color: $green;
 
-        &.tagline {
-          margin-top: 10px;
-          font-size: 16px;
-          display: block;
+      &.tagline {
+        margin-top: 10px;
+        font-size: 16px;
+        display: block;
 
-          &+ h2 {
-            margin-top: 0;
-          }
-
+        &+ h2 {
+          margin-top: 0;
         }
 
       }
 
-      h2 {
-        font-size: 16px;
-        color: $mid-grey;
-        font-weight: bold;
-      }
+    }
+
+    h2 {
+      font-size: 16px;
+      color: $mid-grey;
+      font-weight: bold;
+    }
 
   }
 		
@@ -1125,7 +1129,8 @@ PAGE NAVI STYLES
     border-right: 1px solid $gray;
   }
 
-  a, span {
+  a,
+  span {
     margin: 0;
     text-decoration: none;
     padding: 0;
@@ -1137,7 +1142,8 @@ PAGE NAVI STYLES
     display: block;
     color: $blue;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $blue;
       color: $white;
     }
@@ -1148,7 +1154,8 @@ PAGE NAVI STYLES
     cursor: default;
     color: $text-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $white;
       color: $text-color;
     }
@@ -1202,12 +1209,11 @@ COMMENT STYLES
   }
 
   .vcard {
+    margin-left: 50px;
 
     p {
       margin: 0;
     }
-
-    margin-left: 50px;
 
     cite.fn {
       font-weight: 700;
@@ -1315,7 +1321,7 @@ COMMENT FORM STYLES
   margin: 0;
 
   a {
-      color: $text-color;
+    color: $text-color;
   }
 
 }
@@ -1563,7 +1569,6 @@ FOOTER STYLES
             width: 280px !important;
             display: block !important;
           }
-
 
         }
 

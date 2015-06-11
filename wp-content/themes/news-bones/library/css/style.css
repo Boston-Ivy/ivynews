@@ -1470,6 +1470,9 @@ header .searchform input.search-field {
   width: 240px;
   float: left; }
 
+/*********************
+MAIN STYLES
+*********************/
 #main {
   margin-bottom: 60px; }
 
@@ -1940,7 +1943,8 @@ PAGE NAVI STYLES
     display: inline;
     overflow: hidden;
     border-right: 1px solid #eaedf2; }
-  .pagination a, .pagination span {
+  .pagination a,
+  .pagination span {
     margin: 0;
     text-decoration: none;
     padding: 0;
@@ -1951,7 +1955,9 @@ PAGE NAVI STYLES
     min-width: 1em;
     display: block;
     color: #2980b9; }
-    .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+    .pagination a:hover, .pagination a:focus,
+    .pagination span:hover,
+    .pagination span:focus {
       background-color: #2980b9;
       color: #fff; }
   .pagination .current {
