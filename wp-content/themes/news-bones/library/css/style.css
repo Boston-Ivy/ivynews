@@ -2101,8 +2101,8 @@ SIDEBARS & ASIDES
   float: none; }
   .textwidget .NewsCats .cat-title {
     padding: 15px 10px;
-    margin-bottom: 0;
-    border-bottom: none; }
+    margin-top: 0;
+    border-top: none; }
 
 .widgettitle {
   border-bottom: 1px solid #eaedf2;
