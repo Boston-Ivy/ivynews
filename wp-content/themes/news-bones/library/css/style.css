@@ -919,7 +919,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .green-btn:active, .comment-reply-link:active, #submit:active {
     background-color: #449b30; }
 
-.btn {
+.btn, body .contactform11 .wdform-page-and-images button {
   width: auto;
   height: inherit;
   display: inline-block;
@@ -937,17 +937,17 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   background-image: none;
   border: none;
   white-space: nowrap; }
-  .btn.btn-green {
+  .btn.btn-green, body .contactform11 .wdform-page-and-images button.btn-green {
     background-color: #4dae36; }
-    .btn.btn-green:hover {
+    .btn.btn-green:hover, body .contactform11 .wdform-page-and-images button.btn-green:hover {
       background-color: #666666; }
-  .btn.btn-grey {
+  .btn.btn-grey, body .contactform11 .wdform-page-and-images button.btn-grey {
     background-color: #666666; }
-    .btn.btn-grey:hover {
+    .btn.btn-grey:hover, body .contactform11 .wdform-page-and-images button.btn-grey:hover {
       background-color: #000; }
-  .btn.btn-black {
+  .btn.btn-black, body .contactform11 .wdform-page-and-images button.btn-black {
     background-color: #000; }
-    .btn.btn-black:hover {
+    .btn.btn-black:hover, body .contactform11 .wdform-page-and-images button.btn-black:hover {
       background-color: #666666; }
 
 /******************************************************************
@@ -1587,7 +1587,7 @@ HOME STYLES
       float: left;
       padding-right: 142px;
       font-size: 12px; }
-    .subscribe-form .inner .field-group .btn {
+    .subscribe-form .inner .field-group .btn, .subscribe-form .inner .field-group body .contactform11 .wdform-page-and-images button, body .contactform11 .wdform-page-and-images .subscribe-form .inner .field-group button {
       width: 130px;
       height: 38px;
       float: right;
@@ -1599,7 +1599,7 @@ HOME STYLES
       -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
       -o-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3); }
-      .subscribe-form .inner .field-group .btn:hover {
+      .subscribe-form .inner .field-group .btn:hover, .subscribe-form .inner .field-group body .contactform11 .wdform-page-and-images button:hover, body .contactform11 .wdform-page-and-images .subscribe-form .inner .field-group button:hover {
         background-color: #666666; }
 
 .epm-sign-up-form {
@@ -2243,6 +2243,26 @@ FOOTER STYLES
   right: 0;
   left: auto;
   width: 45px; }
+
+/* ##################
+Contact form overrides
+##################### */
+body .contactform11 .wdform-page-and-images {
+  padding: 0; }
+  body .contactform11 .wdform-page-and-images * {
+    font-family: inherit; }
+  body .contactform11 .wdform-page-and-images .wdform-field {
+    padding: 0; }
+  body .contactform11 .wdform-page-and-images .wdform-label {
+    font-size: 12px; }
+  body .contactform11 .wdform-page-and-images button {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 20px; }
+    body .contactform11 .wdform-page-and-images button:hover {
+      background-color: #4dae36; }
+    body .contactform11 .wdform-page-and-images button.button-submit {
+      margin-right: 10px; }
 
 /*********************
 LARGER MOBILE DEVICES
