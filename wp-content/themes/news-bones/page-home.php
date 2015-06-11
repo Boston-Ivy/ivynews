@@ -168,24 +168,8 @@
 
                 $lastCol = '';
                 if($i==0 || $i== 3 || $i==6){
-                $lastCol = "last-col";
+                    $lastCol = "last-col";
                 }
-                $banner_text = get_option("banner_text");
-                $banner_text_url = get_option("front_page_banner_text_link_url");
-                $banner_text_target = get_option("front_page_banner_text_link_target");
-
-                if($i==4 && !empty($banner_text)){
-                    if(empty($banner_text_url)){ $banner_text_url = "#";}
-                    if(empty($banner_text_target)){ $banner_text_target = "_self";}
-                ?>
-                    <section class="m-all t-all d-all">
-                        <a href="<?php echo $banner_text_url ?>" target="<?php echo $banner_text_target ?>" title="<?php echo $banner_text ?>">
-                            <div class="mid-home-banner m-all cf">
-                                <h2><?php echo $banner_text ?></h2>
-                            </div>
-                        </a>
-                    </section>
-                <?php }
 
                 $args = array( 'posts_per_page' => 1, 'cat' => $cat_ID );
 
@@ -284,6 +268,34 @@
                 endforeach; ?>
 
                 </section>
+
+                <?php
+
+                $banner_text = get_option("banner_text");
+                $banner_text_url = get_option("front_page_banner_text_link_url");
+                $banner_text_target = get_option("front_page_banner_text_link_target");
+
+                if (!empty($banner_text)) {
+
+                    if (empty($banner_text_url)) {
+                        $banner_text_url = "#";
+                    }
+
+                    if (empty($banner_text_target)) {
+                        $banner_text_target = "_self";
+                    }
+
+                ?>
+
+                <section class="m-all t-all d-all">
+                    <a href="<?php echo $banner_text_url ?>" target="<?php echo $banner_text_target ?>" title="<?php echo $banner_text ?>">
+                        <div class="mid-home-banner m-all cf">
+                            <h2><?php echo $banner_text ?></h2>
+                        </div>
+                    </a>
+                </section>
+
+                <?php } ?>
 
             </main>
 
