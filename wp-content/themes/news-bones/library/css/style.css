@@ -2214,7 +2214,8 @@ FOOTER STYLES
   .ticker-stocks-container .simply-scroll {
     padding: 0;
     border-bottom: none;
-    background: #fff; }
+    background: #fff;
+    filter: none; }
 
 .video-container {
   position: relative;
