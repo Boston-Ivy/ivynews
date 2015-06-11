@@ -308,10 +308,6 @@ header {
 	li {
       padding: 0;
 
-      &:hover a {
-        border-right: 1px solid transparent;
-      }
-
       a {
         display: block;
         color: $white;
@@ -804,6 +800,24 @@ POSTS & CONTENT STYLES
       margin-right: 10px;
     }
 
+  }
+
+}
+
+.page {
+
+  .NewsCats .entry {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}
+
+.home {
+
+  .NewsCats .entry {
+    margin-left: 0;
+    margin-right: 0;
   }
 
 }
@@ -1448,6 +1462,10 @@ FOOTER STYLES
 
       &:last-child {
         margin-right: 0;
+      }
+
+      &.current-menu-item {
+        background-color: transparent;
       }
 
       &:hover {

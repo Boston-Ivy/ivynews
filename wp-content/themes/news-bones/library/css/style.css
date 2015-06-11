@@ -1455,8 +1455,6 @@ header .nav {
   clear: both; }
   header .nav li {
     padding: 0; }
-    header .nav li:hover a {
-      border-right: 1px solid transparent; }
     header .nav li a {
       display: block;
       color: #fff;
@@ -1748,6 +1746,14 @@ POSTS & CONTENT STYLES
   .archive .NewsCats .entry {
     margin-left: 10px;
     margin-right: 10px; }
+
+.page .NewsCats .entry {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.home .NewsCats .entry {
+  margin-left: 0;
+  margin-right: 0; }
 
 #content {
   margin-top: 20px; }
@@ -2140,6 +2146,8 @@ FOOTER STYLES
       margin: 0 15px 0 0; }
       .footer nav li:last-child {
         margin-right: 0; }
+      .footer nav li.current-menu-item {
+        background-color: transparent; }
       .footer nav li:hover {
         background-color: transparent; }
         .footer nav li:hover a {
