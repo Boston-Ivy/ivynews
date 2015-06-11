@@ -250,7 +250,7 @@
                                     echo '<h2>No Posts for '.$cat_name.' Category</h2>';
                                 endif;
 
-                                wp_reset_query; ?>
+                                wp_reset_query(); ?>
 
                                 <?php echo category_description( $cat_ID); ?>
 
