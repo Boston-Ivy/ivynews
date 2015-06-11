@@ -686,7 +686,7 @@ HOME STYLES
 
   .entry {
     font-size: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-top: 10px;
     border-top: 1px solid $black;
 
@@ -697,6 +697,10 @@ HOME STYLES
 
     &:nth-child(4) {
       display: none;
+    }
+
+    &.editors-choice {
+      margin-bottom: 0;
     }
 
     p {

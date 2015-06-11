@@ -1673,7 +1673,7 @@ HOME STYLES
     background-size: cover; }
   .NewsCats .entry {
     font-size: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-top: 10px;
     border-top: 1px solid #000; }
     .NewsCats .entry:first-child {
@@ -1681,6 +1681,8 @@ HOME STYLES
       padding-top: 0; }
     .NewsCats .entry:nth-child(4) {
       display: none; }
+    .NewsCats .entry.editors-choice {
+      margin-bottom: 0; }
     .NewsCats .entry p {
       margin: 0; }
       .NewsCats .entry p a:hover {
