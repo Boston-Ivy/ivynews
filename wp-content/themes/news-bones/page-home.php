@@ -5,58 +5,51 @@
 <?php get_header(); ?>
 
     <div id="content">
-
         <div id="inner-content" class="wrap cf">
-
             <main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
                 <section class="m-all t-all d-all cf">
-
                     <div class="m-all t-all d-2of3">
 
                         <?php
-                            $hero_post = get_option("front_page_hero_story");
-                            if($hero_post){
+
+                        $hero_post = get_option("front_page_hero_story");
+
+                        if ($hero_post) {
+
                             $post = get_post($hero_post);
                             $hero_cat = get_the_category($hero_post);
                             $parent_cats = get_category_parents($hero_cat[0]->cat_ID);
                             $split_arr = split("/", $parent_cats);
                             $exclude_cat = get_cat_id($split_arr[0]);
-                            $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' );
+                            $hero_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-800' );
+
                         ?>
 
                         <div id="Hero">
-
                             <div class="m-all t2of2 d2of2 herotext">
-                                <h1>
-                                    <a href="<?php echo get_permalink($post->ID); ?>">
+                                <h1><a href="<?php echo get_permalink($post->ID); ?>">
+
                                         <?php
-                                        $intro = rwmb_meta( 'rw_tagline');
+                                            $intro = rwmb_meta( 'rw_tagline');
 
-                                        if (!empty($intro)) {
-                                            _e('<span>'); echo $excerpt = $intro; _e(': </span>');
-                                        } else {
-                                            // do nothing
-                                        }
+                                            if (!empty($intro)) {
+                                                _e('<span>'); echo $excerpt = $intro; _e(': </span>');
+                                            }
+
+                                            echo $post->post_title
                                         ?>
-                                        <?php echo $post->post_title ?>
-                                    </a>
-                                </h1>
-                            </div>
 
+                                </a></h1>
+                            </div>
                             <div class="m-all t-1of2 d-1of2 cf herotext">
                                 <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
                                 <p><a href="<?php echo get_permalink($post->ID); ?>"><?php _e('Read more &raquo;'); ?></a></p>
                             </div>
-
                             <div class="m-all t-1of2 d-1of2 last-col cf heroimg">
-                                <a href="<?php echo get_permalink($post->ID); ?>" class="hero-thumb" title="<?php echo $post->post_title ?>" style="background-image: url(<?php echo $feat_image[0] ?>);"></a>
+                                <a href="<?php echo get_permalink($post->ID); ?>" class="hero-thumb" title="<?php echo $post->post_title ?>" style="background-image: url(<?php echo $hero_image; ?>);"></a>
                             </div>
-
                         </div>
-
                     </div>
-
                     <div class="m-all t-all d-1of3 last-col">
 
                         <script type="text/javascript">
@@ -106,15 +99,12 @@
 
                                 </div>
                             </div>
-
                         </section>
 
                         <script>idio.render()</script>
 
                     </div>
-
                 </section>
-
                 <section class="m-all t-all d-all">
 
                     <?php $args = array( 'posts_per_page' => 2, 'offset'=> 1 ); ?>
@@ -170,9 +160,7 @@
                         <?php } ?>
 
                     </div>
-
                 </section>
-
                 <section class="m-all t-all d-all">
 
                 <?php
@@ -209,77 +197,69 @@
                 endif;
                 wp_reset_query(); ?>
 
-                <section class="m-all t-1of3 d-1of3 cf NewsCats <?php echo $lastCol?>" id="<?php echo $cat_name ?>">
-
-                    <div class="cat">
-
-                    <?php
-                    $args = array( 'posts_per_page' => 4, 'cat' => $cat_ID );
-                    if($cat_ID == $exclude_cat){
-                        $args['post__not_in'] = array($hero_post);
-                    }
-                    query_posts($args);
-
-                    if (have_posts()) : ?>
-
-                        <h3 class="cat-title"><?php echo $cat_name;?></h3>
-                        <div class="cat-thumb" style="background-image: url(<?php echo $feat_image[0]?>);"></div>
-                        <div class='stories'>
+                    <section class="m-all t-1of3 d-1of3 cf NewsCats <?php echo $lastCol?>" id="<?php echo $cat_name ?>">
+                        <div class="cat">
 
                         <?php
-                        while (have_posts()) : the_post(); ?>
+                        $args = array( 'posts_per_page' => 4, 'cat' => $cat_ID );
+                        if($cat_ID == $exclude_cat){
+                            $args['post__not_in'] = array($hero_post);
+                        }
+                        query_posts($args);
 
-                            <?php if ( in_array( $post->ID, $do_not_duplicate ) ) continue; ?>
+                        if (have_posts()) : ?>
 
-                            <div class="entry">
+                            <h3 class="cat-title"><?php echo $cat_name;?></h3>
+                            <div class="cat-thumb" style="background-image: url(<?php echo $feat_image[0]?>);"></div>
+                            <div class='stories'>
 
-                                <h3>
-                                    <a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>">
+                            <?php
+                            while (have_posts()) : the_post(); ?>
+
+                                <?php if ( in_array( $post->ID, $do_not_duplicate ) ) continue; ?>
+
+                                <div class="entry">
+                                    <h3><a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>">
+                                        <?php
+                                        $tagline =  rwmb_meta('rw_tagline');
+
+                                        if( !empty($tagline)) { ?>
+
+                                            <span><?php echo $tagline; _e(': '); ?> </span>
+
+                                        <?php } ?>
+                                        <?php echo the_title()?>
+                                    </a></h3>
+
                                     <?php
-                                    $tagline =  rwmb_meta('rw_tagline');
+                                    $intro = rwmb_meta( 'rw_intro');
 
-                                    if( !empty($tagline)) { ?>
+                                    if(!empty($intro)){
+                                        $excerpt = $intro;
+                                    }else{
+                                        $excerpt = get_the_excerpt();
+                                    }
+                                    ?>
 
-                                        <span><?php echo $tagline; _e(': '); ?> </span>
+                                    <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 18); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
+                                </div>
 
-                                    <?php } ?>
-                                    <?php echo the_title()?>
-                                    </a>
-                                </h3>
+                                <?php endwhile;
 
-                                <?php
-                                $intro = rwmb_meta( 'rw_intro');
+                                else :
+                                    echo '<h2>No Posts for '.$cat_name.' Category</h2>';
+                                endif;
 
-                                if(!empty($intro)){
-                                    $excerpt = $intro;
-                                }else{
-                                    $excerpt = get_the_excerpt();
-                                }
-                                ?>
+                                wp_reset_query; ?>
 
-                                <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 18); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
+                                <?php echo category_description( $cat_ID); ?>
+
+                                <?php $category_link = get_category_link( $cat_ID ); ?>
 
                             </div>
-
-                            <?php endwhile;
-
-                            else :
-                                echo '<h2>No Posts for '.$cat_name.' Category</h2>';
-                            endif;
-
-                            wp_reset_query; ?>
-
-                            <?php echo category_description( $cat_ID); ?>
-
-                            <?php $category_link = get_category_link( $cat_ID ); ?>
-
+                            <a href="<?php echo $category_link ?>" class="more_stories" rel="bookmark" title="View all stories in <?php echo $cat_name;?>">More stories &raquo;</a>
                         </div>
-
-                        <a class="more_stories" href="<?php echo $category_link ?>" rel="bookmark" title="View all stories in <?php echo $cat_name;?>">More stories &raquo;</a>
-
-                    </div>
-
-                </section>
+                    </section>
 
                 <?php
                 $i++;
@@ -320,9 +300,7 @@
                 <?php } ?>
 
             </main>
-
         </div>
-
     </div>
 
 <?php get_footer(); ?>
