@@ -240,7 +240,7 @@
 
                                     if( !empty($tagline)) { ?>
 
-                                        <span><?php echo $tagline ?> / </span>
+                                        <span><?php echo $tagline; _e(': '); ?> </span>
 
                                     <?php } ?>
                                     <?php echo the_title()?>
