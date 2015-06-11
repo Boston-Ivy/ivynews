@@ -1759,8 +1759,6 @@ article.hentry {
     background-color: #fff; }
     article.hentry header section.entry-content {
       padding: 0; }
-      article.hentry header section.entry-content .excerpt-read-more {
-        margin-left: 0; }
   article.hentry section {
     background-color: #fff; }
     article.hentry section.first {
@@ -1914,8 +1912,7 @@ article header {
     display: inline-block; }
 
 .excerpt-read-more {
-  text-decoration: none;
-  margin-left: 5px; }
+  text-decoration: none; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -2523,9 +2520,6 @@ you can add resource intensive styles.
   .banner {
     display: block; }
 
-  .heroimg {
-    height: 240px; }
-
   .grid header {
     min-height: 220px; }
     .grid header span {
@@ -2568,9 +2562,6 @@ This is for the larger monitors and possibly full screen viewers.
 
   .NewsCats .entry p {
     font-size: 14px; }
-
-  .heroimg {
-    height: 300px; }
 
   .grid header {
     min-height: 245px; }

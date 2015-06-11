@@ -616,6 +616,11 @@ HOME STYLES
 .NewsCats {
   margin-bottom: 10px;
 
+  .cat {
+    //border-top: 1px solid $mid-grey;
+    //padding-top: 5px;
+  }
+
   h3 {
     font-size: 14px;
     margin: 0 0 5px 0;
@@ -817,11 +822,6 @@ article {
 
       section.entry-content {
         padding: 0;
-
-        .excerpt-read-more {
-          margin-left: 0;
-        }
-
       }
 
     }
@@ -1088,8 +1088,7 @@ article {
 }
 	
 .excerpt-read-more {
-  text-decoration:none;
-  margin-left:5px;
+  text-decoration: none;
 }
 
 /******************************************************************
