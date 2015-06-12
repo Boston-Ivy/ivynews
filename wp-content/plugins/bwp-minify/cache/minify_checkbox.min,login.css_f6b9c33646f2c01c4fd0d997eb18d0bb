@@ -1,7 +1,0 @@
-#mc4wp-checkbox{clear:both;display:block;position:static;width:auto}#mc4wp-checkbox input{float:none;width:auto;position:static;margin:0 6px 0 0;padding:0;vertical-align:middle;display:inline-block!important;max-width:21px;-webkit-appearance:checkbox}#mc4wp-checkbox label{float:none;display:block;cursor:pointer;width:auto;position:static}#_mc4wp_subscribe_woocommerce_checkout_field input,#_mc4wp_subscribe_woocommerce_checkout_field label{float:none!important;width:auto!important;display:inline-block!important}#registerform #mc4wp-checkbox{margin-bottom:10px}.login h1
-a{background:url(/wp-content/themes/news-bones/library/images/login-logo.png) no-repeat top center;width:326px;height:67px;text-indent:-9999px;overflow:hidden;padding-bottom:15px;display:block}form{margin-left:8px;padding:26px
-24px 46px;font-weight:normal;background:white;border:1px
-solid #E5E5E5;border-radius:3px;box-shadow:none}body form
-.input{font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;font-weight:200;font-size:24px;width:97%;padding:3px;margin-top:2px;margin-right:6px;margin-bottom:16px;border:1px
-solid #E5E5E5;background:#FBFBFB;outline:none;box-shadow:inset 1px 1px 2px rgba(200, 200, 200, 0.2)}@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){.login h1
-a{background:url(/wp-content/themes/news-bones/library/images/login-logo@2x.png) no-repeat top center}}
