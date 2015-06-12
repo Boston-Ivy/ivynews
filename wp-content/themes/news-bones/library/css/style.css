@@ -1808,7 +1808,7 @@ article.hentry {
     width: 100%;
     height: inherit;
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px 0;
     vertical-align: middle; }
     article.hentry img.load-gravatar {
       width: 40px;
