@@ -932,7 +932,6 @@ article {
       color: $green;
 
       &.tagline {
-        font-size: 24px;
         font-weight: bold;
       }
 
@@ -972,9 +971,7 @@ article {
       color: $green;
 
       &.tagline {
-        margin-top: 10px;
-        font-size: 16px;
-        display: block;
+        display: inline-block;
 
         &+ h2 {
           margin-top: 0;

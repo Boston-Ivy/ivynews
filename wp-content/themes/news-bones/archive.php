@@ -22,8 +22,17 @@
                         <header class="entry-header article-header cf">
                             <div class="m-all t-all d-all cf herotext">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                    <span class="tagline"><?php echo rwmb_meta( 'rw_tagline'); ?></span>
-                                    <h1 class="entry-title single"  itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
+                                    <h1 class="entry-title single" itemprop="headline" rel="bookmark">
+                                        <?php $tagline =  rwmb_meta('rw_tagline');
+
+                                        if( !empty($tagline)) { ?>
+
+                                            <span class="tagline"><?php echo $tagline; _e(': '); ?></span>
+
+                                        <?php } ?>
+
+                                        <?php the_title(); ?>
+                                    </h1>
                                 </a>
                             </div>
                             <div class="m-all t-all d-1of2">
@@ -32,7 +41,7 @@
                                 </section>
                             </div>
                             <div class="m-all t-all d-1of2 last-col cf">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">    <?php the_post_thumbnail( 'medium' ); ?>	</a>
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'news-bones-450' ); ?></a>
                             </div>
                         </header>
 
@@ -57,19 +66,19 @@
 
                             <header class="entry-header   article-header">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                    <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+                                    <?php the_post_thumbnail( 'bones-thumb-450' ); ?>
                                 </a>
 
+                                <h2 class="h3 margin entry-title">
                                 <?php $tagline =  rwmb_meta('rw_tagline');
 
                                 if( !empty($tagline)) { ?>
 
-                                    <span class="tagline"><?php echo $tagline ?></span>
+                                    <span class="tagline"><?php echo $tagline; _e(': '); ?></span>
 
                                 <?php } ?>
 
-                                <h2 class="h3 margin entry-title">
-                                    <?php the_title(); ?>
+                                <?php the_title(); ?>
                                 </h2>
                             </header>
 

@@ -1820,7 +1820,6 @@ article header {
   article header span {
     color: #4dae36; }
     article header span.tagline {
-      font-size: 24px;
       font-weight: bold; }
   article header h1 {
     color: #666666;
@@ -1841,9 +1840,7 @@ article header {
 .grid header span {
   color: #4dae36; }
   .grid header span.tagline {
-    margin-top: 10px;
-    font-size: 16px;
-    display: block; }
+    display: inline-block; }
     .grid header span.tagline + h2 {
       margin-top: 0; }
 .grid header h2 {
