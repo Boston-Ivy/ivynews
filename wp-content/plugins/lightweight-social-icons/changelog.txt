@@ -1,0 +1,28 @@
+Changelog Legend:
+----
+
+[+] = Added
+[*] = Changed
+[^] = Moved
+[=] = No Changes
+[x] = Deleted
+[!] = Bugs
+
+----
+
+(5/9/2015) - 0.3
+[*] Add display:block to ul container
+[+] French translation added
+[*] Contact can be email address or link to contact page
+[!] Fix Skype button
+[*] Optimize to work better in Customizer
+
+----
+
+(8/24/2014) - 0.2
+[*] Minor changes
+
+----
+
+(8/20/2014) - 0.1
+Initial Release

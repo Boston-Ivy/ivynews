@@ -1,0 +1,46 @@
+[02-06-2015 16:14:11] [Error] WPRSS:
+The feed URL is not valid! Please recheck: 
+
+
+[09-06-2015 10:19:55] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/e4362023-0b38-4daf-8d8f-f46742ead9bc". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+[09-06-2015 10:19:55] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/c3b8430f-0b06-42a6-980c-e7d1ba1b6608". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+
+[10-06-2015 10:16:48] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/e4362023-0b38-4daf-8d8f-f46742ead9bc". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+[10-06-2015 10:16:48] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/c3b8430f-0b06-42a6-980c-e7d1ba1b6608". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+
+[10-06-2015 11:18:03] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/e4362023-0b38-4daf-8d8f-f46742ead9bc". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+[10-06-2015 11:18:03] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/c3b8430f-0b06-42a6-980c-e7d1ba1b6608". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+
+[10-06-2015 12:13:54] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/e4362023-0b38-4daf-8d8f-f46742ead9bc". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+[10-06-2015 12:13:54] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/c3b8430f-0b06-42a6-980c-e7d1ba1b6608". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+
+[10-06-2015 13:13:16] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/e4362023-0b38-4daf-8d8f-f46742ead9bc". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+[10-06-2015 13:13:16] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/c3b8430f-0b06-42a6-980c-e7d1ba1b6608". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+
+[10-06-2015 14:14:37] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/e4362023-0b38-4daf-8d8f-f46742ead9bc". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+[10-06-2015 14:14:37] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://rss.feed.signal.uk.com/c3b8430f-0b06-42a6-980c-e7d1ba1b6608". cURL error 6: Couldn't resolve host 'rss.feed.signal.uk.com'
+
+
