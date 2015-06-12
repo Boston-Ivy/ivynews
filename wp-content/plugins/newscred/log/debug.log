@@ -231,3 +231,7 @@
 [11-Jun-2015 16:17:46 UTC] PHP Warning:  urlencode() expects parameter 1 to be string, object given in /Users/jase/Web/BostonIvy/marketsnews.co/wp-includes/formatting.php on line 3909
 [11-Jun-2015 16:17:46 UTC] PHP Warning:  urlencode() expects parameter 1 to be string, object given in /Users/jase/Web/BostonIvy/marketsnews.co/wp-includes/formatting.php on line 3909
 [11-Jun-2015 16:17:46 UTC] PHP Warning:  urlencode() expects parameter 1 to be string, object given in /Users/jase/Web/BostonIvy/marketsnews.co/wp-includes/formatting.php on line 3909
+[12-Jun-2015 10:28:01 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Users/jase/Web/BostonIvy/marketsnews.co/wp-content/themes/news-bones/page-home.php on line 276
+[12-Jun-2015 10:28:34 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Users/jase/Web/BostonIvy/marketsnews.co/wp-content/themes/news-bones/page-home.php on line 276
+[12-Jun-2015 10:56:29 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Users/jase/Web/BostonIvy/marketsnews.co/wp-content/themes/news-bones/page-home.php on line 267
+[12-Jun-2015 10:56:32 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Users/jase/Web/BostonIvy/marketsnews.co/wp-content/themes/news-bones/page-home.php on line 267
