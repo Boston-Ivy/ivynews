@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="m-all t-1of2 d-1of2 last-col cf">
-            <?php the_post_thumbnail('medium'); ?>
+            <?php the_post_thumbnail('bones-thumb-450'); ?>
         </div>
     </header>
 

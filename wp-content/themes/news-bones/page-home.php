@@ -50,6 +50,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="m-all t-all d-1of3 last-col">
 
                         <script type="text/javascript">
@@ -105,9 +106,10 @@
 
                     </div>
                 </section>
+
                 <section class="m-all t-all d-all">
 
-                    <?php $args = array( 'posts_per_page' => 2, 'offset'=> 1 ); ?>
+                    <?php $args = array( 'posts_per_page' => 2 ); ?>
                     <?php $loop = new WP_Query($args); while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <?php $do_not_duplicate[] = $post->ID; ?>
 
@@ -191,7 +193,7 @@
                 if (have_posts()) :
                     while (have_posts()) : the_post();
 
-                    $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-800' );
+                        $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' );
 
                     endwhile;
                 endif;
@@ -210,54 +212,80 @@
                         if (have_posts()) : ?>
 
                             <h3 class="cat-title"><?php echo $cat_name;?></h3>
-                            <div class="cat-thumb" style="background-image: url(<?php echo $feat_image[0]?>);"></div>
                             <div class='stories'>
 
                             <?php
+
                             while (have_posts()) : the_post(); ?>
 
-                                <?php if ( in_array( $post->ID, $do_not_duplicate ) ) continue; ?>
+                                <?php
+                                if ( in_array( $post->ID, $do_not_duplicate ) ) continue;
+                                $counter++;
+                                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' );
+                                ?>
 
-                                <div class="entry">
-                                    <h3><a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>">
+                                <?php if($counter == 1) { ?>
+
+                                    <div class="entry">
+                                        <div class="cat-thumb" style="background-image: url(<?php echo $thumb[0]; ?>);"></div>
+                                        <h3><a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>">
+                                            <?php
+                                            $tagline =  rwmb_meta('rw_tagline');
+                                            if ( !empty($tagline)) { ?>
+                                                <span><?php echo $tagline; _e(': '); ?> </span>
+                                            <?php }
+                                            echo the_title();
+                                            ?>
+                                        </a></h3>
                                         <?php
-                                        $tagline =  rwmb_meta('rw_tagline');
+                                        $intro = rwmb_meta( 'rw_intro');
+                                        if (!empty($intro)) {
+                                            $excerpt = $intro;
+                                        } else {
+                                            $excerpt = get_the_excerpt();
+                                        }
+                                        ?>
+                                        <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 18); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
+                                    </div>
 
-                                        if( !empty($tagline)) { ?>
+                                <?php } if($counter > 1){ ?>
 
-                                            <span><?php echo $tagline; _e(': '); ?> </span>
+                                    <div class="entry">
+                                        <h3><a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>">
+                                            <?php
+                                            $tagline =  rwmb_meta('rw_tagline');
+                                            if ( !empty($tagline)) { ?>
+                                                <span><?php echo $tagline; _e(': '); ?> </span>
+                                            <?php }
+                                            echo the_title();
+                                            ?>
+                                        </a></h3>
+                                        <?php
+                                        $intro = rwmb_meta( 'rw_intro');
+                                        if (!empty($intro)) {
+                                            $excerpt = $intro;
+                                        } else {
+                                            $excerpt = get_the_excerpt();
+                                        }
+                                        ?>
+                                        <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 18); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
+                                    </div>
 
-                                        <?php } ?>
-                                        <?php echo the_title()?>
-                                    </a></h3>
+                                <?php } ?>
 
-                                    <?php
-                                    $intro = rwmb_meta( 'rw_intro');
-
-                                    if(!empty($intro)){
-                                        $excerpt = $intro;
-                                    }else{
-                                        $excerpt = get_the_excerpt();
-                                    }
-                                    ?>
-
-                                    <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 18); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
-                                </div>
-
-                                <?php endwhile;
-
-                                else :
-                                    echo '<h2>No Posts for '.$cat_name.' Category</h2>';
-                                endif;
-
-                                wp_reset_query(); ?>
-
-                                <?php echo category_description( $cat_ID); ?>
-
-                                <?php $category_link = get_category_link( $cat_ID ); ?>
+                            <?php endwhile; ?>
 
                             </div>
                             <a href="<?php echo $category_link ?>" class="more_stories" rel="bookmark" title="View all stories in <?php echo $cat_name;?>">More stories &raquo;</a>
+
+                        <?php endif;
+
+                        wp_reset_query(); ?>
+
+                        <?php echo category_description( $cat_ID); ?>
+
+                        <?php $category_link = get_category_link( $cat_ID ); ?>
+
                         </div>
                     </section>
 
