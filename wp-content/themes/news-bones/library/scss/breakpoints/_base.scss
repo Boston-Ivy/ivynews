@@ -917,6 +917,12 @@ article {
       padding: 0;
       margin: 0;
       vertical-align: middle;
+
+      &.load-gravatar {
+        width: 40px;
+        height: 40px;
+      }
+
     }
 
   }
