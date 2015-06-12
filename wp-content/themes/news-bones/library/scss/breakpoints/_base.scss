@@ -369,7 +369,7 @@ HOME STYLES
     font-weight: bold;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
   }
@@ -637,11 +637,6 @@ HOME STYLES
 .NewsCats {
   margin-bottom: 10px;
 
-  .cat {
-    //border-top: 1px solid $mid-grey;
-    //padding-top: 5px;
-  }
-
   h3 {
     font-size: 14px;
     margin: 0 0 5px 0;
@@ -671,7 +666,7 @@ HOME STYLES
 
   .cat-thumb {
     width: 100%;
-    height: 120px;
+    height: 130px;
     margin-bottom: 10px;
     background-position: center center;
     -webkit-background-size: cover;
@@ -886,6 +881,7 @@ article {
 
       p {
         padding: 0;
+        margin: 0 0 15px 0;
       }
 
       ul {

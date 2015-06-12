@@ -1487,7 +1487,7 @@ HOME STYLES
     display: inline-block;
     font-weight: bold; }
     #Hero a:hover {
-      text-decoration: underline; }
+      text-decoration: none; }
   #Hero span {
     color: #4dae36;
     font-size: 24px;
@@ -1667,7 +1667,7 @@ HOME STYLES
     padding-top: 5px; }
   .NewsCats .cat-thumb {
     width: 100%;
-    height: 120px;
+    height: 130px;
     margin-bottom: 10px;
     background-position: center center;
     -webkit-background-size: cover;
@@ -1791,7 +1791,8 @@ article.hentry {
     article.hentry section h3 {
       margin: 10px 0 20px 0; }
     article.hentry section p {
-      padding: 0; }
+      padding: 0;
+      margin: 0 0 15px 0; }
     article.hentry section ul {
       padding-left: 45px; }
       article.hentry section ul li {
