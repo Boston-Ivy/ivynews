@@ -1295,9 +1295,6 @@ a:visited {
   a:visited:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
-.current-post-ancestor {
-  background-color: #4dae36; }
-
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
