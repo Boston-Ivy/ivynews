@@ -1685,8 +1685,6 @@ HOME STYLES
     .NewsCats .entry:first-child {
       border-top: none;
       padding-top: 0; }
-      .NewsCats .entry:first-child .cat-thumb {
-        display: block; }
     .NewsCats .entry:nth-child(4) {
       display: none; }
     .NewsCats .entry.editors-choice {

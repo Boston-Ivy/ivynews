@@ -701,11 +701,6 @@ HOME STYLES
     &:first-child {
       border-top: none;
       padding-top: 0;
-
-      .cat-thumb {
-        display: block;
-      }
-
     }
 
     &:nth-child(4) {
@@ -714,10 +709,6 @@ HOME STYLES
 
     &.editors-choice {
       margin-bottom: 0;
-    }
-
-    .cat-thumb {
-      //display: none;
     }
 
     p {

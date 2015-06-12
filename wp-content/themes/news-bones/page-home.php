@@ -206,7 +206,7 @@
 
                             <?php
 
-                            $count = 1;
+                            $count = 0;
 
                             while (have_posts()) : the_post(); ?>
 
@@ -216,6 +216,8 @@
                                 ?>
 
                                     <div class="entry">
+
+                                        <?php $count++; ?>
 
                                         <?php if ( $count % 4 == 1 ) { ?>
 
