@@ -1405,6 +1405,11 @@ SIDEBARS & ASIDES
   }
 
 }
+
+h4.widgettitle {
+  color: $green;
+  padding: 10px 0;
+}
 	
 .textwidget {
 
@@ -1430,6 +1435,14 @@ SIDEBARS & ASIDES
       border-top: none;
     }
 
+  }
+
+  #addd {
+    margin-top: 10px;
+  }
+
+  .twitter-timeline {
+    margin: 0 0 5px 0 !important;
   }
 
 }

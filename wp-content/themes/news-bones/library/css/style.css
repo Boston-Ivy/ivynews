@@ -2111,6 +2111,10 @@ SIDEBARS & ASIDES
 .sidebar img {
   width: auto; }
 
+h4.widgettitle {
+  color: #4dae36;
+  padding: 10px 0; }
+
 .textwidget a.external {
   display: block; }
 .textwidget img {
@@ -2122,6 +2126,10 @@ SIDEBARS & ASIDES
     padding: 15px 10px;
     margin-top: 0;
     border-top: none; }
+.textwidget #addd {
+  margin-top: 10px; }
+.textwidget .twitter-timeline {
+  margin: 0 0 5px 0 !important; }
 
 .widgettitle {
   border-bottom: 1px solid #eaedf2;
