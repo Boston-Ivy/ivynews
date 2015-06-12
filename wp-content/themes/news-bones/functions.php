@@ -124,7 +124,6 @@ function bones_customise_register($wp_customize)
 
 add_action('customize_register', 'bones_customise_register');
 
-
 // Adding the color customisation above
 function bones_customise_colors()
 {
@@ -132,10 +131,9 @@ function bones_customise_colors()
     /**********************
      * text colors
      **********************/
-// main color
+
+    // main color
     $color_scheme_1 = get_option('color_scheme_1');
-
-
 
     /****************************************
      * styling
@@ -143,14 +141,12 @@ function bones_customise_colors()
     ?>
     <style>
 
-
         /* color scheme */
 
         /* main color */
 
         .excerpt-read-more, .tagline a, .NewsCats h3 span, #Hero span, article header span.tagline, #breadcrumbs a, p a, article header span {
             color: <?php echo $color_scheme_1; ?> !important;
-
         }
 
         .NewsCats .more_stories, .subscribe-form, header .nav li.current-menu-item, header .nav li.current_page_item, header .nav li.current_page_ancestor, header .nav li:hover, header .nav li:focus, button, input#submit {
@@ -164,7 +160,6 @@ function bones_customise_colors()
 }
 
 add_action('wp_head', 'bones_customise_colors');
-
 
 /************* OEMBED SIZE OPTIONS *************/
 
@@ -180,7 +175,6 @@ add_image_size('bones-thumb-600', 680, 250, true);
 add_image_size('bones-thumb-300', 300, 100, true);
 add_image_size('category', 250, 200, true);
 add_image_size('bones-thumb-450', 450, 300, true);
-
 
 /*
 to add more sizes, simply copy a line from above

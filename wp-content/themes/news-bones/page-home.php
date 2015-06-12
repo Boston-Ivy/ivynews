@@ -67,15 +67,28 @@
                             var _ipc = {
                                 api_key: '02F55TD5SZYNPCN7BONR',
                                 complete: function(){
+
                                     jQuery(".idio__p").each(function(){
-                                        _this = jQuery(this);
-                                        _this.text(_this.text().substring(0, 118) + "...");
+
+                                        var $ = jQuery;
+                                        var $string = $(this);
+                                        var maxLength = 118;
+                                        var trimmedString = $string.text().substr(0, maxLength);
+
+                                        trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) + "…";
+
+                                        $string.text(trimmedString);
+
                                     });
+
                                     jQuery("#idio .title").css({
+
                                         "background-image": "url(" + jQuery(".idio__entry[data-image]").first().data('image') + ")",
                                         "background-repeat": "no-repeat",
                                         "background-size": "cover"
+
                                     });
+
                                 }
                             };
                         </script>
