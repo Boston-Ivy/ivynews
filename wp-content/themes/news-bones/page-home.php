@@ -295,7 +295,7 @@
 
                                     ?>
 
-                                    <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 18); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>"><?php _e('Read more &raquo;'); ?></a></p>
+                                    <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 14); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>"><?php _e('Read more &raquo;'); ?></a></p>
 
                                 </div>
 
