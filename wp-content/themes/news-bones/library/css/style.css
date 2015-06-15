@@ -1814,6 +1814,8 @@ article.hentry {
     article.hentry img.load-gravatar {
       width: 40px;
       height: 40px; }
+    article.hentry img.wp-post-image {
+      margin-bottom: 0; }
 article header {
   min-height: 170px;
   position: relative;
@@ -1968,7 +1970,7 @@ PAGE NAVI STYLES
     line-height: 1em;
     font-size: 1em;
     font-weight: normal;
-    padding: 0;
+    padding: 8px 12px;
     min-width: 1em;
     display: block;
     color: #2980b9; }

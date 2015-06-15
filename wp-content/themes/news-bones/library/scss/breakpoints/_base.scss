@@ -920,6 +920,10 @@ article {
         height: 40px;
       }
 
+      &.wp-post-image {
+        margin-bottom: 0;
+      }
+
     }
 
   }
@@ -1170,7 +1174,7 @@ PAGE NAVI STYLES
     line-height: 1em;
     font-size: 1em;
     font-weight: normal;
-    padding: 0;
+    padding: 8px 12px;
     min-width: 1em;
     display: block;
     color: $blue;
