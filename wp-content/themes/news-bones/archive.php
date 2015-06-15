@@ -64,7 +64,7 @@
 
                         <inner>
 
-                            <header class="entry-header   article-header">
+                            <header class="entry-header article-header">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                                     <?php the_post_thumbnail( 'bones-thumb-450' ); ?>
                                 </a>
@@ -83,7 +83,20 @@
                             </header>
 
                             <section class="entry-content cf">
-                                <p><?php echo rwmb_meta( 'rw_intro'); ?>  <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
+
+                                <?php
+
+                                $intro = rwmb_meta( 'rw_intro');
+
+                                if (!empty($intro)) {
+                                    $excerpt = $intro;
+                                } else {
+                                    $excerpt = get_the_excerpt();
+                                }
+
+                                ?>
+
+                                <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 24); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>"><?php _e('Read more &raquo;'); ?></a></p>
                             </section>
 
                             <footer class="article-footer">

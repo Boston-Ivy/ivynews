@@ -1747,7 +1747,7 @@ POSTS & CONTENT STYLES
 .single article header,
 .archive article header {
   min-height: 126px;
-  padding: 20px; }
+  padding: 20px 20px 10px 20px; }
 .single .NewsCats,
 .archive .NewsCats {
   background-color: #fff; }
@@ -1943,7 +1943,7 @@ article header {
     display: inline-block; }
 
 .excerpt-read-more {
-  text-decoration: none; }
+  margin-top: 10px; }
 
 /******************************************************************
 PAGE NAVI STYLES
