@@ -1238,6 +1238,10 @@ COMMENT STYLES
   list-style-type: none;
 }
 
+.comment_content {
+  padding: 0 10px;
+}
+
 .comment {
   position: relative;
   clear: both;
@@ -1256,7 +1260,6 @@ COMMENT STYLES
   }
 
   .vcard {
-    margin-left: 50px;
 
     p {
       margin: 0;
@@ -1284,8 +1287,8 @@ COMMENT STYLES
     }
 
     .avatar {
-      position: absolute;
-      left: 16px;
+      float: left;
+      margin-right: 10px;
       border-radius: 50%;
     }
 

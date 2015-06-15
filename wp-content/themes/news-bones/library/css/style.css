@@ -2007,6 +2007,9 @@ COMMENT STYLES
   margin: 0;
   list-style-type: none; }
 
+.comment_content {
+  padding: 0 10px; }
+
 .comment {
   position: relative;
   clear: both;
@@ -2018,25 +2021,23 @@ COMMENT STYLES
     border: 0; }
     .comment .comment-author img {
       width: auto; }
-  .comment .vcard {
-    margin-left: 50px; }
-    .comment .vcard p {
-      margin: 0; }
-    .comment .vcard cite.fn {
-      font-weight: 700;
-      font-style: normal; }
-    .comment .vcard time {
-      display: block;
-      font-size: 0.9em; }
-      .comment .vcard time a {
-        color: #9fa6b4;
-        text-decoration: none; }
-        .comment .vcard time a:hover {
-          text-decoration: underline; }
-    .comment .vcard .avatar {
-      position: absolute;
-      left: 16px;
-      border-radius: 50%; }
+  .comment .vcard p {
+    margin: 0; }
+  .comment .vcard cite.fn {
+    font-weight: 700;
+    font-style: normal; }
+  .comment .vcard time {
+    display: block;
+    font-size: 0.9em; }
+    .comment .vcard time a {
+      color: #9fa6b4;
+      text-decoration: none; }
+      .comment .vcard time a:hover {
+        text-decoration: underline; }
+  .comment .vcard .avatar {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%; }
   .comment:last-child {
     margin-bottom: 0; }
   .comment .children {
