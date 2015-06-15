@@ -1964,11 +1964,10 @@ PAGE NAVI STYLES
   .pagination span {
     margin: 0;
     text-decoration: none;
-    padding: 0;
     line-height: 1em;
     font-size: 1em;
     font-weight: normal;
-    padding: 0.75em;
+    padding: 0;
     min-width: 1em;
     display: block;
     color: #2980b9; }
