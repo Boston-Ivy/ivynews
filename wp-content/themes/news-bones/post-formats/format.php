@@ -2,12 +2,20 @@
 
     <header class="entry-header article-header cf">
         <div class="m-all t-1of2 d-1of2 cf herotext">
-            <span class="tagline"><?php echo rwmb_meta('rw_tagline'); ?></span>
-            <h1 class="entry-title single" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
+            <h1 class="entry-title single" itemprop="headline" rel="bookmark">
+                <?php
+                $tagline = rwmb_meta( 'rw_tagline');
+
+                if (!empty($tagline)) {
+                    _e('<span class="tagline">'); echo $tagline; _e(': </span>');
+                }
+                ?>
+                <?php the_title(); ?>
+            </h1>
             <div class="byline entry-meta vcard">
                 <p class="tags"><?php printf(__('Posted by: %1$s', 'bonestheme'),
-                        /* the author of the post */
-                        '<span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link(get_the_author_meta('ID')) . '</span>'); ?></p>
+                    /* the author of the post */
+                    '<span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link(get_the_author_meta('ID')) . '</span>'); ?></p>
 
                 <p class="tags">
                     <time class="updated entry-time" datetime="<?php echo get_the_time('Y-m-d') ?>"
