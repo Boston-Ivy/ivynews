@@ -1655,6 +1655,18 @@ FOOTER STYLES
   width: 45px;
 }
 
+body.search {
+
+  article.hentry:nth-child(2n+4) {
+    clear: none;
+  }
+
+  article.hentry:nth-child(2n+3) {
+    clear: both;
+  }
+
+}
+
 /* ##################
 Contact form overrides
 ##################### */
