@@ -1756,7 +1756,8 @@ POSTS & CONTENT STYLES
     margin-left: 10px;
     margin-right: 10px; }
 
-.page .NewsCats .entry {
+.page .NewsCats .entry,
+.search .NewsCats .entry {
   margin-left: 10px;
   margin-right: 10px; }
 
