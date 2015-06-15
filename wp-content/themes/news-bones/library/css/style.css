@@ -2601,6 +2601,9 @@ you can add resource intensive styles.
   .grid section {
     min-height: 110px; }
 
+  .heroimg {
+    padding-left: 7px; }
+
   .secondary-post.entry:nth-child(2) {
     padding-right: 0.75em; } }
 /*********************
