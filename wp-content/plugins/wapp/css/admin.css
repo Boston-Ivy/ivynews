@@ -1,8 +1,0 @@
-#wapp_slider_post_box{display:none}
-.wapp_radio_image{width:41px; height:41px; display: inline-block; vertical-align: middle; margin-right:10px}
-.wapp_radio_image.admin_area{display:block; margin:5px 0 0 0}
-.wapp_radio_image.wapp_type1, .wapp_radio_image.wapp_wapp_config_display_columns{background-image:url(../images/wapp_type1.png)}
-.wapp_radio_image.wapp_type2, .wapp_radio_image.wapp_wapp_config_display_full{background-image:url(../images/wapp_type2.png)}
-.wapp_radio_image.wapp_type3, .wapp_radio_image.wapp_wapp_config_display_list{background-image:url(../images/wapp_type3.png)}
-.wapp_radio_image.wapp_type4, .wapp_radio_image.wapp_wapp_config_display_slider{background-image:url(../images/wapp_type4.png)}
-.wapp_radio_image.wapp_type5, .wapp_radio_image.wapp_wapp_config_display_intro{background-image:url(../images/wapp_type5.png)}
