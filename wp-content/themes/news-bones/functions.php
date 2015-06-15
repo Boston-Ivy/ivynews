@@ -141,16 +141,12 @@ function bones_customise_colors()
     ?>
     <style>
 
-        /* color scheme */
-
-        /* main color */
-
         .excerpt-read-more, .tagline a, .NewsCats h3 span, #Hero span, article header span.tagline, #breadcrumbs a, p a, article header span {
-            color: <?php echo $color_scheme_1; ?> !important;
+            color: <?php echo $color_scheme_1; ?>;
         }
 
         .NewsCats .more_stories, .subscribe-form, header .nav li.current-menu-item, header .nav li.current_page_item, header .nav li.current_page_ancestor, header .nav li:hover, header .nav li:focus, button, input#submit {
-            background: <?php echo $color_scheme_1; ?> !important;
+            background: <?php echo $color_scheme_1; ?>;
         }
 
     </style>
