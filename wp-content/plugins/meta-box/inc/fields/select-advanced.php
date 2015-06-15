@@ -46,6 +46,8 @@ if ( ! class_exists( 'RWMB_Select_Advanced_Field' ) )
 
 			$html .= '</select>';
 
+			$html .= self::get_select_all_html( $field['multiple'] );
+
 			return $html;
 		}
 

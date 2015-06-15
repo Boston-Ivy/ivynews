@@ -14,6 +14,7 @@ if ( ! class_exists( 'RWMB_Select_Field' ) )
 		static function admin_enqueue_scripts()
 		{
 			wp_enqueue_style( 'rwmb-select', RWMB_CSS_URL . 'select.css', array(), RWMB_VER );
+			wp_enqueue_script( 'rwmb-select', RWMB_JS_URL . 'select.js', array(), RWMB_VER, true );
 		}
 
 		/**
@@ -37,6 +38,8 @@ if ( ! class_exists( 'RWMB_Select_Field' ) )
 			$html .= self::options_html( $field, $meta );
 
 			$html .= '</select>';
+
+			$html .= self::get_select_all_html( $field['multiple'] );
 
 			return $html;
 		}
@@ -78,10 +81,7 @@ if ( ! class_exists( 'RWMB_Select_Field' ) )
 		static function normalize_field( $field )
 		{
 			$field = wp_parse_args( $field, array(
-				'desc'        => '',
-				'name'        => $field['id'],
-				'size'        => $field['multiple'] ? 5 : 0,
-				'placeholder' => '',
+				'size' => $field['multiple'] ? 5 : 0,
 			) );
 			if ( ! $field['clone'] && $field['multiple'] )
 				$field['field_name'] .= '[]';
@@ -190,6 +190,24 @@ if ( ! class_exists( 'RWMB_Select_Field' ) )
 		static function get_option_label( &$value, $index, $field )
 		{
 			$value = $field['options'][$value];
+		}
+
+		/**
+		 * Get html for select all|none for multiple select
+		 *
+		 * @param $multiple
+		 *
+		 * @return string
+		 */
+		static function get_select_all_html( $multiple )
+		{
+			if ( $multiple === true )
+			{
+				return '<div class="rwmb-select-all-none">
+						' . __( 'Select', 'meta-box' ) . ': <a data-type="all" href="#">' . __( 'All', 'meta-box' ) . '</a> | <a data-type="none" href="#">' . __( 'None', 'meta-box' ) . '</a>
+					</div>';
+			}
+			return '';
 		}
 	}
 }

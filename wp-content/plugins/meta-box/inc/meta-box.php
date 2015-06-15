@@ -241,13 +241,13 @@ if ( ! class_exists( 'RW_Meta_Box' ) )
 					if ( typeof rwmb == "undefined" )
 					{
 						var rwmb = {
-							validationOptions : jQuery.parseJSON( \'' . json_encode( $this->validation ) . '\' ),
-							summaryMessage : "' . esc_js( __( 'Please correct the errors highlighted below and try again.', 'meta-box' ) ) . '"
+							validationOptions : jQuery.parseJSON( \'' , json_encode( $this->validation ) , '\' ),
+							summaryMessage : "' , esc_js( __( 'Please correct the errors highlighted below and try again.', 'meta-box' ) ) , '"
 						};
 					}
 					else
 					{
-						var tempOptions = jQuery.parseJSON( \'' . json_encode( $this->validation ) . '\' );
+						var tempOptions = jQuery.parseJSON( \'' , json_encode( $this->validation ) . '\' );
 						jQuery.extend( true, rwmb.validationOptions, tempOptions );
 					}
 					</script>
@@ -387,8 +387,8 @@ if ( ! class_exists( 'RW_Meta_Box' ) )
 			{
 				$field = wp_parse_args( $field, array(
 					'id'          => '',
+					'name'        => '',
 					'multiple'    => false,
-					'clone'       => false,
 					'std'         => '',
 					'desc'        => '',
 					'format'      => '',
@@ -397,6 +397,10 @@ if ( ! class_exists( 'RW_Meta_Box' ) )
 					'field_name'  => isset( $field['id'] ) ? $field['id'] : '',
 					'required'    => false,
 					'placeholder' => '',
+
+					'clone'       => false,
+					'max_clone'   => 0,
+					'sort_clone'  => false,
 				) );
 
 				$class = self::get_class_name( $field );
