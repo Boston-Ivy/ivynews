@@ -543,25 +543,26 @@ HOME STYLES
 
       .search-field {
         max-width: 100%;
+        width: 100%;
         height: 38px;
-        margin: 0 -130px 0 0;
-        float: left;
-        padding-right: 142px;
+        margin: 0;
         font-size: 12px;
+        position: relative;
+        top: -38px;
       }
 
       .btn {
-        width: 130px;
+        width: 100%;
         height: 38px;
-        float: right;
         background-color: $green;
         font-size: 12px;
         font-weight: bold;
-        border-left: 10px solid $dark-grey;
         -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
         -o-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
         box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+        position: relative;
+        top: 38px;
 
         &:hover {
           background-color: $mid-grey;

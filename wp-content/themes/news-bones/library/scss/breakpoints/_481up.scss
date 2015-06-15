@@ -110,6 +110,22 @@ article header h1 {
   padding-right: 0.75em !important;
 }
 
+.subscribe-form .inner .field-group {
+
+  .search-field {
+    width: calc(100% - 140px);
+    float: left;
+    top: 0;
+  }
+
+  .btn {
+    width: 130px;
+    float: right;
+    top: 0;
+  }
+
+}
+
 /*********************
 FOOTER STYLES
 *********************/
