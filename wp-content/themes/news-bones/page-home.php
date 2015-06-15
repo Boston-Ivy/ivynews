@@ -225,6 +225,7 @@
                     foreach ($cats as $cat_ID) :
 
                         $cat_name = get_the_category_by_ID( $cat_ID );
+                        $cat_link = get_category_link( $cat_ID );
 
                         $lastCol = '';
 
@@ -257,7 +258,7 @@
 
                         if (have_posts()) : ?>
 
-                            <h3 class="cat-title"><?php echo $cat_name;?></h3>
+                            <h3 class="cat-title"><a href="<?php echo $cat_link; ?>"><?php echo $cat_name; ?></a></h3>
 
                             <div class='stories'>
 
