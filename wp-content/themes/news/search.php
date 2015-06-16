@@ -16,16 +16,18 @@
                             <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
                         </a>
 
-                        <?php $tagline =  rwmb_meta('rw_tagline');
-
-                        if( !empty($tagline)) { ?>
-
-                            <span class="tagline"><?php echo $tagline ?></span>
-
-                        <?php } ?>
-
                         <h2 class="h3 margin entry-title">
-                            <?php the_title(); ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php $tagline =  rwmb_meta('rw_tagline');
+
+                                if( !empty($tagline)) { ?>
+
+                                    <span class="tagline"><?php echo $tagline ?></span>
+
+                                <?php } ?>
+
+                                <?php the_title(); ?>
+                            </a>
                         </h2>
                     </header>
 

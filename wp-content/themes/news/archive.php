@@ -70,15 +70,17 @@
                                 </a>
 
                                 <h2 class="h3 margin entry-title">
-                                <?php $tagline =  rwmb_meta('rw_tagline');
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php $tagline =  rwmb_meta('rw_tagline');
 
-                                if( !empty($tagline)) { ?>
+                                        if( !empty($tagline)) { ?>
 
-                                    <span class="tagline"><?php echo $tagline; _e(': '); ?></span>
+                                            <span class="tagline"><?php echo $tagline; _e(': '); ?></span>
 
-                                <?php } ?>
+                                        <?php } ?>
 
-                                <?php the_title(); ?>
+                                        <?php the_title(); ?>
+                                    </a>
                                 </h2>
                             </header>
 

@@ -847,6 +847,23 @@ h1.single {
   font-size: 26px;
 }
 
+.entry-title a {
+  color: $dark-grey;
+
+  span {
+    color: $green;
+  }
+
+}
+
+.search {
+
+  .grid header {
+    min-height: inherit;
+  }
+
+}
+
 .single .entry-content {
   padding: 10px 17px;
 

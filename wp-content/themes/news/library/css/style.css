@@ -1774,6 +1774,14 @@ POSTS & CONTENT STYLES
 h1.single {
   font-size: 26px; }
 
+.entry-title a {
+  color: #333333; }
+  .entry-title a span {
+    color: #4dae36; }
+
+.search .grid header {
+  min-height: inherit; }
+
 .single .entry-content {
   padding: 10px 17px; }
   .single .entry-content h2,
