@@ -1784,8 +1784,11 @@ h1.single {
   font-weight: normal !important; }
   .excerpt a:hover {
     text-decoration: none !important; }
-.excerpt .read-more {
+.excerpt .read-more,
+.excerpt .excerpt-read-more {
   color: #4dae36 !important; }
+.excerpt .excerpt-read-more {
+  margin-top: 10px; }
 
 .search .grid header {
   min-height: inherit; }

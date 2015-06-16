@@ -868,8 +868,13 @@ h1.single {
 
   }
 
-  .read-more {
+  .read-more,
+  .excerpt-read-more {
     color: $green !important;
+  }
+
+  .excerpt-read-more {
+    margin-top: 10px;
   }
 
 }

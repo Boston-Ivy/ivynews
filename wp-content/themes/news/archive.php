@@ -37,7 +37,7 @@
                             </div>
                             <div class="m-all t-all d-1of2">
                                 <section class="entry-content first cf">
-                                    <?php the_excerpt(); ?>
+                                    <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php the_excerpt_rss(); ?></a></p>
                                 </section>
                             </div>
                             <div class="m-all t-all d-1of2 last-col cf">
@@ -98,7 +98,7 @@
 
                                 ?>
 
-                                <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 24); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>"><?php _e('Read more &raquo;'); ?></a></p>
+                                <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php $string = $excerpt; $trimmedText = shorten_string($string, 24); echo $trimmedText ?></a> <a class="read-more" href="<?php echo get_permalink(get_the_ID()); ?>"><?php _e('Read more &raquo;'); ?></a></p>
                             </section>
 
                             <footer class="article-footer">
