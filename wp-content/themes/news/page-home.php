@@ -150,7 +150,7 @@
 
                         <div class="m-all t-1of2 d-1of3 secondary-post entry">
 
-                            <h3><span><?php _e('Tagline: '); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
                             <?php
 
