@@ -1,0 +1,2762 @@
+/*! Made with Bones: http://themble.com/bones :) */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 1.5em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong,
+.strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn,
+em,
+.em {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/*
+ * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
+*/
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+pre {
+  margin: 0; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+small, .small {
+  font-size: 75%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+  Lists
+========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0; }
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu {
+  padding: 0 0 0 40px; }
+
+ol,
+ul {
+  padding: 0;
+  list-style-type: none; }
+
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* ==========================================================================
+  Embedded content
+========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.image-replacement,
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.clearfix, .cf, .comment-respond {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+    content: "";
+    display: table; }
+  .clearfix:after, .cf:after, .comment-respond:after {
+    clear: both; }
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*********************
+STYLES
+*********************/
+.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after, .NewsCats .stories:after, .footer nav:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+******************************************************************/
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+https://github.com/dope/lemonade - Neat lightweight grid.
+
+
+The grid below is a custom built thingy I modeled a bit after
+Gridset. It's VERY basic and probably shouldn't be used on
+your client projects. The idea is you learn how to roll your
+own grids. It's better in the long run and allows you full control
+over your project's layout.
+
+******************************************************************/
+.last-col {
+  float: right;
+  padding-right: 0 !important; }
+
+/*
+Mobile Grid Styles
+These are the widths for the mobile grid.
+There are four types, but you can add or customize
+them however you see fit.
+*/
+@media (max-width: 767px) {
+  .m-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0; }
+
+  .m-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%; }
+
+  .m-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%; }
+
+  .m-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%; }
+
+  .m-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%; }
+
+  .m-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%; } }
+/* Portrait tablet to landscape */
+@media (min-width: 768px) and (max-width: 1029px) {
+  .t-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0; }
+
+  .t-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%; }
+
+  .t-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%; }
+
+  .t-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%; }
+
+  .t-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%; }
+
+  .t-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%; }
+
+  .t-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%; }
+
+  .t-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%; }
+
+  .t-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%; }
+
+  .t-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%; } }
+/* Landscape to small desktop */
+@media (min-width: 1030px) {
+  .d-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0; }
+
+  .d-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%; }
+
+  .d-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%; }
+
+  .d-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%; }
+
+  .d-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%; }
+
+  .d-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%; }
+
+  .d-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%; }
+
+  .d-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%; }
+
+  .d-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%; }
+
+  .d-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%; }
+
+  .d-1of6 {
+    float: left;
+    padding-right: 0.75em;
+    width: 16.6666666667%; }
+
+  .d-1of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 14.2857142857%; }
+
+  .d-2of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 28.5714286%; }
+
+  .d-3of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 42.8571429%; }
+
+  .d-4of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 57.1428572%; }
+
+  .d-5of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 71.4285715%; }
+
+  .d-6of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 85.7142857%; }
+
+  .d-1of8 {
+    float: left;
+    padding-right: 0.75em;
+    width: 12.5%; }
+
+  .d-1of9 {
+    float: left;
+    padding-right: 0.75em;
+    width: 11.1111111111%; }
+
+  .d-1of10 {
+    float: left;
+    padding-right: 0.75em;
+    width: 10%; }
+
+  .d-1of11 {
+    float: left;
+    padding-right: 0.75em;
+    width: 9.09090909091%; }
+
+  .d-1of12 {
+    float: left;
+    padding-right: 0.75em;
+    width: 8.33%; } }
+/*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Alert Styles
+
+If you want to use these alerts in your design, you can. If not,
+you can just remove this stylesheet.
+
+******************************************************************/
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid; }
+
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f; }
+
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8; }
+
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4; }
+
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+/*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+Here's a quick video to show how it works:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+.green-btn, .comment-reply-link, #submit {
+  display: inline-block;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  padding: 7px;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.14s ease-in-out;
+  transition: background-color 0.14s ease-in-out; }
+  .green-btn:hover, .comment-reply-link:hover, #submit:hover, .green-btn:focus, .comment-reply-link:focus, #submit:focus {
+    color: #fff;
+    text-decoration: none; }
+  .green-btn:active, .comment-reply-link:active, #submit:active {
+    top: 1px; }
+
+.green-btn, .comment-reply-link, #submit {
+  background-color: #4dae36; }
+  .green-btn:hover, .comment-reply-link:hover, #submit:hover, .green-btn:focus, .comment-reply-link:focus, #submit:focus {
+    background-color: #469e31; }
+  .green-btn:active, .comment-reply-link:active, #submit:active {
+    background-color: #449b30; }
+
+.btn, body .contactform11 .wdform-page-and-images button {
+  width: auto;
+  height: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 6px 20px;
+  cursor: pointer;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  touch-action: manipulation;
+  background-image: none;
+  border: none;
+  white-space: nowrap; }
+  .btn.btn-green, body .contactform11 .wdform-page-and-images button.btn-green {
+    background-color: #4dae36; }
+    .btn.btn-green:hover, body .contactform11 .wdform-page-and-images button.btn-green:hover {
+      background-color: #666666; }
+  .btn.btn-grey, body .contactform11 .wdform-page-and-images button.btn-grey {
+    background-color: #666666; }
+    .btn.btn-grey:hover, body .contactform11 .wdform-page-and-images button.btn-grey:hover {
+      background-color: #000; }
+  .btn.btn-black, body .contactform11 .wdform-page-and-images button.btn-black {
+    background-color: #000; }
+    .btn.btn-black:hover, body .contactform11 .wdform-page-and-images button.btn-black:hover {
+      background-color: #666666; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Form Styles
+
+We put all the form and button styles in here to setup a consistent
+look. If we need to customize them, we can do this in the main
+stylesheets and just override them. Easy Peasy.
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+/*********************
+INPUTS
+*********************/
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea,
+.field {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 12px;
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: #333333;
+  -webkit-appearance: none;
+  /* border-radius: 3px;*/
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  vertical-align: middle;
+  box-shadow: none;
+  border: 0;
+  width: 100%;
+  max-width: 400px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #eaedf2;
+  -webkit-transition: background-color 0.24s ease-in-out;
+  transition: background-color 0.24s ease-in-out; }
+  input[type="text"]:focus, input[type="text"]:active,
+  input[type="password"]:focus,
+  input[type="password"]:active,
+  input[type="datetime"]:focus,
+  input[type="datetime"]:active,
+  input[type="datetime-local"]:focus,
+  input[type="datetime-local"]:active,
+  input[type="date"]:focus,
+  input[type="date"]:active,
+  input[type="month"]:focus,
+  input[type="month"]:active,
+  input[type="time"]:focus,
+  input[type="time"]:active,
+  input[type="week"]:focus,
+  input[type="week"]:active,
+  input[type="number"]:focus,
+  input[type="number"]:active,
+  input[type="email"]:focus,
+  input[type="email"]:active,
+  input[type="url"]:focus,
+  input[type="url"]:active,
+  input[type="search"]:focus,
+  input[type="search"]:active,
+  input[type="tel"]:focus,
+  input[type="tel"]:active,
+  input[type="color"]:focus,
+  input[type="color"]:active,
+  select:focus,
+  select:active,
+  textarea:focus,
+  textarea:active,
+  .field:focus,
+  .field:active {
+    background-color: #f7f8fa;
+    outline: none; }
+  input[type="text"].error, input[type="text"].is-invalid,
+  input[type="password"].error,
+  input[type="password"].is-invalid,
+  input[type="datetime"].error,
+  input[type="datetime"].is-invalid,
+  input[type="datetime-local"].error,
+  input[type="datetime-local"].is-invalid,
+  input[type="date"].error,
+  input[type="date"].is-invalid,
+  input[type="month"].error,
+  input[type="month"].is-invalid,
+  input[type="time"].error,
+  input[type="time"].is-invalid,
+  input[type="week"].error,
+  input[type="week"].is-invalid,
+  input[type="number"].error,
+  input[type="number"].is-invalid,
+  input[type="email"].error,
+  input[type="email"].is-invalid,
+  input[type="url"].error,
+  input[type="url"].is-invalid,
+  input[type="search"].error,
+  input[type="search"].is-invalid,
+  input[type="tel"].error,
+  input[type="tel"].is-invalid,
+  input[type="color"].error,
+  input[type="color"].is-invalid,
+  select.error,
+  select.is-invalid,
+  textarea.error,
+  textarea.is-invalid,
+  .field.error,
+  .field.is-invalid {
+    color: #fbe3e4;
+    border-color: #fbe3e4;
+    background-color: #fff;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
+    outline-color: #fbe3e4; }
+  input[type="text"].success, input[type="text"].is-valid,
+  input[type="password"].success,
+  input[type="password"].is-valid,
+  input[type="datetime"].success,
+  input[type="datetime"].is-valid,
+  input[type="datetime-local"].success,
+  input[type="datetime-local"].is-valid,
+  input[type="date"].success,
+  input[type="date"].is-valid,
+  input[type="month"].success,
+  input[type="month"].is-valid,
+  input[type="time"].success,
+  input[type="time"].is-valid,
+  input[type="week"].success,
+  input[type="week"].is-valid,
+  input[type="number"].success,
+  input[type="number"].is-valid,
+  input[type="email"].success,
+  input[type="email"].is-valid,
+  input[type="url"].success,
+  input[type="url"].is-valid,
+  input[type="search"].success,
+  input[type="search"].is-valid,
+  input[type="tel"].success,
+  input[type="tel"].is-valid,
+  input[type="color"].success,
+  input[type="color"].is-valid,
+  select.success,
+  select.is-valid,
+  textarea.success,
+  textarea.is-valid,
+  .field.success,
+  .field.is-valid {
+    color: #e6efc2;
+    border-color: #e6efc2;
+    background-color: #fff;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
+    outline-color: #e6efc2; }
+  input[type="text"][disabled], input[type="text"].is-disabled,
+  input[type="password"][disabled],
+  input[type="password"].is-disabled,
+  input[type="datetime"][disabled],
+  input[type="datetime"].is-disabled,
+  input[type="datetime-local"][disabled],
+  input[type="datetime-local"].is-disabled,
+  input[type="date"][disabled],
+  input[type="date"].is-disabled,
+  input[type="month"][disabled],
+  input[type="month"].is-disabled,
+  input[type="time"][disabled],
+  input[type="time"].is-disabled,
+  input[type="week"][disabled],
+  input[type="week"].is-disabled,
+  input[type="number"][disabled],
+  input[type="number"].is-disabled,
+  input[type="email"][disabled],
+  input[type="email"].is-disabled,
+  input[type="url"][disabled],
+  input[type="url"].is-disabled,
+  input[type="search"][disabled],
+  input[type="search"].is-disabled,
+  input[type="tel"][disabled],
+  input[type="tel"].is-disabled,
+  input[type="color"][disabled],
+  input[type="color"].is-disabled,
+  select[disabled],
+  select.is-disabled,
+  textarea[disabled],
+  textarea.is-disabled,
+  .field[disabled],
+  .field.is-disabled {
+    cursor: not-allowed;
+    border-color: #cfcfcf;
+    opacity: 0.6; }
+    input[type="text"][disabled]:focus, input[type="text"][disabled]:active, input[type="text"].is-disabled:focus, input[type="text"].is-disabled:active,
+    input[type="password"][disabled]:focus,
+    input[type="password"][disabled]:active,
+    input[type="password"].is-disabled:focus,
+    input[type="password"].is-disabled:active,
+    input[type="datetime"][disabled]:focus,
+    input[type="datetime"][disabled]:active,
+    input[type="datetime"].is-disabled:focus,
+    input[type="datetime"].is-disabled:active,
+    input[type="datetime-local"][disabled]:focus,
+    input[type="datetime-local"][disabled]:active,
+    input[type="datetime-local"].is-disabled:focus,
+    input[type="datetime-local"].is-disabled:active,
+    input[type="date"][disabled]:focus,
+    input[type="date"][disabled]:active,
+    input[type="date"].is-disabled:focus,
+    input[type="date"].is-disabled:active,
+    input[type="month"][disabled]:focus,
+    input[type="month"][disabled]:active,
+    input[type="month"].is-disabled:focus,
+    input[type="month"].is-disabled:active,
+    input[type="time"][disabled]:focus,
+    input[type="time"][disabled]:active,
+    input[type="time"].is-disabled:focus,
+    input[type="time"].is-disabled:active,
+    input[type="week"][disabled]:focus,
+    input[type="week"][disabled]:active,
+    input[type="week"].is-disabled:focus,
+    input[type="week"].is-disabled:active,
+    input[type="number"][disabled]:focus,
+    input[type="number"][disabled]:active,
+    input[type="number"].is-disabled:focus,
+    input[type="number"].is-disabled:active,
+    input[type="email"][disabled]:focus,
+    input[type="email"][disabled]:active,
+    input[type="email"].is-disabled:focus,
+    input[type="email"].is-disabled:active,
+    input[type="url"][disabled]:focus,
+    input[type="url"][disabled]:active,
+    input[type="url"].is-disabled:focus,
+    input[type="url"].is-disabled:active,
+    input[type="search"][disabled]:focus,
+    input[type="search"][disabled]:active,
+    input[type="search"].is-disabled:focus,
+    input[type="search"].is-disabled:active,
+    input[type="tel"][disabled]:focus,
+    input[type="tel"][disabled]:active,
+    input[type="tel"].is-disabled:focus,
+    input[type="tel"].is-disabled:active,
+    input[type="color"][disabled]:focus,
+    input[type="color"][disabled]:active,
+    input[type="color"].is-disabled:focus,
+    input[type="color"].is-disabled:active,
+    select[disabled]:focus,
+    select[disabled]:active,
+    select.is-disabled:focus,
+    select.is-disabled:active,
+    textarea[disabled]:focus,
+    textarea[disabled]:active,
+    textarea.is-disabled:focus,
+    textarea.is-disabled:active,
+    .field[disabled]:focus,
+    .field[disabled]:active,
+    .field.is-disabled:focus,
+    .field.is-disabled:active {
+      background-color: #d5edf8; }
+
+input[type="password"] {
+  letter-spacing: 0.3em; }
+
+textarea {
+  max-width: 100%;
+  min-height: 120px;
+  line-height: 1.5em; }
+
+select {
+  -webkit-appearance: none;
+  /* 1 */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOEZCMjYxMEYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOEZCMjYxMUYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4RkIyNjBFRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ4RkIyNjBGRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vxkp9gAAAI9JREFUeNpidHFxucHAwKAOxE+AmJmBMPgLxDJAfJMFSKwD4kqoAClgA+P///8ZXF1dPaCGcBKh6QcQB+3evXs7WDMIAA2QB1I7gFgDj0aQFz2BGh+AOEwwUaDAQyBlCMR7cGjcC5KHaQQBuM3IAOiKTiBVhiTUDdRUhq4Oq2aoAelAahIQ5wM1zsCmBiDAADhYMJXVZ9u9AAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: 97.5% center; }
+
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f1f1; }
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+.widget_search {
+  display: none; }
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  width: 96%;
+  margin: 0 auto; }
+
+/*********************
+LINK STYLES
+*********************/
+a,
+a:visited {
+  color: #4dae36;
+  text-decoration: none; }
+  a:link,
+  a:visited:link {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500; }
+  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+    text-decoration: none; }
+
+h1, .h1 {
+  line-height: 1.333em; }
+
+h2, .h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em; }
+
+h3, .h3 {
+  font-size: 1.125em; }
+
+h4, .h4 {
+  font-size: 1.1em;
+  font-weight: 700; }
+
+h5, .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+/*********************
+HEADER STYLES
+*********************/
+.header {
+  background-color: #fff;
+  border-bottom: #eaedf2 1px solid; }
+  .header #inner-header {
+    padding-top: 20px; }
+  .header .logo {
+    width: 246px;
+    height: 65px;
+    display: inline-block;
+    text-indent: -999px;
+    overflow: hidden;
+    vertical-align: bottom;
+    background-image: url("../images/logo-header.png"); }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .header .logo {
+        background-image: url("../images/logo-header@2x.png");
+        background-size: 246px 65px;
+        background-repeat: no-repeat; } }
+  .header .widget {
+    background: none; }
+    .header .widget.widget_search {
+      height: 30px;
+      margin: 0 0 10px 0;
+      float: none; }
+      .header .widget.widget_search form {
+        width: 100%;
+        display: block; }
+        .header .widget.widget_search form .search-icon {
+          width: 25px;
+          height: 30px;
+          display: inline-block;
+          text-indent: -999px;
+          overflow: hidden;
+          vertical-align: bottom;
+          background-image: url("../images/icon-search.png");
+          background-position: left center;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          float: right; }
+          @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+            .header .widget.widget_search form .search-icon {
+              background-image: url("../images/icon-search@2x.png");
+              background-size: 50px 25px;
+              background-repeat: no-repeat; } }
+          .header .widget.widget_search form .search-icon:hover {
+            background-position: right center; }
+        .header .widget.widget_search form .field-group {
+          width: 0;
+          height: 30px;
+          overflow: hidden;
+          float: right; }
+          .header .widget.widget_search form .field-group input {
+            margin-bottom: 0; }
+            .header .widget.widget_search form .field-group input#searchsubmit {
+              width: 55px;
+              padding-left: 0;
+              padding-right: 0;
+              margin-left: 1px; }
+              .header .widget.widget_search form .field-group input#searchsubmit:focus {
+                outline: none; }
+    .header .widget.widget_nav_menu h4 {
+      display: none; }
+    .header .widget.widget_nav_menu > div {
+      width: 100%;
+      display: table; }
+    .header .widget.widget_nav_menu ul {
+      margin: 30px 0 0 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+      float: right; }
+      .header .widget.widget_nav_menu ul li {
+        display: inline-block;
+        float: left;
+        margin: 0 8px 0 0; }
+        .header .widget.widget_nav_menu ul li:last-child {
+          margin-right: 0; }
+        .header .widget.widget_nav_menu ul li.facebook a {
+          background-position: left 0; }
+          .header .widget.widget_nav_menu ul li.facebook a:hover {
+            background-position: right 0; }
+        .header .widget.widget_nav_menu ul li.twitter a {
+          background-position: left -25px; }
+          .header .widget.widget_nav_menu ul li.twitter a:hover {
+            background-position: right -25px; }
+        .header .widget.widget_nav_menu ul li.google a {
+          background-position: left -50px; }
+          .header .widget.widget_nav_menu ul li.google a:hover {
+            background-position: right -50px; }
+        .header .widget.widget_nav_menu ul li.linkedin a {
+          background-position: left -75px; }
+          .header .widget.widget_nav_menu ul li.linkedin a:hover {
+            background-position: right -75px; }
+        .header .widget.widget_nav_menu ul li a {
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          text-indent: -999px;
+          overflow: hidden;
+          vertical-align: bottom;
+          background-image: url("../images/icon-social.png"); }
+          @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+            .header .widget.widget_nav_menu ul li a {
+              background-image: url("../images/icon-social@2x.png");
+              background-size: 50px 100px;
+              background-repeat: no-repeat; } }
+          .header .widget.widget_nav_menu ul li a:focus {
+            outline: none; }
+
+#breadcrumbs {
+  margin-top: 10px; }
+
+/*********************
+NAVIGATION STYLES
+*********************/
+header nav {
+  background: #000; }
+header .nav {
+  border-bottom: 0;
+  margin: auto;
+  background: #000;
+  clear: both; }
+  header .nav li {
+    padding: 0; }
+    header .nav li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 15px;
+      border-right: 1px solid #666666; }
+    header .nav li ul.sub-menu li a,
+    header .nav li ul.children li a {
+      padding-left: 30px; }
+header .searchform input.search-field {
+  width: 240px;
+  float: left; }
+
+/*********************
+MAIN STYLES
+*********************/
+#main {
+  margin-bottom: 30px; }
+
+/*********************
+HOME STYLES
+*********************/
+#Hero {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px; }
+  #Hero img {
+    width: 100%;
+    float: right; }
+  #Hero a {
+    color: #4dae36;
+    display: inline-block;
+    font-weight: bold; }
+    #Hero a:hover {
+      text-decoration: none; }
+  #Hero span {
+    color: #4dae36;
+    font-size: 24px;
+    font-weight: bold; }
+  #Hero h1 {
+    color: #333333 !important;
+    font-size: 24px;
+    margin: 0; }
+  #Hero p {
+    margin-top: 0; }
+
+.secondary-post.entry:before {
+  content: "";
+  width: 100%;
+  display: table;
+  border-top: 1px solid #333333; }
+.secondary-post.entry:last-child {
+  padding-right: 0; }
+.secondary-post.entry h3 {
+  margin: 10px 0; }
+  .secondary-post.entry h3 span {
+    color: #4dae36; }
+  .secondary-post.entry h3 a {
+    color: #333333; }
+.secondary-post.entry p {
+  font-size: 14px;
+  margin-top: 0; }
+
+.herotext a {
+  margin-bottom: 10px; }
+  .herotext a h1 {
+    display: inline-block; }
+.herotext h1 a {
+  color: #333333 !important; }
+.herotext p:last-child {
+  margin-bottom: 0; }
+  .herotext p:last-child a {
+    margin-bottom: 0; }
+
+.heroimg {
+  height: 220px; }
+  .heroimg a {
+    width: 100%;
+    height: 100%;
+    display: block; }
+    .heroimg a.hero-thumb {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; }
+
+.overlay {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 20px;
+  padding: 8px;
+  display: inline-block;
+  top: 10px; }
+  .overlay span {
+    color: #4dae36;
+    font-weight: bold;
+    display: none; }
+
+/* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
+#Insights {
+  padding-right: 0 !important; }
+
+#Bonds {
+  padding-right: 0 !important; }
+
+#Tech {
+  padding-right: 0 !important; }
+
+#Commodities {
+  clear: both; }
+
+/* NEWSLETTER FORM HOME */
+.NewsText {
+  float: left; }
+
+.NewsInputs {
+  float: right;
+  width: 295px; }
+
+.subscribe-form {
+  margin: 0 0 10px 0; }
+  .subscribe-form .inner {
+    padding: 11px;
+    background-color: #333333; }
+    .subscribe-form .inner .field-group h3 {
+      color: #fff;
+      margin: 0 0 5px 0; }
+    .subscribe-form .inner .field-group label {
+      font-size: 14px;
+      color: #fff;
+      display: block;
+      margin-bottom: 10px; }
+    .subscribe-form .inner .field-group .search-field {
+      max-width: 100%;
+      width: 100%;
+      height: 38px;
+      margin: 0;
+      font-size: 12px;
+      position: relative;
+      top: -38px; }
+    .subscribe-form .inner .field-group .btn, .subscribe-form .inner .field-group body .contactform11 .wdform-page-and-images button, body .contactform11 .wdform-page-and-images .subscribe-form .inner .field-group button {
+      width: 100%;
+      height: 38px;
+      background-color: #4dae36;
+      font-size: 12px;
+      font-weight: bold;
+      -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      -o-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      position: relative;
+      top: 38px; }
+      .subscribe-form .inner .field-group .btn:hover, .subscribe-form .inner .field-group body .contactform11 .wdform-page-and-images button:hover, body .contactform11 .wdform-page-and-images .subscribe-form .inner .field-group button:hover {
+        background-color: #666666; }
+
+.epm-sign-up-form {
+  padding: 7px 10px; }
+
+#epm-email {
+  width: 240px;
+  float: left;
+  margin-top: 5px;
+  border-radius: 0; }
+
+.sidebar .subscribe-form span {
+  font-size: 20px; }
+.sidebar .epm-form-field {
+  float: left; }
+.sidebar #epm-email {
+  width: 185px; }
+.sidebar .epm-message {
+  margin-left: -45px; }
+
+.epm-sign-up-button {
+  float: right;
+  background: #000;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 5px;
+  border: none;
+  color: #fff;
+  padding: 7px; }
+
+.epm-message {
+  position: absolute;
+  margin-top: 25px;
+  color: #fff; }
+
+.banner {
+  display: none; }
+
+/*CATEGORY BOXES ON HOME */
+.NewsCats .idio-recommendations .entry:first-child {
+  border-top: 1px solid #000;
+  padding-top: 10px; }
+
+.NewsCats {
+  margin-bottom: 10px; }
+  .NewsCats h3 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    font-weight: bold; }
+    .NewsCats h3 a {
+      color: #333333; }
+    .NewsCats h3 span {
+      color: #4dae36; }
+  .NewsCats p {
+    margin-bottom: 10px; }
+  .NewsCats .cat-title {
+    font-size: 1.125em;
+    color: #4dae36;
+    margin: 10px 0;
+    border-top: 1px solid #000;
+    padding-top: 5px; }
+    .NewsCats .cat-title a {
+      color: #4dae36; }
+      .NewsCats .cat-title a:hover {
+        color: #333333; }
+  .NewsCats .cat-thumb {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 10px;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  .NewsCats .entry {
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #000; }
+    .NewsCats .entry:first-child {
+      border-top: none;
+      padding-top: 0; }
+    .NewsCats .entry:nth-child(4) {
+      display: none; }
+    .NewsCats .entry.editors-choice {
+      margin-bottom: 0; }
+    .NewsCats .entry p {
+      margin: 0; }
+      .NewsCats .entry p a:hover {
+        text-decoration: underline; }
+  .NewsCats .more_stories {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    float: right;
+    background-color: #4dae36;
+    padding: 6px 10px;
+    margin-top: 0;
+    display: inline-block; }
+    .NewsCats .more_stories:hover {
+      background-color: #333333; }
+
+.learn {
+  float: left;
+  color: #fff;
+  text-decoration: none;
+  padding: 3px 7px;
+  margin-top: -5px; }
+
+.forex {
+  background: #05a7c8; }
+
+.shares {
+  background: #ed2d31; }
+
+.commodities {
+  background: #74509f; }
+
+.indecies {
+  background: #c1377f; }
+
+.bitcoin {
+  background: #f05e32; }
+
+.mid-home-banner {
+  background: #c1377f;
+  padding: 20px; }
+  .mid-home-banner h2 {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin: 0; }
+    .mid-home-banner h2 a {
+      color: #fff; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+.single article header,
+.archive article header {
+  min-height: 126px;
+  padding: 20px 20px 10px 20px; }
+.single .NewsCats,
+.archive .NewsCats {
+  background-color: #fff; }
+  .single .NewsCats .entry,
+  .archive .NewsCats .entry {
+    margin-left: 10px;
+    margin-right: 10px; }
+
+.page .NewsCats .entry,
+.search .NewsCats .entry {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.home .NewsCats .entry {
+  margin-left: 0;
+  margin-right: 0; }
+
+#content {
+  margin-top: 20px; }
+
+h1.single {
+  font-size: 26px; }
+
+.single .entry-content {
+  padding: 10px 17px; }
+  .single .entry-content h2,
+  .single .entry-content h3 {
+    margin-left: 0; }
+
+.page .entry-content {
+  padding: 10px 17px; }
+
+article.hentry {
+  margin-bottom: 10px; }
+  article.hentry:nth-child(2n+4) {
+    clear: both; }
+  article.hentry header {
+    background-color: #fff; }
+    article.hentry header section.entry-content {
+      padding: 0; }
+  article.hentry section {
+    background-color: #fff; }
+    article.hentry section.first {
+      min-height: 90px; }
+    article.hentry section.entry-content {
+      padding: 0 20px; }
+    article.hentry section h3 {
+      margin: 10px 0 20px 0; }
+    article.hentry section p {
+      padding: 0;
+      margin: 0 0 15px 0; }
+    article.hentry section ul {
+      padding-left: 45px; }
+      article.hentry section ul li {
+        list-style-type: disc; }
+  article.hentry footer {
+    border-top: 1px solid #eaedf2;
+    background: #fff;
+    padding: 20px; }
+    article.hentry footer p {
+      font-size: 13px;
+      margin: 0; }
+  article.hentry img {
+    width: 100%;
+    height: inherit;
+    padding: 0;
+    margin: 0 0 20px 0;
+    vertical-align: middle; }
+    article.hentry img.load-gravatar {
+      width: 40px;
+      height: 40px; }
+    article.hentry img.wp-post-image {
+      margin-bottom: 0; }
+article header {
+  min-height: 170px;
+  position: relative;
+  padding: 10px 20px; }
+  article header span {
+    color: #4dae36; }
+    article header span.tagline {
+      font-weight: bold; }
+  article header h1 {
+    color: #666666;
+    font-size: 24px;
+    margin: 0; }
+  article header h3,
+  article header h2,
+  article header h1 {
+    font-size: 20px;
+    margin: 10px 0 0 0; }
+    article header h3 a,
+    article header h2 a,
+    article header h1 a {
+      color: #fff; }
+  article header a {
+    display: block; }
+
+.grid header span {
+  color: #4dae36; }
+  .grid header span.tagline {
+    display: inline-block; }
+    .grid header span.tagline + h2 {
+      margin-top: 0; }
+.grid header h2 {
+  font-size: 16px;
+  color: #666666;
+  font-weight: bold; }
+.grid section {
+  min-height: 80px; }
+
+.single-title {
+  margin: 0; }
+
+.byline {
+  color: #666666;
+  margin: 0; }
+
+.entry-content h2, .entry-content h3 {
+  font-weight: 800;
+  margin-bottom: 0; }
+.entry-content p {
+  margin: 0 0 1.5em; }
+.entry-content table {
+  width: 100%;
+  border: 1px solid #eaedf2;
+  margin-bottom: 1.5em; }
+  .entry-content table caption {
+    margin: 0 0 7px;
+    font-size: 0.75em;
+    color: #9fa6b4;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+.entry-content tr {
+  border-bottom: 1px solid #eaedf2; }
+  .entry-content tr:nth-child(even) {
+    background-color: #f8f9fa; }
+.entry-content td {
+  padding: 7px;
+  border-right: 1px solid #eaedf2; }
+  .entry-content td:last-child {
+    border-right: 0; }
+.entry-content th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaedf2;
+  border-right: 1px solid #eaedf2; }
+  .entry-content th:last-child {
+    border-right: 0; }
+.entry-content blockquote {
+  margin: 0 0 1.5em 0.75em;
+  padding: 0 0 0 0.75em;
+  border-left: 3px solid #2980b9;
+  font-style: italic;
+  color: #9fa6b4; }
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em; }
+.entry-content img {
+  max-width: 100%;
+  height: auto; }
+.entry-content .size-auto,
+.entry-content .size-full,
+.entry-content .size-large,
+.entry-content .size-medium,
+.entry-content .size-thumbnail {
+  max-width: 100%;
+  height: auto; }
+.entry-content pre {
+  background: #000;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px; }
+
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px; }
+  .wp-caption img {
+    max-width: 100%;
+    margin-bottom: 0;
+    width: 100%; }
+  .wp-caption p.wp-caption-text {
+    font-size: 0.85em;
+    margin: 4px 0 7px;
+    text-align: center; }
+
+.tags {
+  margin: 0;
+  font-size: 0.857em; }
+  .tags a {
+    display: inline-block; }
+
+.excerpt-read-more {
+  margin-top: 10px; }
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+.pagination,
+.wp-prev-next {
+  margin: 1.5em 0; }
+
+.pagination {
+  text-align: center; }
+  .pagination ul {
+    display: inline-block;
+    background-color: #fff;
+    white-space: nowrap;
+    padding: 0;
+    clear: both; }
+  .pagination li {
+    padding: 0;
+    margin: 0;
+    float: left;
+    display: inline;
+    overflow: hidden;
+    border-right: 1px solid #eaedf2; }
+  .pagination a,
+  .pagination span {
+    margin: 0;
+    text-decoration: none;
+    line-height: 1em;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 8px 12px;
+    min-width: 1em;
+    display: block;
+    color: #2980b9; }
+    .pagination a:hover, .pagination a:focus,
+    .pagination span:hover,
+    .pagination span:focus {
+      background-color: #2980b9;
+      color: #fff; }
+  .pagination .current {
+    cursor: default;
+    color: #333333; }
+    .pagination .current:hover, .pagination .current:focus {
+      background-color: #fff;
+      color: #333333; }
+
+.wp-prev-next .prev-link {
+  float: left; }
+.wp-prev-next .next-link {
+  float: right; }
+
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+#comments-title {
+  padding: 0.75em;
+  margin: 0;
+  border-top: 1px solid #f8f9fa; }
+
+.commentlist {
+  margin: 0;
+  list-style-type: none; }
+
+.comment_content {
+  padding: 0 10px; }
+
+.comment {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 1.5em;
+  border-bottom: 1px solid #f8f9fa; }
+  .comment .comment-author {
+    padding: 7px;
+    border: 0; }
+    .comment .comment-author img {
+      width: auto; }
+  .comment .vcard p {
+    margin: 0; }
+  .comment .vcard cite.fn {
+    font-weight: 700;
+    font-style: normal; }
+  .comment .vcard time {
+    display: block;
+    font-size: 0.9em; }
+    .comment .vcard time a {
+      color: #9fa6b4;
+      text-decoration: none; }
+      .comment .vcard time a:hover {
+        text-decoration: underline; }
+  .comment .vcard .avatar {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%; }
+  .comment:last-child {
+    margin-bottom: 0; }
+  .comment .children {
+    margin: 0; }
+  .comment[class*=depth-] {
+    margin-top: 1.1em; }
+  .comment.depth-1 {
+    margin-left: 0;
+    margin-top: 0; }
+  .comment:not(.depth-1) {
+    margin-top: 0;
+    margin-left: 7px;
+    padding: 7px; }
+  .comment.odd {
+    background-color: #fff; }
+  .comment.even {
+    background: #f8f9fa; }
+
+.comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em; }
+
+.comment-reply-link {
+  font-size: 0.9em;
+  float: right; }
+
+.comment-edit-link {
+  font-style: italic;
+  margin: 0 7px;
+  text-decoration: none;
+  font-size: 0.9em; }
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+.comment-respond {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 40px; }
+
+#reply-title {
+  margin: 0; }
+
+.logged-in-as {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0; }
+  .logged-in-as a {
+    color: #333333; }
+
+.comment-form-comment {
+  margin: 1.5em 0 0.75em; }
+
+.form-allowed-tags {
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  font-size: 0.9em; }
+
+#submit {
+  float: right;
+  font-size: 1em; }
+
+#comment-form-title {
+  margin: 0 0 1.1em; }
+
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0; }
+
+.nocomments {
+  margin: 0 20px 1.1em; }
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar img {
+  width: auto; }
+
+h4.widgettitle {
+  color: #4dae36;
+  padding: 10px 0; }
+
+.textwidget a.external {
+  display: block; }
+.textwidget img {
+  width: 100%;
+  vertical-align: bottom; }
+.textwidget .NewsCats {
+  float: none; }
+  .textwidget .NewsCats .cat-title {
+    padding: 15px 10px;
+    margin-top: 0;
+    border-top: none; }
+.textwidget #addd {
+  margin-top: 10px; }
+.textwidget .twitter-timeline {
+  margin: 0 0 5px 0 !important; }
+
+.widgettitle {
+  border-bottom: 1px solid #eaedf2;
+  margin-bottom: 0.75em;
+  text-indent: 10px; }
+
+.widget {
+  background: #fff; }
+
+.no-widgets {
+  background-color: #fff;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-bottom: 1.5em; }
+
+/*********************
+FOOTER STYLES
+*********************/
+.footer {
+  clear: both;
+  background-color: #000;
+  color: #f8f9fa; }
+  .footer nav {
+    float: left; }
+    .footer nav li {
+      float: left;
+      margin: 0 15px 0 0; }
+      .footer nav li:last-child {
+        margin-right: 0; }
+      .footer nav li.current-menu-item {
+        background-color: transparent; }
+      .footer nav li:hover {
+        background-color: transparent; }
+        .footer nav li:hover a {
+          text-decoration: underline; }
+      .footer nav li a {
+        text-decoration: none;
+        color: #fff; }
+
+.copyright {
+  float: right;
+  margin: 0;
+  line-height: 64px; }
+
+#infinite-footer {
+  display: none; }
+
+.clear, .field-group:after, .header .widget.widget_search form:after, .header .widget.widget_search form .field-group:after, .header .widget.widget_nav_menu > div, .header .widget.widget_nav_menu ul:after, .subscribe-form:after, .NewsCats .stories:after, .footer nav:after {
+  clear: both; }
+
+.widget_search {
+  padding: 0; }
+
+.form-signin button {
+  background: #4dae36 !important;
+  border: 0 none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+  padding: 7px;
+  position: relative;
+  text-decoration: none;
+  transition: background-color 0.14s ease-in-out 0s; }
+
+.recent-posts-extended div {
+  padding: 0 7px; }
+
+.nc_pixel {
+  width: 1px !important; }
+
+.single article {
+  margin-bottom: 0 !important; }
+
+.sd-social-icon .sd-content ul li[class*="share-"] a,
+.sd-social-icon .sd-content ul li[class*="share-"] a:hover,
+.sd-social-icon .sd-content ul li[class*="share-"] div.option a {
+  border-radius: 0 !important;
+  margin: 0 4px !important; }
+
+.pagination {
+  clear: both; }
+
+.twitter-timeline {
+  padding: 0 10px !important; }
+
+.contactform11 input[type="text"] {
+  line-height: 22px; }
+
+.ticker-stocks-container {
+  margin-top: 20px; }
+  .ticker-stocks-container .simply-scroll {
+    padding: 0;
+    border-bottom: none;
+    background: #fff;
+    filter: none; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.no-cssanimations .header .widget.widget_search form .search-icon {
+  display: none !important; }
+.no-cssanimations .header .widget.widget_search form .field-group {
+  width: 280px !important;
+  display: block !important; }
+
+#click-menu {
+  top: 30px !important;
+  right: 0;
+  left: auto;
+  width: 45px; }
+
+body.search article.hentry:nth-child(2n+4) {
+  clear: none; }
+body.search article.hentry:nth-child(2n+3) {
+  clear: both; }
+
+/* ##################
+Contact form overrides
+##################### */
+body .contactform11 .wdform-page-and-images {
+  padding: 0; }
+  body .contactform11 .wdform-page-and-images * {
+    font-family: inherit; }
+  body .contactform11 .wdform-page-and-images .wdform-field {
+    padding: 0; }
+  body .contactform11 .wdform-page-and-images .wdform-label {
+    font-size: 12px; }
+  body .contactform11 .wdform-page-and-images button {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 20px; }
+    body .contactform11 .wdform-page-and-images button:hover {
+      background-color: #4dae36; }
+    body .contactform11 .wdform-page-and-images button.button-submit {
+      margin-right: 10px; }
+
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: 481px and Up Stylesheet
+  
+  This stylesheet is loaded for larger devices. It's set to
+  481px because at 480px it would load on a landscaped iPhone.
+  This isn't ideal because then you would be loading all those
+  extra styles on that same mobile connection.
+  
+  A word of warning. This size COULD be a larger mobile device,
+  so you still want to keep it pretty light and simply expand
+  upon your base.scss styles.
+  
+  ******************************************************************/
+  /*
+  IMPORTANT NOTE ABOUT SASS 3.3 & UP
+  You can't use @extend within media queries
+  anymore, so just be aware that if you drop
+  them in here, they won't work.
+  */
+  img {
+    max-width: 100%;
+    height: inherit; }
+
+  .overlay span {
+    display: block; }
+
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  .widget_search {
+    display: none; }
+
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  .entry-content img img {
+    width: auto; }
+  .entry-content img .grid .inner section {
+    min-height: 120px !important; }
+  .entry-content img .alignleft,
+  .entry-content img img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left; }
+  .entry-content img .alignright,
+  .entry-content img img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right; }
+  .entry-content img .aligncenter,
+  .entry-content img img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both; }
+
+  /*********************
+  HOMEPAGE STYLES
+  *********************/
+  .NewsCats:first-child {
+    padding-right: 0.75em; }
+
+  .banner {
+    display: none; }
+
+  article header h1 {
+    font-size: 26px !important; }
+
+  /* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
+  #Insights {
+    padding-right: 0.75em !important; }
+
+  #Bonds {
+    padding-right: 0.75em !important; }
+
+  .subscribe-form .inner .field-group .search-field {
+    width: calc(100% - 140px);
+    float: left;
+    top: 0; }
+  .subscribe-form .inner .field-group .btn, .subscribe-form .inner .field-group body .contactform11 .wdform-page-and-images button, body .contactform11 .wdform-page-and-images .subscribe-form .inner .field-group button {
+    width: 130px;
+    float: right;
+    top: 0; }
+
+  /*********************
+  FOOTER STYLES
+  *********************/
+  h1.single {
+    font-size: 36px; } }
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  .wrap {
+    width: 760px; }
+
+  /*********************
+  HEADER STYLES
+  *********************/
+  .ticker-stocks-container {
+    display: block; }
+
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  header .widget_search {
+    display: block; }
+
+  .header .widget.widget_nav_menu ul {
+    margin-top: 0; }
+
+  .nav {
+    border: 0; }
+    .nav ul {
+      background: #000;
+      margin-top: 0; }
+    .nav li {
+      float: left;
+      position: relative;
+      padding: 5px 0px; }
+      .nav li:hover, .nav li:focus {
+        color: #fff;
+        background: #4dae36; }
+      .nav li a {
+        border-bottom: 0; }
+      .nav li ul.sub-menu,
+      .nav li ul.children {
+        margin-top: 0;
+        border: 1px solid #ccc;
+        border-top: 0;
+        position: absolute;
+        visibility: hidden;
+        z-index: 8999; }
+        .nav li ul.sub-menu li a,
+        .nav li ul.children li a {
+          padding-left: 10px;
+          border-right: 0;
+          display: block;
+          width: 180px;
+          border-bottom: 1px solid #ccc; }
+        .nav li ul.sub-menu li:last-child a,
+        .nav li ul.children li:last-child a {
+          border-bottom: 0; }
+        .nav li ul.sub-menu li ul,
+        .nav li ul.children li ul {
+          top: 0;
+          left: 100%; }
+      .nav li:hover > ul {
+        top: auto;
+        visibility: visible; }
+    .nav li.current-menu-item,
+    .nav li.current_page_item,
+    .nav li.current_page_ancestor {
+      background: #4dae36; }
+      .nav li.current-menu-item a,
+      .nav li.current_page_item a,
+      .nav li.current_page_ancestor a {
+        border: none; }
+
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+  .widgettitle {
+    margin-top: 0; }
+
+  .widget ul li {
+    margin-bottom: 0.75em; }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
+
+  .widget_search {
+    float: left;
+    margin-left: 75px;
+    padding: 0; }
+
+  /*********************
+  HOME STYLES
+  *********************/
+  .secondary-post.entry:nth-child(2) {
+    padding-right: 0; }
+
+  #s {
+    float: left;
+    width: 200px; }
+
+  #searchsubmit {
+    float: left; }
+
+  .NewsCats {
+    margin-bottom: 10px; }
+    .NewsCats h3 {
+      font-size: 14px;
+      margin: 0;
+      font-weight: bold; }
+    .NewsCats p {
+      margin-bottom: 10px; }
+    .NewsCats .entry {
+      font-size: 12px; }
+      .NewsCats .entry p {
+        margin: 0; }
+
+  .banner {
+    margin-top: 10px;
+    display: none; }
+
+  #Hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative; }
+    #Hero span {
+      color: #4dae36;
+      font-size: 24px;
+      font-weight: bold; }
+    #Hero h1 {
+      font-size: 24px;
+      color: #666; }
+
+  .overlay span {
+    color: #4dae36; }
+
+  /************************
+  SINGLE POST / PAGE STYLES
+  ************************/
+  article header h1 {
+    font-size: 24px !important;
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+  article header .vcard {
+    margin-top: 60px; }
+
+  /*********************
+  CATEGORY STYLES
+  *********************/
+  article.top header h2 {
+    font-size: 27px;
+    margin-left: 26px;
+    margin-right: 20px;
+    margin-top: 27px; }
+
+  .grid header {
+    min-height: 170px; }
+  .grid section {
+    min-height: 105px; }
+
+  #click-menu {
+    display: none !important; } }
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name: NEWS.MARKETS
+  Author: Anthony Barnes - BostonIvy
+  
+  Stylesheet: Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop.
+  
+  ******************************************************************/
+  .wrap {
+    width: 1040px; }
+
+  .NewsText {
+    float: left; }
+
+  .banner {
+    display: block; }
+
+  .grid header {
+    min-height: 220px; }
+    .grid header span {
+      color: #4dae36; }
+      .grid header span .tagline {
+        padding: 0 10px;
+        font-size: 20px; }
+    .grid header h2 {
+      font-size: 18px;
+      color: #666;
+      font-weight: bold; }
+  .grid section {
+    min-height: 110px; }
+
+  .heroimg {
+    padding-left: 7px; }
+
+  .secondary-post.entry:nth-child(2) {
+    padding-right: 0.75em; } }
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/
+  /*********************
+  SINGLE POST / PAGE STYLES
+  *********************/
+  article header h1 {
+    font-size: 24px !important; }
+
+  .wrap {
+    width: 1280px; }
+
+  .NewsCats .entry p {
+    font-size: 14px; }
+
+  .grid header {
+    min-height: 245px; }
+  .grid section {
+    min-height: 80px; } }
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */ }
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+    a:after, a:visited:after {
+      content: " (" attr(href) ")"; }
+    a abbr[title]:after, a:visited abbr[title]:after {
+      content: " (" attr(title) ")"; }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr, img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; }
+
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */

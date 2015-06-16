@@ -1,0 +1,63 @@
+/******************************************************************
+Site Name: NEWS.MARKETS
+Author: Anthony Barnes - BostonIvy
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.wrap {
+  width: 1040px;
+}
+
+.NewsText {
+  float: left;
+}
+
+.banner {
+  display: block;
+}
+
+.grid {
+
+  header {
+    min-height: 220px;
+
+    span {
+      color: $green;
+
+      .tagline {
+        padding: 0 10px;
+        font-size:20px;
+      }
+
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #666;
+      font-weight: bold;
+    }
+
+  }
+
+  section {
+    min-height: 110px;
+  }
+
+}
+
+.heroimg {
+  padding-left: 7px;
+}
+
+.secondary-post {
+
+  &.entry:nth-child(2) {
+    padding-right: 0.75em;
+  }
+
+}

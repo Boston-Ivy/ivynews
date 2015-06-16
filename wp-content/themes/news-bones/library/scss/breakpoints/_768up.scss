@@ -1,0 +1,278 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+  width: 760px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.ticker-stocks-container{
+  display: block;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+header .widget_search {
+  display: block;
+}
+
+.header .widget.widget_nav_menu ul {
+  margin-top: 0;
+}
+
+.nav {
+	border: 0;
+
+	ul {
+      background: $black;
+      margin-top: 0;
+	}
+
+	li {
+      float: left;
+      position: relative;
+      padding: 5px 0px;
+
+      &:hover, &:focus {
+        color: $white;
+        background: $green;
+      }
+
+      a {
+        border-bottom: 0;
+      }
+
+      ul.sub-menu,
+      ul.children {
+        margin-top: 0;
+        border: 1px solid #ccc;
+        border-top: 0;
+        position: absolute;
+        visibility: hidden;
+        z-index: 8999;
+
+        li {
+
+          a {
+            padding-left: 10px;
+            border-right: 0;
+            display: block;
+            width: 180px;
+            border-bottom: 1px solid #ccc;
+          }
+
+          &:last-child a {
+            border-bottom: 0;
+          }
+
+          ul {
+            top: 0;
+            left: 100%;
+          }
+
+        }
+
+      }
+
+      &:hover > ul {
+        top: auto;
+        visibility: visible;
+      }
+
+	}
+
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+      background: $green;
+
+      a {
+        border: none;
+      }
+
+	}
+
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.widgettitle {
+  margin-top: 0;
+}
+
+.widget {
+
+  ul {
+
+    li {
+      margin-bottom: 0.75em;
+
+      ul {
+        margin-top: 0.75em;
+        padding-left: 1em;
+      }
+
+    }
+
+  }
+
+}
+
+.widget_search {
+  float: left;
+  margin-left: 75px;
+  padding: 0;
+}
+	
+/*********************
+HOME STYLES
+*********************/
+
+.secondary-post {
+
+  &.entry:nth-child(2) {
+    padding-right: 0;
+  }
+
+}
+
+#s {
+  float: left;
+  width: 200px;
+}
+
+#searchsubmit {
+  float: left;
+}
+
+.NewsCats {
+  margin-bottom: 10px;
+
+  h3 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  .entry {
+    font-size: 12px;
+
+    p {
+      margin: 0;
+    }
+
+  }
+
+}
+
+.banner{
+  margin-top: 10px;
+  display: none;
+}
+
+#Hero {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  span {
+    color: $green;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: #666;
+  }
+
+}
+
+.overlay {
+
+  span {
+    color: $green;
+  }
+
+}
+
+/************************
+SINGLE POST / PAGE STYLES
+************************/
+
+article {
+		
+  header {
+
+    h1 {
+      font-size: 24px !important;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    .vcard {
+      margin-top: 60px;
+    }
+
+  }
+
+}
+
+/*********************
+CATEGORY STYLES
+*********************/
+
+article.top header {
+
+  h2 {
+    font-size: 27px;
+    margin-left: 26px;
+    margin-right: 20px;
+    margin-top: 27px;
+  }
+
+}
+
+.grid {
+
+  header{
+    min-height: 170px;
+  }
+
+  section{
+    min-height: 105px;
+  }
+
+}
+
+#click-menu {
+  display: none !important;
+}
+

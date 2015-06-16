@@ -1,0 +1,136 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+
+img {
+  max-width: 100%;
+  height: inherit;
+}
+
+.overlay span {
+  display: block;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.widget_search {
+  display: none;
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+.entry-content img {
+
+  img {
+    width: auto;
+  }
+		
+  .grid {
+
+    .inner {
+
+      section {
+        min-height: 120px !important;
+      }
+
+    }
+
+  }
+
+  .alignleft,
+  img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+
+  .alignright,
+  img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+
+  .aligncenter,
+  img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+
+}
+
+/*********************
+HOMEPAGE STYLES
+*********************/
+
+.NewsCats:first-child {
+  padding-right: 0.75em;
+}
+
+.banner {
+  display:none;
+}
+
+article header h1 {
+  font-size: 26px !important;
+}
+
+/* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
+#Insights {
+  padding-right: 0.75em !important;
+}
+
+#Bonds {
+  padding-right: 0.75em !important;
+}
+
+.subscribe-form .inner .field-group {
+
+  .search-field {
+    width: calc(100% - 140px);
+    float: left;
+    top: 0;
+  }
+
+  .btn {
+    width: 130px;
+    float: right;
+    top: 0;
+  }
+
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+h1.single {
+  font-size: 36px;
+}
+
