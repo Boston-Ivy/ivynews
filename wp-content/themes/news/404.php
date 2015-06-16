@@ -13,7 +13,7 @@
                     </header>
 
                     <section class="entry-content">
-                        <p><?php _e( 'The content you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
+                        <p><?php _e( 'Sorry, but we couldn’t find the article you were looking for. Please try again.', 'bonestheme' ); ?></p>
                     </section>
 
                 </article>
