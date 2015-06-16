@@ -1779,6 +1779,14 @@ h1.single {
   .entry-title a span {
     color: #4dae36; }
 
+.excerpt a {
+  color: inherit !important;
+  font-weight: normal !important; }
+  .excerpt a:hover {
+    text-decoration: none !important; }
+.excerpt .read-more {
+  color: #4dae36 !important; }
+
 .search .grid header {
   min-height: inherit; }
 
@@ -1954,7 +1962,7 @@ article header {
   .tags a {
     display: inline-block; }
 
-.excerpt-read-more {
+.read-more {
   margin-top: 10px; }
 
 /******************************************************************

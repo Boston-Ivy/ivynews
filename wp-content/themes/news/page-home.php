@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="m-all t-1of2 d-1of2 cf herotext">
-                                <p><?php echo rwmb_meta( 'rw_intro'); ?></p>
+                                <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php echo rwmb_meta( 'rw_intro'); ?></a></p>
                                 <p><a href="<?php echo get_permalink($post->ID); ?>"><?php _e('Read more &raquo;'); ?></a></p>
                             </div>
 
@@ -121,7 +121,7 @@
                                         <div class="entry editors-choice">
 
                                             <h3><span><?php _e("Editor's choice: "); ?></span><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title ?></a></h3>
-                                            <p><?php $string = rwmb_meta( 'rw_intro'); $trimmedText = shorten_string($string, 18); echo $trimmedText ?></p>
+                                            <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php $string = rwmb_meta( 'rw_intro'); $trimmedText = shorten_string($string, 18); echo $trimmedText ?></a></p>
 
                                         </div>
 
@@ -164,7 +164,7 @@
 
                             ?>
 
-                            <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 24); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>">Read&nbsp;more&nbsp;&raquo;</a></p>
+                            <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php $string = $excerpt; $trimmedText = shorten_string($string, 24); echo $trimmedText ?></a> <a href="<?php echo get_permalink(get_the_ID()); ?>" class="read-more"><?php _e('Read more &raquo;'); ?></a></p>
 
                         </div>
 
@@ -309,7 +309,7 @@
 
                                     ?>
 
-                                    <p><?php $string = $excerpt; $trimmedText = shorten_string($string, 14); echo $trimmedText ?> <a class="excerpt-read-more" href="<?php echo get_permalink(get_the_ID()); ?>"><?php _e('Read more &raquo;'); ?></a></p>
+                                    <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php $string = $excerpt; $trimmedText = shorten_string($string, 14); echo $trimmedText ?></a> <a class="read-more" href="<?php echo get_permalink(get_the_ID()); ?>"><?php _e('Read more &raquo;'); ?></a></p>
 
                                 </div>
 

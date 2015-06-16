@@ -856,6 +856,24 @@ h1.single {
 
 }
 
+.excerpt {
+
+  a {
+    color: inherit !important;
+    font-weight: normal !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+  }
+
+  .read-more {
+    color: $green !important;
+  }
+
+}
+
 .search {
 
   .grid header {
@@ -1165,7 +1183,7 @@ article {
 
 }
 	
-.excerpt-read-more {
+.read-more {
   margin-top: 10px;
 }
 
