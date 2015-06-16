@@ -32,7 +32,7 @@
                     </header>
 
                     <section class="entry-content cf">
-                        <?php the_excerpt(); ?>
+                        <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php the_excerpt_rss(); ?></a></p>
                     </section>
 
                     <footer class="article-footer">
