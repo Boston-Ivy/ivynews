@@ -26,6 +26,7 @@
                             $split_arr = split("/", $parent_cats);
                             $exclude_cat = get_cat_id($split_arr[0]);
                             $hero_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-450' );
+                            $hero_id = $post->ID;
                         ?>
 
                         <div id="Hero">
@@ -142,11 +143,11 @@
                 <?php /* Begin second row – 2 x Sub-Hero / Newsletter subscribe form */ ?>
                 <section class="m-all t-all d-all">
 
-                    <?php $args = array( 'posts_per_page' => 2 ); ?>
+                    <?php $args = array( 'showposts' => 2, 'post__not_in' => array( $hero_id ) ); ?>
 
                     <?php $loop = new WP_Query($args); while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-                        <?php $do_not_duplicate[] = $post->ID; ?>
+                        <?php $sub_hero_id = get_the_ID(); ?>
 
                         <div class="m-all t-1of2 d-1of3 secondary-post entry">
 
@@ -233,11 +234,11 @@
                             $lastCol = "last-col";
                         }
 
-                        $args = array( 'posts_per_page' => 1, 'cat' => $cat_ID );
+//                        $args = array( 'posts_per_page' => 1, 'cat' => $cat_ID );
 
-                        if ($cat_ID == $exclude_cat) {
-                            $args['post__not_in'] = array($hero_post);
-                        }
+//                        if ($cat_ID == $exclude_cat) {
+//                            $args['post__not_in'] = array($hero_post);
+//                        }
 
                     ?>
 
@@ -248,11 +249,11 @@
 
                         <?php
 
-                        $args = array( 'posts_per_page' => 4, 'cat' => $cat_ID );
+                        $args = array( 'posts_per_page' => 3, 'cat' => $cat_ID, 'post__not_in' => array( $hero_id, $sub_hero_id ) );
 
-                        if ($cat_ID == $exclude_cat) {
-                            $args['post__not_in'] = array($hero_post);
-                        }
+//                        if ($cat_ID == $exclude_cat) {
+//                            $args['post__not_in'] = array($hero_post);
+//                        }
 
                         query_posts($args);
 
@@ -269,9 +270,7 @@
                             /* Loop through categories */
                             while (have_posts()) : the_post();
 
-                                if ( in_array( $post->ID, $do_not_duplicate ) ) continue;
-                                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' );
-                                ?>
+                                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' ); ?>
 
                                 <div class="entry">
 
