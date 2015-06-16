@@ -277,7 +277,7 @@
 
                                     <?php $count++; if ( $count % 4 == 1 ) { /* Only show featured image for first post in category */ ?>
 
-                                        <div class="cat-thumb" style="background-image: url(<?php echo $thumb[0]; ?>);"></div>
+                                        <a href="<?php echo the_permalink(); ?>" class="cat-thumb" style="background-image: url(<?php echo $thumb[0]; ?>);"><?php echo the_title()?></a>
 
                                     <?php } /* and for all sequential posts do not show featured image… */ ?>
 

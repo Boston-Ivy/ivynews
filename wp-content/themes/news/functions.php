@@ -920,6 +920,15 @@ $GLOBALS['comment'] = $comment; ?>
     add_filter('embed_oembed_html', 'alx_embed_html', 10, 3);
     add_filter('video_embed_html', 'alx_embed_html'); // Jetpack
 
+    // enqueue styles
+    function theme_styles() {
+
+        wp_register_style( 'style', get_template_directory_uri() . '/library/css/style.css', array(), '1.0.1', 'all' );
+        wp_enqueue_style( 'style' );
+
+    }
+    add_action( 'wp_enqueue_scripts', 'theme_styles' );
+
     // enqueue custom scripts
     function theme_js()
     {

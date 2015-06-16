@@ -1,7 +1,7 @@
 {
   "name": "News.Markets",
-  "version": "1.0.0",
-  "description": "Responsive WordPress theme for News.Markets",
+  "version": "1.0.1",
+  "description": "WordPress theme for news.markets",
   "main": "index.js",
   "scripts": {
     "test": "testcmd"
