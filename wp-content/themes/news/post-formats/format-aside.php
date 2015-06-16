@@ -2,7 +2,19 @@
 
     <header class="article-header entry-header">
 
-        <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+        <h1 class="entry-title single-title" itemprop="headline">
+            <?php
+
+            $tagline = rwmb_meta( 'rw_tagline');
+
+            if (!empty($tagline)) {
+                _e('<span>'); echo $tagline; _e(': </span>');
+            }
+
+            ?>
+
+            <?php the_title(); ?>
+        </h1>
 
         <p class="byline entry-meta vcard">
         <?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),

@@ -102,7 +102,7 @@ wp-content/mysql.sql
 
 # Codekit
 ###########
-wp-content/themes/news-bones/.sass-cache/*
+wp-content/themes/news/.sass-cache/*
 
 # Include these files in previously blocked directories
 !wp-content/uploads/.htaccess
