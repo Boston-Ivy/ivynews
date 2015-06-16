@@ -2313,6 +2313,23 @@ body .contactform11 .wdform-page-and-images {
     body .contactform11 .wdform-page-and-images button.button-submit {
       margin-right: 10px; }
 
+/* ---------------------------
+------ 404 Error Page --------
+----------------------------*/
+body.error404 #main article {
+  text-align: center; }
+  body.error404 #main article header {
+    min-height: inherit;
+    padding: 60px 0 30px 0; }
+    body.error404 #main article header h1 {
+      margin: 0;
+      color: #4dae36; }
+  body.error404 #main article section {
+    padding: 0 30px 60px 30px; }
+    body.error404 #main article section p {
+      max-width: 300px;
+      margin: 0 auto 10px auto; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
