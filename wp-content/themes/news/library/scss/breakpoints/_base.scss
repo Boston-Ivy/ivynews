@@ -147,26 +147,27 @@ HEADER STYLES
         }
 
         .search-icon {
-          width: 25px;
-          height: 30px;
-          display: inline-block;
-          text-indent: -999px;
-          overflow: hidden;
-          vertical-align: bottom;
-          @include at2x('../images/icon-search', png, 50px, 25px, no-repeat);
-          background-position: left center;
-          background-repeat: no-repeat;
-          cursor: pointer;
-          float: right;
-
-          &:hover {
-            background-position: right center;
-          }
+          display: none;
+//          width: 25px;
+//          height: 30px;
+//          display: inline-block;
+//          text-indent: -999px;
+//          overflow: hidden;
+//          vertical-align: bottom;
+//          @include at2x('../images/icon-search', png, 50px, 25px, no-repeat);
+//          background-position: left center;
+//          background-repeat: no-repeat;
+//          cursor: pointer;
+//          float: right;
+//
+//          &:hover {
+//            background-position: right center;
+//          }
 
         }
 
         .field-group {
-          width: 0;
+          //width: 0;
           height: 30px;
           overflow: hidden;
           float: right;

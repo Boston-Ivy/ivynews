@@ -1369,26 +1369,8 @@ HEADER STYLES
         width: 100%;
         display: block; }
         .header .widget.widget_search form .search-icon {
-          width: 25px;
-          height: 30px;
-          display: inline-block;
-          text-indent: -999px;
-          overflow: hidden;
-          vertical-align: bottom;
-          background-image: url("../images/icon-search.png");
-          background-position: left center;
-          background-repeat: no-repeat;
-          cursor: pointer;
-          float: right; }
-          @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-            .header .widget.widget_search form .search-icon {
-              background-image: url("../images/icon-search@2x.png");
-              background-size: 50px 25px;
-              background-repeat: no-repeat; } }
-          .header .widget.widget_search form .search-icon:hover {
-            background-position: right center; }
+          display: none; }
         .header .widget.widget_search form .field-group {
-          width: 0;
           height: 30px;
           overflow: hidden;
           float: right; }
