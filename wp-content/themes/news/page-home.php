@@ -140,7 +140,21 @@
                                         <div class="entry editors-choice">
 
                                             <h3><span><?php _e("Editor's choice: "); ?></span><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title ?></a></h3>
-                                            <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php $string = rwmb_meta( 'rw_intro'); $trimmedText = shorten_string($string, 18); echo $trimmedText ?></a></p>
+
+                                            <?php
+
+                                            $intro = rwmb_meta( 'rw_intro');
+
+                                            if (!empty($intro)) {
+                                                $excerpt = $intro;
+                                            } else {
+                                                $excerpt = get_the_excerpt();
+                                            }
+
+                                            ?>
+
+                                            <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php $string = $excerpt; $trimmedText = shorten_string($string, 16); echo $trimmedText ?></a> <a href="<?php echo get_permalink(get_the_ID()); ?>" class="read-more"><?php _e('Read more &raquo;'); ?></a></p>
+
 
                                         </div>
 
@@ -354,14 +368,14 @@
 
                             <?php endwhile; ?>
 
-                                <?php
+                            <?php
 
-                                endif;
-                                wp_reset_query();
-                                echo category_description( $cat_ID);
-                                $category_link = get_category_link( $cat_ID );
+                            endif;
+                            wp_reset_query();
+                            echo category_description( $cat_ID);
+                            $category_link = get_category_link( $cat_ID );
 
-                                ?>
+                            ?>
 
                             <a href="<?php echo $category_link ?>" class="more_stories" rel="bookmark" title="View all stories in <?php echo $cat_name;?>"><?php _e('More stories &raquo;'); ?></a>
 
