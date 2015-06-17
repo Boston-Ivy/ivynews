@@ -27,6 +27,7 @@
                             $exclude_cat = get_cat_id($split_arr[0]);
                             $hero_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-450' );
                             $hero_id = $post->ID;
+                            $sub_hero_ids[] = $hero_id;
                         ?>
 
                         <div id="Hero">
@@ -147,7 +148,7 @@
 
                     <?php $loop = new WP_Query($args); while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-                        <?php $sub_hero_id = get_the_ID(); ?>
+                        <?php $sub_hero_ids[] = get_the_ID(); ?>
 
                         <div class="m-all t-1of2 d-1of3 secondary-post entry">
 
@@ -249,7 +250,18 @@
 
                         <?php
 
-                        $args = array( 'posts_per_page' => 3, 'cat' => $cat_ID, 'post__not_in' => array( $hero_id, $sub_hero_id ) );
+                        $comma_separated = implode(", ", $sub_hero_ids);
+                        //$duplicates_combined = array( $comma_separated, $hero_id);
+                        //$duplicate_posts = implode(", ", $duplicates_combined);
+
+                        $args = array(
+                            'posts_per_page' => 3,
+                            'cat' => $cat_ID,
+                            'post__not_in' => array( $comma_separated )
+//                            'post__not_in' => array( $hero_id )
+                        );
+
+                        print_r($args);
 
 //                        if ($cat_ID == $exclude_cat) {
 //                            $args['post__not_in'] = array($hero_post);
@@ -272,7 +284,7 @@
 
                                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bones-thumb-450' ); ?>
 
-                                <div class="entry">
+                                <div id="<?php echo get_the_ID(); ?>" class="entry">
 
                                     <?php $count++; if ( $count % 4 == 1 ) { /* Only show featured image for first post in category */ ?>
 
