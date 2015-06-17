@@ -159,6 +159,7 @@ jQuery(document).ready(function($) {
             e.stopPropagation();
             $(this).hide();
             $field.animate({ width: '280px' }, 'medium').show();
+            $('.header input.search-field').focus();
 
         });
 
