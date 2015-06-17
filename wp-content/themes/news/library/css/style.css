@@ -1507,7 +1507,8 @@ HOME STYLES
 .secondary-post.entry:last-child {
   padding-right: 0; }
 .secondary-post.entry h3 {
-  margin: 10px 0; }
+  margin: 10px 0;
+  font-weight: bold; }
   .secondary-post.entry h3 span {
     color: #4dae36; }
   .secondary-post.entry h3 a {
