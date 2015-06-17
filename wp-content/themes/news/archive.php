@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
     <div id="content">
-
         <div id="inner-content" class="wrap cf">
-
             <main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
                 <?php if (have_posts()) :
@@ -11,14 +9,14 @@
                     while (have_posts()) : the_post();
 
                     $lastCol = '';
+
                     if ($i % 2 == 0){
-                    $lastCol="last-col";
+                        $lastCol="last-col";
                     }
 
                     if($i<1): ?>
 
                     <article id="post-<?php the_ID(); ?>" <?php post_class("cf top "); ?> role="article">
-
                         <header class="entry-header article-header cf">
 
                             <div class="m-all t-all d-all cf herotext">
@@ -99,7 +97,7 @@
 
                                 <?php
 
-                                $intro = rwmb_meta( 'rw_intro');
+                                $intro = rwmb_meta( 'rw_intro' );
 
                                 if (!empty($intro)) {
                                     $excerpt = $intro;
@@ -115,11 +113,11 @@
                             <footer class="article-footer">
                                 <p class="byline entry-meta vcard">
                                 <?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
-                                             /* the time the post was published */
-                                '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                                                /* the author of the post */
-                                ' <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                                            ); ?>
+                                    /* the time the post was published */
+                                    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+                                    /* the author of the post */
+                                    ' <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+                                ); ?>
                                 </p>
                             </footer>
 
@@ -134,21 +132,21 @@
 
                     <?php bones_page_navi(); ?>
 
-                    <?php else : ?>
+                <?php else : ?>
 
-                        <article id="post-not-found" class="hentry cf">
-                            <header class="article-header">
-                                <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-                            </header>
-                            <section class="entry-content">
-                                <p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-                            </section>
-                            <footer class="article-footer">
-                                    <p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
-                            </footer>
-                        </article>
+                    <article id="post-not-found" class="hentry cf">
+                        <header class="article-header">
+                            <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+                        </header>
+                        <section class="entry-content">
+                            <p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+                        </section>
+                        <footer class="article-footer">
+                            <p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
+                        </footer>
+                    </article>
 
-                    <?php endif; ?>
+                <?php endif; ?>
 
             </main>
 
