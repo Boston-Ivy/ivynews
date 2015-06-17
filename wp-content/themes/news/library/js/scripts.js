@@ -146,6 +146,7 @@ jQuery(document).ready(function($) {
   
     loadGravatars();
     search();
+    preloadImages();
 
     function search() {
 
@@ -175,6 +176,20 @@ jQuery(document).ready(function($) {
 
         });
 
+    }
+
+    function preloadImages(){
+        $.fn.preload = function() {
+            this.each(function(){
+                $('<img/>')[0].src = this;
+            });
+        }
+        $([
+            '/wp-content/themes/news/library/images/logo-header-mob.png',
+            '/wp-content/themes/news/library/images/logo-header-mob@2x.png',
+            '/wp-content/themes/news/library/images/logo-header.png',
+            '/wp-content/themes/news/library/images/logo-header@2x.png',
+        ]).preload();
     }
 
 }); /* end of as page load scripts */

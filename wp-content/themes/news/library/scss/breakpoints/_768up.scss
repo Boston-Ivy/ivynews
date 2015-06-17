@@ -28,6 +28,18 @@ HEADER STYLES
   display: block;
 }
 
+.header {
+
+  .logo {
+    display: inline-block;
+  }
+
+  .mob-logo {
+    display: none;
+  }
+
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -300,4 +312,10 @@ article.top header {
 
   }
 
+}
+
+.copyright {
+  float: right;
+  text-align: left;
+  font-size: 1em;
 }

@@ -74,6 +74,7 @@
 
 					<div class="m-2of3 t-1of3 d-2of7 cf">
                         <a href="<?php echo home_url(); ?>" rel="nofollow" class="logo" ><?php bloginfo('name'); ?></a>
+                        <a href="<?php echo home_url(); ?>" rel="nofollow" class="mob-logo" ><?php bloginfo('name'); ?></a>
                     </div>
                     
                     <div class="m-all t-2of3 d-5of7 last-col cf header-right">

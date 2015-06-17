@@ -1336,7 +1336,7 @@ HEADER STYLES
   .header .logo {
     width: 246px;
     height: 65px;
-    display: inline-block;
+    display: none;
     text-indent: -999px;
     overflow: hidden;
     vertical-align: bottom;
@@ -1345,6 +1345,19 @@ HEADER STYLES
       .header .logo {
         background-image: url("../images/logo-header@2x.png");
         background-size: 246px 65px;
+        background-repeat: no-repeat; } }
+  .header .mob-logo {
+    width: 174px;
+    height: 46px;
+    display: inline-block;
+    text-indent: -999px;
+    overflow: hidden;
+    vertical-align: bottom;
+    background-image: url("../images/logo-header-mob.png"); }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .header .mob-logo {
+        background-image: url("../images/logo-header-mob@2x.png");
+        background-size: 174px 46px;
         background-repeat: no-repeat; } }
   .header .widget {
     background: none; }
@@ -1485,9 +1498,12 @@ HOME STYLES
   #Hero a {
     color: #4dae36;
     display: inline-block;
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 0 0 0 0; }
     #Hero a:hover {
       text-decoration: none; }
+    #Hero a.hero-thumb {
+      margin-top: 10px; }
   #Hero span {
     color: #4dae36;
     font-size: 24px;
@@ -1497,7 +1513,7 @@ HOME STYLES
     font-size: 24px;
     margin: 0; }
   #Hero p {
-    margin-top: 0; }
+    margin: 10px 0; }
 
 .secondary-post.entry:before {
   content: "";
@@ -2201,9 +2217,10 @@ FOOTER STYLES
         color: #fff; }
 
 .copyright {
-  float: right;
   margin: 0;
-  line-height: 64px; }
+  line-height: 64px;
+  text-align: center;
+  font-size: 12px; }
 
 #infinite-footer {
   display: none; }
@@ -2330,6 +2347,28 @@ body.error404 #main article {
     body.error404 #main article section p {
       max-width: 300px;
       margin: 0 auto 10px auto; }
+
+/* ---------------------------
+------ Mobile toggle ---------
+----------------------------*/
+body #click-menu {
+  width: 60px;
+  top: 20px !important;
+  border-radius: 3px;
+  display: table;
+  padding: 5px 10px !important;
+  -webkit-box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.3); }
+  body #click-menu .threeLines {
+    width: 100% !important;
+    height: auto !important;
+    display: table-cell;
+    vertical-align: middle; }
+    body #click-menu .threeLines .line {
+      height: 4px !important;
+      margin: 6px 0 !important; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2461,6 +2500,11 @@ you can add resource intensive styles.
   *********************/
   .ticker-stocks-container {
     display: block; }
+
+  .header .logo {
+    display: inline-block; }
+  .header .mob-logo {
+    display: none; }
 
   /*********************
   NAVIGATION STYLES
@@ -2616,7 +2660,12 @@ you can add resource intensive styles.
   .home .NewsCats .idio-recommendations .entry {
     height: auto; }
     .home .NewsCats .idio-recommendations .entry:first-child {
-      height: auto; } }
+      height: auto; }
+
+  .copyright {
+    float: right;
+    text-align: left;
+    font-size: 1em; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and

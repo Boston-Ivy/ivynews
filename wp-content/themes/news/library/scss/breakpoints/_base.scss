@@ -113,11 +113,21 @@ HEADER STYLES
   .logo {
     width: 246px;
     height: 65px;
-    display: inline-block;
+    display: none;
     text-indent: -999px;
     overflow: hidden;
     vertical-align: bottom;
     @include at2x('../images/logo-header', png, 246px, 65px, no-repeat);
+  }
+
+  .mob-logo {
+    width: 174px;
+    height: 46px;
+    display: inline-block;
+    text-indent: -999px;
+    overflow: hidden;
+    vertical-align: bottom;
+    @include at2x('../images/logo-header-mob', png, 174px, 46px, no-repeat);
   }
 
   .widget {
@@ -367,9 +377,14 @@ HOME STYLES
     color: $green;
     display: inline-block;
     font-weight: bold;
+    margin: 0 0 0 0;
 
     &:hover {
       text-decoration: none;
+    }
+
+    &.hero-thumb {
+      margin-top: 10px;
     }
 
   }
@@ -387,7 +402,7 @@ HOME STYLES
   }
 
   p {
-    margin-top: 0;
+    margin: 10px 0;
   }
 
 }
@@ -1574,9 +1589,10 @@ FOOTER STYLES
 }
 
 .copyright {
-  float: right;
   margin: 0;
   line-height: 64px;
+  text-align: center;
+  font-size: 12px;
 }
 
 #infinite-footer {
@@ -1787,6 +1803,41 @@ body.error404 {
       p {
         max-width: 300px;
         margin: 0 auto 10px auto;
+      }
+
+    }
+
+  }
+
+}
+
+/* ---------------------------
+------ Mobile toggle ---------
+----------------------------*/
+
+body {
+
+  #click-menu {
+    width: 60px;
+    top: 20px !important;
+    border-radius: 3px;
+    display: table;
+    padding: 5px 10px !important;
+
+    -webkit-box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.3);
+
+    .threeLines {
+      width: 100% !important;
+      height: auto !important;
+      display: table-cell;
+      vertical-align: middle;
+
+      .line {
+        height: 4px !important;
+        margin: 6px 0 !important;
       }
 
     }
