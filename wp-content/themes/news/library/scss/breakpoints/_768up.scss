@@ -276,3 +276,31 @@ article.top header {
   display: none !important;
 }
 
+.home {
+
+  .NewsCats {
+
+    .entry {
+      height: 100px;
+      margin-left: 0;
+      margin-right: 0;
+      overflow: hidden;
+
+      &:first-child {
+        height: 230px;
+      }
+
+    }
+
+    .idio-recommendations .entry {
+      height: auto;
+
+      &:first-child {
+        height: auto;
+      }
+
+    }
+
+  }
+
+}

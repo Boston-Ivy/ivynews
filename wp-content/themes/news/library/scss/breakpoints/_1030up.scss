@@ -61,3 +61,32 @@ be seen on the Desktop.
   }
 
 }
+
+.home {
+
+  .NewsCats {
+
+    .entry {
+      height: 80px;
+      margin-left: 0;
+      margin-right: 0;
+      overflow: hidden;
+
+      &:first-child {
+        height: 210px;
+      }
+
+    }
+
+    .idio-recommendations .entry {
+      height: auto;
+
+      &:first-child {
+        height: auto;
+      }
+
+    }
+
+  }
+
+}

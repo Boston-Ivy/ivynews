@@ -833,9 +833,13 @@ POSTS & CONTENT STYLES
 
 .home {
 
-  .NewsCats .entry {
-    margin-left: 0;
-    margin-right: 0;
+  .NewsCats {
+
+    .entry {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
   }
 
 }

@@ -2607,7 +2607,19 @@ you can add resource intensive styles.
     min-height: 105px; }
 
   #click-menu {
-    display: none !important; } }
+    display: none !important; }
+
+  .home .NewsCats .entry {
+    height: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden; }
+    .home .NewsCats .entry:first-child {
+      height: 230px; }
+  .home .NewsCats .idio-recommendations .entry {
+    height: auto; }
+    .home .NewsCats .idio-recommendations .entry:first-child {
+      height: auto; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -2652,7 +2664,19 @@ you can add resource intensive styles.
     padding-left: 7px; }
 
   .secondary-post.entry:nth-child(2) {
-    padding-right: 0.75em; } }
+    padding-right: 0.75em; }
+
+  .home .NewsCats .entry {
+    height: 80px;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden; }
+    .home .NewsCats .entry:first-child {
+      height: 210px; }
+  .home .NewsCats .idio-recommendations .entry {
+    height: auto; }
+    .home .NewsCats .idio-recommendations .entry:first-child {
+      height: auto; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
