@@ -375,6 +375,40 @@ $GLOBALS['comment'] = $comment; ?>
         'comment-form'
     ));
 
+    // Create admin menu for Google Tag Manager
+    add_action('admin_menu', 'tag_manager_menu');
+
+    function tag_manager_menu() {
+        add_options_page('Tag Manager', 'Tag Manager', 'manage_options', 'tag-manager.php', 'tag_manager_page');
+    }
+
+    if(isset($_POST['tag_manager'])){
+        update_option("tag_manager", $_POST['tag_manager']);
+    }
+
+    function tag_manager_page(){
+        $tag_manager = get_option("tag_manager");
+        ?><form method="post">
+        <div class="wrap">
+            <h2>Google Tag Manager</h2>
+            <table class="form-table">
+                <tr>
+                    <th scope="row">Tag Manager code</th>
+                    <td>
+                        <fieldset>
+                            <p style="margin-top: 0;"><label for="tag_manager">Paste in the Tag Manager code below:</label></p>
+                            <input type="text" name="tag_manager" value="<?php echo $tag_manager ?>" id="tag_manager" class="regular-text">
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+            <p class="submit">
+                <button type="submit" class="button button-primary"><?php _e('Save Changes'); ?></button>
+            </p>
+        </div>
+        </form>
+    <?php }
+
     function string_limit_words($string, $word_limit)
     {
         $words = explode(' ', $string, ($word_limit + 1));
