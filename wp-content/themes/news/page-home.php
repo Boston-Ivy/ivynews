@@ -123,7 +123,7 @@
                                     <script class="idio-recommendations" type="text/x-mustache" data-rpp="2" data-fallback-section="1">
                                     {{#content}}
                                         <div class="entry idio__entry" {{#main_image_url}}data-image="{{main_image_url}}?w=300&amp;h=100" {{/main_image_url}}>
-                                            <h3><span>Recommended:</span> <a href="{{link_url}}" rel="bookmark" title="{{title}}">{{title}}</a></h3>
+                                            <h3><a href="{{link_url}}" rel="bookmark" title="{{title}}"><span>Recommended:</span> {{title}}</a></h3>
                                             <p><font class="idio__p">{{abstract}}</font></p>
                                         </div>
                                     {{/content}}
@@ -139,7 +139,7 @@
 
                                         <div class="entry editors-choice">
 
-                                            <h3><span><?php _e("Editor's choice: "); ?></span><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title ?></a></h3>
+                                            <h3><a href="<?php echo get_permalink($post->ID); ?>"><span><?php _e("Editor's choice: "); ?></span><?php echo $post->post_title ?></a></h3>
 
                                             <?php
 
