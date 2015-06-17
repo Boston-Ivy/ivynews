@@ -354,18 +354,18 @@
 
                             <?php endwhile; ?>
 
+                                <?php
+
+                                endif;
+                                wp_reset_query();
+                                echo category_description( $cat_ID);
+                                $category_link = get_category_link( $cat_ID );
+
+                                ?>
+
+                            <a href="<?php echo $category_link ?>" class="more_stories" rel="bookmark" title="View all stories in <?php echo $cat_name;?>"><?php _e('More stories &raquo;'); ?></a>
+
                             </div>
-
-                            <a href="<?php echo $category_link ?>" class="more_stories" rel="bookmark" title="View all stories in <?php echo $cat_name;?>">More stories &raquo;</a>
-
-                            <?php
-
-                            endif;
-                            wp_reset_query();
-                            echo category_description( $cat_ID);
-                            $category_link = get_category_link( $cat_ID );
-
-                            ?>
 
                         </div>
 
