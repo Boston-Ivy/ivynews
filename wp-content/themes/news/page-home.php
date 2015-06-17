@@ -53,6 +53,21 @@
                             <div class="m-all t-1of2 d-1of2 cf herotext">
                                 <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php echo rwmb_meta( 'rw_intro'); ?></a></p>
                                 <p><a href="<?php echo get_permalink($post->ID); ?>"><?php _e('Read more &raquo;'); ?></a></p>
+
+<!--                                --><?php
+//
+//                                $intro = rwmb_meta( 'rw_intro');
+//
+//                                if (!empty($intro)) {
+//                                    $hero_excerpt = $intro;
+//                                } else {
+//                                    $hero_excerpt = $post->post_excerpt;
+//                                }
+//
+//                                ?>
+
+<!--                                <p class="excerpt"><a href="--><?php //echo get_permalink($post->ID); ?><!--">--><?php //$string = $hero_excerpt; $trimmedText = shorten_string($string, 24); echo $trimmedText ?><!--</a> <a href="--><?php //echo get_permalink(get_the_ID()); ?><!--" class="read-more">--><?php //_e('Read more &raquo;'); ?><!--</a></p>-->
+
                             </div>
 
                             <div class="m-all t-1of2 d-1of2 last-col cf heroimg">
@@ -250,25 +265,22 @@
 
                         <?php
 
-                        $comma_separated = implode(", ", $sub_hero_ids);
-                        //$duplicates_combined = array( $comma_separated, $hero_id);
-                        //$duplicate_posts = implode(", ", $duplicates_combined);
+                        $comma_separated = implode(", ", $sub_hero_ids );
 
                         $args = array(
                             'posts_per_page' => 3,
                             'cat' => $cat_ID,
-                            'post__not_in' => array( $comma_separated )
-//                            'post__not_in' => array( $hero_id )
+                            'post__not_in' => $sub_hero_ids
                         );
 
-                        print_r($args);
+                        //print_r($args);
 
 //                        if ($cat_ID == $exclude_cat) {
 //                            $args['post__not_in'] = array($hero_post);
 //                        }
 
                         query_posts($args);
-
+                        //echo "<p>REQUEST:$wp_query->request</p>";
                         if (have_posts()) : ?>
 
                             <h3 class="cat-title"><a href="<?php echo $cat_link; ?>"><?php echo $cat_name; ?></a></h3>
