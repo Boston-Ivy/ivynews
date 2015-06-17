@@ -2610,10 +2610,7 @@ you can add resource intensive styles.
     display: none !important; }
 
   .home .NewsCats .entry {
-    height: 100px;
-    margin-left: 0;
-    margin-right: 0;
-    overflow: hidden; }
+    height: 100px; }
     .home .NewsCats .entry:first-child {
       height: 230px; }
   .home .NewsCats .idio-recommendations .entry {
@@ -2667,10 +2664,7 @@ you can add resource intensive styles.
     padding-right: 0.75em; }
 
   .home .NewsCats .entry {
-    height: 80px;
-    margin-left: 0;
-    margin-right: 0;
-    overflow: hidden; }
+    height: 80px; }
     .home .NewsCats .entry:first-child {
       height: 210px; }
   .home .NewsCats .idio-recommendations .entry {
