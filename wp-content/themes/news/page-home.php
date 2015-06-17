@@ -28,6 +28,8 @@
                             $hero_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-450' );
                             $hero_id = $post->ID;
                             $sub_hero_ids[] = $hero_id;
+                            setup_postdata($post);
+                            $hero_snippet = get_the_excerpt();
                         ?>
 
                         <div id="Hero">
@@ -52,24 +54,21 @@
 
                             <div class="m-all t-1of2 d-1of2 cf herotext">
 
-                                <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php echo rwmb_meta( 'rw_intro'); ?></a></p>
-                                <p><a href="<?php echo get_permalink($post->ID); ?>"><?php _e('Read more &raquo;'); ?></a></p>
+                                <?php
 
-<!--                                --><?php
-//
-//                                $intro = rwmb_meta( 'rw_intro');
-//
-//                                if (!empty($intro)) {
-//                                    $hero_excerpt = $intro;
-//                                } else {
-//                                    $hero_excerpt = $post->post_excerpt;
-//                                }
-//
-//                                echo $hero_excerpt;
-//
-//                                ?>
-<!---->
-<!--                                <p class="excerpt"><a href="--><?php //echo get_permalink($post->ID); ?><!--">--><?php //$string = $hero_excerpt; $trimmedText = shorten_string($string, 24); echo $trimmedText ?><!--</a> <a href="--><?php //echo get_permalink(get_the_ID()); ?><!--" class="read-more">--><?php //_e('Read more &raquo;'); ?><!--</a></p>-->
+                                $intro = rwmb_meta( 'rw_intro');
+
+                                if (!empty($intro)) {
+                                    $hero_excerpt = $intro;
+                                } else {
+                                    $hero_excerpt = $hero_snippet;
+                                }
+
+                                ?>
+
+                                <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php $string = $hero_excerpt; $trimmedText = shorten_string($string, 44); echo $trimmedText ?></a></p>
+
+                                <p><a href="<?php echo get_permalink(get_the_ID()); ?>" class="read-more"><?php _e('Read more &raquo;'); ?></a></p>
 
                             </div>
 
