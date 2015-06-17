@@ -293,10 +293,10 @@ article.top header {
   .NewsCats {
 
     .entry {
-      height: 100px;
+      height: 105px;
 
       &:first-child {
-        height: 230px;
+        height: 235px;
       }
 
     }
@@ -318,4 +318,16 @@ article.top header {
   float: right;
   text-align: left;
   font-size: 1em;
+}
+
+/* ---------------------------
+---------- Archive -----------
+----------------------------*/
+
+.archive-hero {
+  height: 200px;
+}
+
+.archive-thumb {
+  height: 140px;
 }

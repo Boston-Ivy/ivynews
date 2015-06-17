@@ -67,10 +67,10 @@ be seen on the Desktop.
   .NewsCats {
 
     .entry {
-      height: 80px;
+      height: 85px;
 
       &:first-child {
-        height: 210px;
+        height: 215px;
       }
 
     }
@@ -86,4 +86,16 @@ be seen on the Desktop.
 
   }
 
+}
+
+/* ---------------------------
+---------- Archive -----------
+----------------------------*/
+
+.archive-hero {
+  height: 280px;
+}
+
+.archive-thumb {
+  height: 220px;
 }

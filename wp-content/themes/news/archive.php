@@ -20,6 +20,7 @@
                     <article id="post-<?php the_ID(); ?>" <?php post_class("cf top "); ?> role="article">
 
                         <header class="entry-header article-header cf">
+
                             <div class="m-all t-all d-all cf herotext">
                                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                                     <h1 class="entry-title single" itemprop="headline" rel="bookmark">
@@ -35,14 +36,21 @@
                                     </h1>
                                 </a>
                             </div>
+
                             <div class="m-all t-all d-1of2">
                                 <section class="entry-content first cf">
                                     <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php the_excerpt_rss(); ?></a></p>
                                 </section>
                             </div>
+
                             <div class="m-all t-all d-1of2 last-col cf">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'news-bones-450' ); ?></a>
+                                <?php $archive_hero = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-450' ); ?>
+
+                                <a href="<?php the_permalink(); ?>" class="archive-hero" rel="bookmark" style="background-image: url(<?php echo $archive_hero[0]; ?>);">
+                                    <?php the_title(); ?>
+                                </a>
                             </div>
+
                         </header>
 
                         <footer class="article-footer">
@@ -65,8 +73,11 @@
                         <inner>
 
                             <header class="entry-header article-header">
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                    <?php the_post_thumbnail( 'bones-thumb-450' ); ?>
+
+                                <?php $archive_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-450' ); ?>
+
+                                <a href="<?php the_permalink(); ?>" class="archive-thumb" rel="bookmark" style="background-image: url(<?php echo $archive_thumb[0]; ?>);">
+                                    <?php the_title(); ?>
                                 </a>
 
                                 <h2 class="h3 margin entry-title">

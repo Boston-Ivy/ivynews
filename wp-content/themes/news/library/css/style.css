@@ -2370,6 +2370,33 @@ body #click-menu {
       height: 4px !important;
       margin: 6px 0 !important; }
 
+/* ---------------------------
+---------- Archive -----------
+----------------------------*/
+.archive-hero {
+  width: 100%;
+  height: 280px;
+  display: block;
+  text-indent: -999px;
+  overflow: hidden;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.archive-thumb {
+  width: 100%;
+  height: 180px;
+  display: block;
+  text-indent: -999px;
+  overflow: hidden;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2654,9 +2681,9 @@ you can add resource intensive styles.
     display: none !important; }
 
   .home .NewsCats .entry {
-    height: 100px; }
+    height: 105px; }
     .home .NewsCats .entry:first-child {
-      height: 230px; }
+      height: 235px; }
   .home .NewsCats .idio-recommendations .entry {
     height: auto; }
     .home .NewsCats .idio-recommendations .entry:first-child {
@@ -2665,7 +2692,16 @@ you can add resource intensive styles.
   .copyright {
     float: right;
     text-align: left;
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  /* ---------------------------
+  ---------- Archive -----------
+  ----------------------------*/
+  .archive-hero {
+    height: 200px; }
+
+  .archive-thumb {
+    height: 140px; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -2713,13 +2749,22 @@ you can add resource intensive styles.
     padding-right: 0.75em; }
 
   .home .NewsCats .entry {
-    height: 80px; }
+    height: 85px; }
     .home .NewsCats .entry:first-child {
-      height: 210px; }
+      height: 215px; }
   .home .NewsCats .idio-recommendations .entry {
     height: auto; }
     .home .NewsCats .idio-recommendations .entry:first-child {
-      height: auto; } }
+      height: auto; }
+
+  /* ---------------------------
+  ---------- Archive -----------
+  ----------------------------*/
+  .archive-hero {
+    height: 280px; }
+
+  .archive-thumb {
+    height: 220px; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

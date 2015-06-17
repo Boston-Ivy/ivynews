@@ -12,8 +12,11 @@
                 <inner>
 
                     <header class="entry-header   article-header">
-                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                            <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+
+                        <?php $search_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-450' ); ?>
+
+                        <a href="<?php the_permalink(); ?>" class="archive-thumb" rel="bookmark" style="background-image: url(<?php echo $search_thumb[0]; ?>);">
+                            <?php the_title(); ?>
                         </a>
 
                         <h2 class="h3 margin entry-title">
