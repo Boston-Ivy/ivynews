@@ -1375,7 +1375,8 @@ HEADER STYLES
           overflow: hidden;
           float: right; }
           .header .widget.widget_search form .field-group input {
-            margin-bottom: 0; }
+            margin-bottom: 0;
+            font-size: 12px; }
             .header .widget.widget_search form .field-group input#searchsubmit {
               width: 55px;
               padding-left: 0;
@@ -1550,18 +1551,6 @@ HOME STYLES
     display: none; }
 
 /* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
-#Insights {
-  padding-right: 0 !important; }
-
-#Bonds {
-  padding-right: 0 !important; }
-
-#Tech {
-  padding-right: 0 !important; }
-
-#Commodities {
-  clear: both; }
-
 /* NEWSLETTER FORM HOME */
 .NewsText {
   float: left; }
@@ -1668,7 +1657,7 @@ HOME STYLES
     .NewsCats .cat-title a {
       color: #4dae36; }
       .NewsCats .cat-title a:hover {
-        color: #333333; }
+        color: #4dae36; }
   .NewsCats .cat-thumb {
     width: 100%;
     height: 130px;
@@ -2458,12 +2447,6 @@ tweeners.
     font-size: 26px !important; }
 
   /* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
-  #Insights {
-    padding-right: 0.75em !important; }
-
-  #Bonds {
-    padding-right: 0.75em !important; }
-
   .subscribe-form .inner .field-group .search-field {
     width: calc(100% - 140px);
     float: left;

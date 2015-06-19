@@ -151,14 +151,18 @@ HEADER STYLES
 //          width: 25px;
 //          height: 30px;
 //          display: inline-block;
-//          text-indent: -999px;
-//          overflow: hidden;
+//          text-indent: -55px;
 //          vertical-align: bottom;
 //          @include at2x('../images/icon-search', png, 50px, 25px, no-repeat);
 //          background-position: left center;
 //          background-repeat: no-repeat;
 //          cursor: pointer;
 //          float: right;
+//          line-height: 30px;
+//          font-size: 10px;
+//          text-transform: uppercase;
+//          letter-spacing: 2px;
+//          color: #7B7B7B;
 //
 //          &:hover {
 //            background-position: right center;
@@ -167,7 +171,7 @@ HEADER STYLES
         }
 
         .field-group {
-          //width: 0;
+//          width: 0;
           height: 30px;
           overflow: hidden;
           float: right;
@@ -178,6 +182,7 @@ HEADER STYLES
 
           input {
             margin-bottom: 0;
+            font-size: 12px;
 
             &#searchsubmit {
               width: 55px;
@@ -508,19 +513,19 @@ HOME STYLES
 
 /* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
 #Insights {
-  padding-right: 0 !important;
+  //padding-right: 0 !important;
 }
 
 #Bonds {
-  padding-right: 0 !important;
+  //padding-right: 0 !important;
 }
 
 #Tech {
-  padding-right: 0 !important;
+  //padding-right: 0 !important;
 }
 
 #Commodities {
-  clear: both;
+  //clear: both;
 }
 
 /* NEWSLETTER FORM HOME */
@@ -685,7 +690,7 @@ HOME STYLES
       color: $green;
 
       &:hover {
-        color: $text-color;
+        color: $green;
       }
 
     }

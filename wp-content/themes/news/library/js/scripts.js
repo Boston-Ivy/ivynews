@@ -59,22 +59,22 @@ var timeToWaitForLast = 50;
  viewport = updateViewportDimensions();
  
        // if we're above or equal to 768 fire this off
-       if( viewport.width <= 1030 && viewport.width >= 768 ) {
-		   jQuery(".NewsCats:eq(1)").addClass('last-col');
-		   jQuery(".NewsCats:first").removeClass('last-col');
-		   jQuery(".NewsCats:eq(5)").addClass('last-col');
-		   jQuery(".NewsCats:last").removeClass('last-col');
-		   
-         console.log('On home page and window sized to 768 width or more.');
-       } else {
-         // otherwise, let's do this instead
-		 	jQuery(".NewsCats:eq(1)").removeClass('last-col');
-		    jQuery(".NewsCats:first").addClass('last-col');
-			jQuery(".NewsCats:eq(5)").removeClass('last-col');
-		    jQuery(".NewsCats:last").addClass('last-col');
-			
-         console.log('Not on home page, or window sized to less than 768.');
-       }
+       //if( viewport.width <= 1030 && viewport.width >= 768 ) {
+		//   jQuery(".NewsCats:eq(1)").addClass('last-col');
+		//   jQuery(".NewsCats:first").removeClass('last-col');
+		//   jQuery(".NewsCats:eq(5)").addClass('last-col');
+		//   jQuery(".NewsCats:last").removeClass('last-col');
+       //
+       //  console.log('On home page and window sized to 768 width or more.');
+       //} else {
+       //  // otherwise, let's do this instead
+		// 	jQuery(".NewsCats:eq(1)").removeClass('last-col');
+		//    jQuery(".NewsCats:first").addClass('last-col');
+		//	jQuery(".NewsCats:eq(5)").removeClass('last-col');
+		//    jQuery(".NewsCats:last").addClass('last-col');
+       //
+       //  console.log('Not on home page, or window sized to less than 768.');
+       //}
  
  
  
@@ -89,22 +89,22 @@ if( is_home ) { waitForFinalEvent( function() {
  	viewport = updateViewportDimensions();
  
        // if we're above or equal to 768 fire this off
-       if( viewport.width <= 1030 && viewport.width >= 768 ) {
-		   jQuery(".NewsCats:eq(1)").addClass('last-col');
-		   jQuery(".NewsCats:first").removeClass('last-col');
-		   jQuery(".NewsCats:eq(5)").addClass('last-col');
-		   jQuery(".NewsCats:last").removeClass('last-col');
-		   
-         console.log('On home page and window sized to 768 width or more.');
-       } else {
-         // otherwise, let's do this instead
-		 	jQuery(".NewsCats:eq(1)").removeClass('last-col');
-		    jQuery(".NewsCats:first").addClass('last-col');
-			jQuery(".NewsCats:eq(5)").removeClass('last-col');
-		    jQuery(".NewsCats:last").addClass('last-col');
-			
-         console.log('Not on home page, or window sized to less than 768.');
-       }
+       //if( viewport.width <= 1030 && viewport.width >= 768 ) {
+		//   jQuery(".NewsCats:eq(1)").addClass('last-col');
+		//   jQuery(".NewsCats:first").removeClass('last-col');
+		//   jQuery(".NewsCats:eq(5)").addClass('last-col');
+		//   jQuery(".NewsCats:last").removeClass('last-col');
+		//
+       //  console.log('On home page and window sized to 768 width or more.');
+       //} else {
+       //  // otherwise, let's do this instead
+		// 	jQuery(".NewsCats:eq(1)").removeClass('last-col');
+		//    jQuery(".NewsCats:first").addClass('last-col');
+		//	jQuery(".NewsCats:eq(5)").removeClass('last-col');
+		//    jQuery(".NewsCats:last").addClass('last-col');
+		//
+       //  console.log('Not on home page, or window sized to less than 768.');
+       //}
  
      }, timeToWaitForLast, "your-function-identifier-string"); }
   });
