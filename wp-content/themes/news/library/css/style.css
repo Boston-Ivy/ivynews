@@ -1369,8 +1369,31 @@ HEADER STYLES
         width: 100%;
         display: block; }
         .header .widget.widget_search form .search-icon {
-          display: none; }
+          display: none;
+          width: 25px;
+          height: 30px;
+          display: inline-block;
+          text-indent: -55px;
+          vertical-align: bottom;
+          background-image: url("../images/icon-search.png");
+          background-position: left center;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          float: right;
+          line-height: 30px;
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #7B7B7B; }
+          @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+            .header .widget.widget_search form .search-icon {
+              background-image: url("../images/icon-search@2x.png");
+              background-size: 50px 25px;
+              background-repeat: no-repeat; } }
+          .header .widget.widget_search form .search-icon:hover {
+            background-position: right center; }
         .header .widget.widget_search form .field-group {
+          width: 0;
           height: 30px;
           overflow: hidden;
           float: right; }

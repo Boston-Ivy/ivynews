@@ -145,7 +145,7 @@ jQuery(document).ready(function($) {
     */
   
     loadGravatars();
-    //search();
+    search();
     preloadImages();
 
     function search() {
