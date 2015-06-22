@@ -1584,6 +1584,10 @@ HOME STYLES
 
 .subscribe-form {
   margin: 0 0 10px 0; }
+  .subscribe-form .mc4wp-alert {
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 0 0 0; }
   .subscribe-form .inner {
     padding: 11px;
     background-color: #333333; }

@@ -545,6 +545,12 @@ HOME STYLES
     @extend .clear;
   }
 
+  .mc4wp-alert {
+    color: $white;
+    font-size: 12px;
+    padding: 10px 0 0 0;
+  }
+
   .inner {
     padding: 11px;
     background-color: $dark-grey;
