@@ -2770,6 +2770,9 @@ you can add resource intensive styles.
     .home .NewsCats .idio-recommendations .entry:first-child {
       height: auto; }
 
+  header .nav li a {
+    font-size: 14px; }
+
   /* ---------------------------
   ---------- Archive -----------
   ----------------------------*/
