@@ -344,6 +344,10 @@ header {
 	li {
       padding: 0;
 
+      &:last-child a {
+        border-right: none;
+      }
+
       a {
         display: block;
         font-size: 12px;
@@ -429,7 +433,7 @@ HOME STYLES
     color: $text-color !important;
     font-size: 24px;
     margin: 0;
-    
+
     a {
       font-weight: bold;
     }

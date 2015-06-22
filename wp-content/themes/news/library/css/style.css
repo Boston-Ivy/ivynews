@@ -1491,6 +1491,8 @@ header .nav {
   clear: both; }
   header .nav li {
     padding: 0; }
+    header .nav li:last-child a {
+      border-right: none; }
     header .nav li a {
       display: block;
       font-size: 12px;
