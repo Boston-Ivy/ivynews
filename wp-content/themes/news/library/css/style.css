@@ -1270,6 +1270,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f1f1f1; }
 
+/*********************
+Fix the layout
+*********************/
+#container {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.header,
+#content,
+.footer {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+#inner-header,
+#inner-content,
+#inner-footer {
+  padding-left: 15px;
+  padding-right: 15px; }
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -1281,7 +1300,6 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
   margin: 0 auto; }
 
 /*********************
@@ -2512,7 +2530,7 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 760px; }
+    max-width: 760px; }
 
   /*********************
   HEADER STYLES
@@ -2712,7 +2730,7 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1040px; }
+    max-width: 1040px; }
 
   .NewsText {
     float: left; }
@@ -2779,7 +2797,7 @@ This is for the larger monitors and possibly full screen viewers.
     font-size: 24px !important; }
 
   .wrap {
-    width: 1280px; }
+    max-width: 1280px; }
 
   .NewsCats .entry p {
     font-size: 14px; }
