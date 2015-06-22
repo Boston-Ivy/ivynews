@@ -88,6 +88,14 @@ be seen on the Desktop.
 
 }
 
+.secondary-post.with-form {
+
+  &.entry:nth-child(2) {
+    padding-right: 0.75em;
+  }
+
+}
+
 header .nav li a {
   font-size: 14px;
 }

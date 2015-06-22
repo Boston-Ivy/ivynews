@@ -195,7 +195,15 @@
 
                         <?php $sub_hero_ids[] = get_the_ID(); ?>
 
-                        <div class="m-all t-1of2 d-1of3 secondary-post entry">
+                        <?php if ($newsletter_shortcode) { ?>
+
+                            <div class="m-all t-1of2 d-1of3 secondary-post entry with-form">
+
+                        <?php } else { ?>
+
+                            <div class="m-all t-1of3 d-1of3 secondary-post entry">
+
+                        <?php } ?>
 
                             <h3>
                                 <a href="<?php echo the_permalink()?>" rel="bookmark" title="<?php echo the_title()?>">

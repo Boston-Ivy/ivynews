@@ -1498,7 +1498,7 @@ header .nav {
       font-size: 12px;
       color: #fff;
       text-decoration: none;
-      padding: 8px 15px;
+      padding: 8px 12px;
       border-right: 1px solid #666666; }
     header .nav li ul.sub-menu li a,
     header .nav li ul.children li a {
@@ -2646,7 +2646,7 @@ you can add resource intensive styles.
   /*********************
   HOME STYLES
   *********************/
-  .secondary-post.entry:nth-child(2) {
+  .secondary-post.with-form.entry:nth-child(2) {
     padding-right: 0; }
 
   #s {
@@ -2792,6 +2792,9 @@ you can add resource intensive styles.
     height: auto; }
     .home .NewsCats .idio-recommendations .entry:first-child {
       height: auto; }
+
+  .secondary-post.with-form.entry:nth-child(2) {
+    padding-right: 0.75em; }
 
   header .nav li a {
     font-size: 14px; }

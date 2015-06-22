@@ -1,84 +1,92 @@
 <?php get_header(); ?>
 
-    <div id="content">
-
+<div id="content">
     <div id="inner-content" class="wrap cf">
 
         <main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class( "m-all t-1of2 d-1of2 $lastCol cf grid" ); ?> role="article">
+            <header>
+                <h1><?php _e('You searched for: &ldquo;'); the_search_query(); _e('&rdquo;'); ?></h1>
+            </header>
 
-                <inner>
+            <section class="m-all t-all d-all">
 
-                    <header class="entry-header   article-header">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                        <?php $search_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-450' ); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class( "m-all t-1of2 d-1of2 $lastCol cf grid" ); ?> role="article">
 
-                        <a href="<?php the_permalink(); ?>" class="archive-thumb" rel="bookmark" style="background-image: url(<?php echo $search_thumb[0]; ?>);">
-                            <?php the_title(); ?>
-                        </a>
+                    <inner>
 
-                        <h2 class="h3 margin entry-title">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php $tagline =  rwmb_meta('rw_tagline');
+                        <header class="entry-header article-header">
 
-                                if( !empty($tagline)) { ?>
+                            <?php $search_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bones-thumb-450' ); ?>
 
-                                    <span class="tagline"><?php echo $tagline ?></span>
-
-                                <?php } ?>
-
+                            <a href="<?php the_permalink(); ?>" class="archive-thumb" rel="bookmark" style="background-image: url(<?php echo $search_thumb[0]; ?>);">
                                 <?php the_title(); ?>
                             </a>
-                        </h2>
-                    </header>
 
-                    <section class="entry-content cf">
-                        <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php the_excerpt_rss(); ?></a></p>
-                    </section>
+                            <h2 class="h3 margin entry-title">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php $tagline =  rwmb_meta('rw_tagline');
 
-                    <footer class="article-footer">
-                        <p class="byline entry-meta vcard">
-                            <?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
-                                         /* the time the post was published */
-                            '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                                            /* the author of the post */
-                            ' <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                            ); ?>
-                        </p>
-                    </footer>
+                                    if( !empty($tagline)) { ?>
 
-                </inner>
+                                        <span class="tagline"><?php echo $tagline ?></span>
 
-            </article>
+                                    <?php } ?>
+
+                                    <?php the_title(); ?>
+                                </a>
+                            </h2>
+                        </header>
+
+                        <section class="entry-content cf">
+                            <p class="excerpt"><a href="<?php echo get_permalink($post->ID); ?>"><?php the_excerpt_rss(); ?></a></p>
+                        </section>
+
+                        <footer class="article-footer">
+                            <p class="byline entry-meta vcard">
+                                <?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
+                                             /* the time the post was published */
+                                '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+                                                /* the author of the post */
+                                ' <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+                                ); ?>
+                            </p>
+                        </footer>
+
+                    </inner>
+
+                </article>
 
             <?php endwhile; ?>
 
-                <?php bones_page_navi(); ?>
+            </section>
 
-                <?php else : ?>
+            <?php bones_page_navi(); ?>
 
-                    <article id="post-not-found" class="hentry cf">
-                        <header class="article-header">
-                            <h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
-                        </header>
-                        <section class="entry-content">
-                            <p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
-                        </section>
-                        <footer class="article-footer">
-                                <p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
-                        </footer>
-                    </article>
+            <?php else : ?>
 
-                <?php endif; ?>
+                <article id="post-not-found" class="hentry cf">
+                    <header class="article-header">
+                        <h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
+                    </header>
+                    <section class="entry-content">
+                        <p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
+                    </section>
+                    <footer class="article-footer">
+                            <p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
+                    </footer>
+                </article>
 
-            </main>
+            <?php endif; ?>
 
-            <?php get_sidebar(); ?>
+        </main>
 
-        </div>
+        <?php get_sidebar(); ?>
 
     </div>
+
+</div>
 
 <?php get_footer(); ?>
