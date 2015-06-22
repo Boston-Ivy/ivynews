@@ -1722,7 +1722,7 @@ HOME STYLES
     font-size: 12px;
     margin-bottom: 10px;
     padding-top: 10px;
-    border-top: 1px solid #000; }
+    border-top: 1px solid #ccc; }
     .NewsCats .entry:first-child {
       border-top: none;
       padding-top: 0; }
