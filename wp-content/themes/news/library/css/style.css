@@ -1597,7 +1597,6 @@ HOME STYLES
     font-weight: bold;
     display: none; }
 
-/* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
 /* NEWSLETTER FORM HOME */
 .NewsText {
   float: left; }
@@ -1900,6 +1899,13 @@ article.hentry {
       height: 40px; }
     article.hentry img.wp-post-image {
       margin-bottom: 0; }
+article#post-not-found .article-header {
+  min-height: inherit;
+  padding-top: 15px;
+  padding-bottom: 0; }
+article#post-not-found .entry-content {
+  padding-top: 15px;
+  padding-bottom: 15px; }
 article header {
   min-height: 170px;
   position: relative;

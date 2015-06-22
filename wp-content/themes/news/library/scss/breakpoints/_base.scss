@@ -544,23 +544,6 @@ HOME STYLES
 
 }
 
-/* We have to hack the grid because of the idio scripts messing up the nth-child stuff */
-#Insights {
-  //padding-right: 0 !important;
-}
-
-#Bonds {
-  //padding-right: 0 !important;
-}
-
-#Tech {
-  //padding-right: 0 !important;
-}
-
-#Commodities {
-  //clear: both;
-}
-
 /* NEWSLETTER FORM HOME */
 .NewsText {
   float: left;
@@ -1060,6 +1043,21 @@ article {
         margin-bottom: 0;
       }
 
+    }
+
+  }
+
+  &#post-not-found {
+
+    .article-header {
+      min-height: inherit;
+      padding-top: 15px;
+      padding-bottom: 0;
+    }
+
+    .entry-content {
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
 
   }
