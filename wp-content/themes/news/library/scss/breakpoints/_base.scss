@@ -1076,13 +1076,8 @@ article {
 
     .article-header {
       min-height: inherit;
-      padding-top: 15px;
-      padding-bottom: 0;
-    }
-
-    .entry-content {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding: 0;
+      background-color: transparent;
     }
 
   }
@@ -1680,6 +1675,10 @@ FOOTER STYLES
 
 .widget_search {
   padding: 0;
+}
+
+.search-header {
+  margin-top: 0;
 }
 
 .form-signin button {

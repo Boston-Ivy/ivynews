@@ -1917,11 +1917,8 @@ article.hentry {
       margin-bottom: 0; }
 article#post-not-found .article-header {
   min-height: inherit;
-  padding-top: 15px;
-  padding-bottom: 0; }
-article#post-not-found .entry-content {
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  padding: 0;
+  background-color: transparent; }
 article header {
   min-height: 170px;
   position: relative;
@@ -2288,6 +2285,9 @@ FOOTER STYLES
 
 .widget_search {
   padding: 0; }
+
+.search-header {
+  margin-top: 0; }
 
 .form-signin button {
   background: #4dae36 !important;
