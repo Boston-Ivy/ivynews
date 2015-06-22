@@ -1410,7 +1410,8 @@ HEADER STYLES
               background-size: 50px 25px;
               background-repeat: no-repeat; } }
           .header .widget.widget_search form .search-icon:hover {
-            background-position: right center; }
+            background-position: right center;
+            color: #b7b7b7; }
         .header .widget.widget_search form .field-group {
           width: 0;
           height: 30px;
