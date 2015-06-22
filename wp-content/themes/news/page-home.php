@@ -175,7 +175,21 @@
                 <?php /* Begin second row – 2 x Sub-Hero / Newsletter subscribe form */ ?>
                 <section class="m-all t-all d-all">
 
-                    <?php $args = array( 'showposts' => 2, 'post__not_in' => array( $hero_id ) ); ?>
+                    <?php
+
+                    $newsletter_shortcode = get_option("front_page_newsletter_shortcode");
+
+                    if ($newsletter_shortcode) {
+
+                        $args = array('showposts' => 2, 'post__not_in' => array($hero_id));
+
+                    } else {
+
+                        $args = array('showposts' => 3, 'post__not_in' => array($hero_id));
+
+                    }
+
+                    ?>
 
                     <?php $loop = new WP_Query($args); while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
@@ -231,15 +245,13 @@
 
                     } ?>
 
+                    <?php
+
+                    $newsletter_shortcode = get_option("front_page_newsletter_shortcode");
+
+                    if ($newsletter_shortcode) { ?>
+
                     <div class="m-all t-all d-1of3 last-col">
-
-                        <?php
-
-                        $newsletter_shortcode = get_option("front_page_newsletter_shortcode");
-
-                        if ($newsletter_shortcode) {
-
-                            ?>
 
                             <div class="subscribe-form">
                                 <div class="inner">
@@ -247,9 +259,9 @@
                                 </div>
                             </div>
 
-                        <?php } ?>
-
                     </div>
+
+                    <?php } ?>
 
                 </section>
 
