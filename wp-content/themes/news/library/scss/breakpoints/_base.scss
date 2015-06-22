@@ -712,7 +712,7 @@ HOME STYLES
 
   .cat-title {
     font-size: 1.125em;
-    color: $green;
+    color: $dark-grey;
     margin: 10px 0;
     border-top: 1px solid $black;
     padding-top: 5px;
@@ -771,11 +771,6 @@ HOME STYLES
 
     p {
       margin: 0;
-
-      a:hover {
-        text-decoration: underline;
-      }
-
     }
 
   }
@@ -965,6 +960,28 @@ article {
 
     &:nth-child(2n+4) {
       clear: both;
+    }
+
+    &.tag-video .archive-thumb {
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -30px 0 0 -30px;
+        @include at2x('../images/icon-video', png, 120px, 60px, no-repeat);
+        background-position: left center;
+      }
+
+      &:hover:before {
+        background-position: right center;
+      }
+
     }
 
     header {
@@ -1378,11 +1395,6 @@ COMMENT STYLES
       a {
         color: $meta-gray;
         text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-
       }
 
     }
@@ -1518,7 +1530,7 @@ SIDEBARS & ASIDES
 }
 
 h4.widgettitle {
-  color: $green;
+  color: $dark-grey;
   padding: 10px 0;
 }
 	
@@ -1607,11 +1619,6 @@ FOOTER STYLES
 
       &:hover {
         background-color: transparent;
-
-        a {
-          text-decoration: underline;
-        }
-
       }
 
       a {
@@ -1681,6 +1688,17 @@ FOOTER STYLES
 
 .pagination {
   clear: both;
+
+  a,
+  span {
+    color: $green;
+
+    &:hover {
+      background-color: $green;
+    }
+
+  }
+
 }
 
 .twitter-timeline {

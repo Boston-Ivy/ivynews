@@ -1698,7 +1698,7 @@ HOME STYLES
     margin-bottom: 10px; }
   .NewsCats .cat-title {
     font-size: 1.125em;
-    color: #4dae36;
+    color: #333333;
     margin: 10px 0;
     border-top: 1px solid #000;
     padding-top: 5px; }
@@ -1732,8 +1732,6 @@ HOME STYLES
       margin-bottom: 0; }
     .NewsCats .entry p {
       margin: 0; }
-      .NewsCats .entry p a:hover {
-        text-decoration: underline; }
   .NewsCats .more_stories {
     font-size: 12px;
     font-weight: bold;
@@ -1842,6 +1840,26 @@ article.hentry {
   margin-bottom: 10px; }
   article.hentry:nth-child(2n+4) {
     clear: both; }
+  article.hentry.tag-video .archive-thumb {
+    position: relative; }
+    article.hentry.tag-video .archive-thumb:before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -30px 0 0 -30px;
+      background-image: url("../images/icon-video.png");
+      background-position: left center; }
+      @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+        article.hentry.tag-video .archive-thumb:before {
+          background-image: url("../images/icon-video@2x.png");
+          background-size: 120px 60px;
+          background-repeat: no-repeat; } }
+    article.hentry.tag-video .archive-thumb:hover:before {
+      background-position: right center; }
   article.hentry header {
     background-color: #fff; }
     article.hentry header section.entry-content {
@@ -2091,8 +2109,6 @@ COMMENT STYLES
     .comment .vcard time a {
       color: #9fa6b4;
       text-decoration: none; }
-      .comment .vcard time a:hover {
-        text-decoration: underline; }
   .comment .vcard .avatar {
     float: left;
     margin-right: 10px;
@@ -2176,7 +2192,7 @@ SIDEBARS & ASIDES
   width: auto; }
 
 h4.widgettitle {
-  color: #4dae36;
+  color: #333333;
   padding: 10px 0; }
 
 .textwidget a.external {
@@ -2229,8 +2245,6 @@ FOOTER STYLES
         background-color: transparent; }
       .footer nav li:hover {
         background-color: transparent; }
-        .footer nav li:hover a {
-          text-decoration: underline; }
       .footer nav li a {
         text-decoration: none;
         color: #fff; }
@@ -2282,6 +2296,12 @@ FOOTER STYLES
 
 .pagination {
   clear: both; }
+  .pagination a,
+  .pagination span {
+    color: #4dae36; }
+    .pagination a:hover,
+    .pagination span:hover {
+      background-color: #4dae36; }
 
 .twitter-timeline {
   padding: 0 10px !important; }
