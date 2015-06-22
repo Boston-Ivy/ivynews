@@ -1525,7 +1525,6 @@ HOME STYLES
   #Hero a {
     color: #4dae36;
     display: inline-block;
-    font-weight: bold;
     margin: 0 0 0 0; }
     #Hero a:hover {
       text-decoration: none; }
@@ -1539,6 +1538,8 @@ HOME STYLES
     color: #333333 !important;
     font-size: 24px;
     margin: 0; }
+    #Hero h1 a {
+      font-weight: bold; }
   #Hero p {
     margin: 10px 0; }
 

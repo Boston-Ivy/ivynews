@@ -407,7 +407,6 @@ HOME STYLES
   a {
     color: $green;
     display: inline-block;
-    font-weight: bold;
     margin: 0 0 0 0;
 
     &:hover {
@@ -430,6 +429,11 @@ HOME STYLES
     color: $text-color !important;
     font-size: 24px;
     margin: 0;
+    
+    a {
+      font-weight: bold;
+    }
+
   }
 
   p {
