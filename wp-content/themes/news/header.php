@@ -89,7 +89,7 @@
 					
 				</div>
 
-                <nav role="navigation" class="m-all cf" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <nav id="main-nav" role="navigation" class="m-all cf" itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <?php wp_nav_menu(array(
                         'container' => false,                           // remove nav container
                         'container_class' => 'menu cf',                 // class of container (should you choose to use it)

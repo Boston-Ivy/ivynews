@@ -1284,6 +1284,7 @@ Fix the layout
   margin-right: -15px; }
 
 #inner-header,
+#menu-main-menu,
 #inner-content,
 #inner-footer {
   padding-left: 15px;
@@ -1491,9 +1492,10 @@ header .nav {
     padding: 0; }
     header .nav li a {
       display: block;
+      font-size: 12px;
       color: #fff;
       text-decoration: none;
-      padding: 5px 15px;
+      padding: 8px 15px;
       border-right: 1px solid #666666; }
     header .nav li ul.sub-menu li a,
     header .nav li ul.children li a {
@@ -1802,7 +1804,7 @@ POSTS & CONTENT STYLES
   margin-right: 0; }
 
 #content {
-  margin-top: 20px; }
+  padding-top: 20px; }
 
 h1.single {
   font-size: 26px; }

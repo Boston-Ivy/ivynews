@@ -42,6 +42,7 @@ Fix the layout
 }
 
 #inner-header,
+#menu-main-menu,
 #inner-content,
 #inner-footer {
   padding-left: 15px;
@@ -344,9 +345,10 @@ header {
 
       a {
         display: block;
+        font-size: 12px;
         color: $white;
         text-decoration: none;
-        padding: 5px 15px;
+        padding: 8px 15px;
         border-right: 1px solid $mid-grey;
       }
 
@@ -894,7 +896,7 @@ POSTS & CONTENT STYLES
 }
 
 #content {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 h1.single {
