@@ -1842,9 +1842,11 @@ article.hentry {
   margin-bottom: 10px; }
   article.hentry:nth-child(2n+4) {
     clear: both; }
-  article.hentry.tag-video .archive-thumb {
+  article.hentry.tag-video .archive-thumb,
+  article.hentry.tag-video .archive-hero {
     position: relative; }
-    article.hentry.tag-video .archive-thumb:before {
+    article.hentry.tag-video .archive-thumb:before,
+    article.hentry.tag-video .archive-hero:before {
       content: "";
       display: block;
       width: 60px;
@@ -1856,11 +1858,13 @@ article.hentry {
       background-image: url("../images/icon-video.png");
       background-position: left center; }
       @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-        article.hentry.tag-video .archive-thumb:before {
+        article.hentry.tag-video .archive-thumb:before,
+        article.hentry.tag-video .archive-hero:before {
           background-image: url("../images/icon-video@2x.png");
           background-size: 120px 60px;
           background-repeat: no-repeat; } }
-    article.hentry.tag-video .archive-thumb:hover:before {
+    article.hentry.tag-video .archive-thumb:hover:before,
+    article.hentry.tag-video .archive-hero:hover:before {
       background-position: right center; }
   article.hentry header {
     background-color: #fff; }
