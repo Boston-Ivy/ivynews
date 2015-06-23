@@ -1389,7 +1389,7 @@ HEADER STYLES
         display: block; }
         .header .widget.widget_search form .search-icon {
           display: none;
-          width: 25px;
+          width: 30px;
           height: 30px;
           display: inline-block;
           text-indent: -55px;
@@ -1407,7 +1407,7 @@ HEADER STYLES
           @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
             .header .widget.widget_search form .search-icon {
               background-image: url("../images/icon-search@2x.png");
-              background-size: 50px 25px;
+              background-size: 60px 30px;
               background-repeat: no-repeat; } }
           .header .widget.widget_search form .search-icon:hover {
             background-position: right center;
@@ -1449,20 +1449,20 @@ HEADER STYLES
           .header .widget.widget_nav_menu ul li.facebook a:hover {
             background-position: right 0; }
         .header .widget.widget_nav_menu ul li.twitter a {
-          background-position: left -25px; }
+          background-position: left -30px; }
           .header .widget.widget_nav_menu ul li.twitter a:hover {
-            background-position: right -25px; }
+            background-position: right -30px; }
         .header .widget.widget_nav_menu ul li.google a {
-          background-position: left -50px; }
+          background-position: left -60px; }
           .header .widget.widget_nav_menu ul li.google a:hover {
-            background-position: right -50px; }
+            background-position: right -60px; }
         .header .widget.widget_nav_menu ul li.linkedin a {
-          background-position: left -75px; }
+          background-position: left -90px; }
           .header .widget.widget_nav_menu ul li.linkedin a:hover {
-            background-position: right -75px; }
+            background-position: right -90px; }
         .header .widget.widget_nav_menu ul li a {
-          width: 25px;
-          height: 25px;
+          width: 30px;
+          height: 30px;
           display: inline-block;
           text-indent: -999px;
           overflow: hidden;
@@ -1471,7 +1471,7 @@ HEADER STYLES
           @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
             .header .widget.widget_nav_menu ul li a {
               background-image: url("../images/icon-social@2x.png");
-              background-size: 50px 100px;
+              background-size: 60px 120px;
               background-repeat: no-repeat; } }
           .header .widget.widget_nav_menu ul li a:focus {
             outline: none; }

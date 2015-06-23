@@ -171,12 +171,12 @@ HEADER STYLES
 
         .search-icon {
           display: none;
-          width: 25px;
+          width: 30px;
           height: 30px;
           display: inline-block;
           text-indent: -55px;
           vertical-align: bottom;
-          @include at2x('../images/icon-search', png, 50px, 25px, no-repeat);
+          @include at2x('../images/icon-search', png, 60px, 30px, no-repeat);
           background-position: left center;
           background-repeat: no-repeat;
           cursor: pointer;
@@ -270,40 +270,40 @@ HEADER STYLES
           }
 
           &.twitter a {
-            background-position: left -25px;
+            background-position: left -30px;
 
             &:hover {
-              background-position: right -25px;
+              background-position: right -30px;
             }
 
           }
 
           &.google a {
-            background-position: left -50px;
+            background-position: left -60px;
 
             &:hover {
-              background-position: right -50px;
+              background-position: right -60px;
             }
 
           }
 
           &.linkedin a {
-            background-position: left -75px;
+            background-position: left -90px;
 
             &:hover {
-              background-position: right -75px;
+              background-position: right -90px;
             }
 
           }
 
           a {
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
             display: inline-block;
             text-indent: -999px;
             overflow: hidden;
             vertical-align: bottom;
-            @include at2x('../images/icon-social', png, 50px, 100px, no-repeat);
+            @include at2x('../images/icon-social', png, 60px, 120px, no-repeat);
 
             &:focus {
               outline: none;
