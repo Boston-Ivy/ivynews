@@ -640,7 +640,7 @@ $GLOBALS['comment'] = $comment; ?>
                             </td>
                             <td>
                                 <input type="text" name="newsletter_shortcode"
-                                       value="<?php echo $newsletter_shortcode ?>  " id="newsletter_shortcode"
+                                       value="<?php echo $newsletter_shortcode ?>" id="newsletter_shortcode"
                                        class="regular-text">
                             </td>
                         </tr>
