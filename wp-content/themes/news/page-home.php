@@ -81,10 +81,16 @@
                     </div>
 
                     <div class="m-all t-all d-1of3 last-col">
-
+					<?php
+						$date =  date('Y-m-d');
+						$now = $date."T00:00:00Z";
+						$weekAgo = date("Y-m-d",(strtotime ( '-7 day' , strtotime ( $date) ) ));
+						$weekAgoDate = $weekAgo."T00:00:00Z";
+					?>
                         <script type="text/javascript">
                             var _ipc = {
                                 api_key: '02F55TD5SZYNPCN7BONR',
+								filter: 'published:[<?php echo $weekAgoDate  ?> TO <?php echo $now;?>]', 
                                 complete: function(){
 
                                     jQuery(".idio__p").each(function(){
@@ -97,7 +103,6 @@
                                         trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))) + "…";
 
                                         $string.text(trimmedString);
-
                                     });
 
                                     jQuery("#idio .title").css({
