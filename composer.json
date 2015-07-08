@@ -1,0 +1,45 @@
+{
+    "name": "Boston-Ivy/ivynews",
+    "description": "Boston-Ivy/ivynews",
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "Yoast/wpseo-news",
+            "version": "dev-trunk",
+            "type": "wordpress-plugin",
+            "dist": {
+              "type": "zip",
+              "url": "https://github.com/Yoast/wpseo-news/archive/trunk.zip"
+            }
+          }
+        }
+
+    ],
+    "require": {
+        "wpackagist-plugin/easy-peasy-mailchimp-ajax-form": "dev-trunk",
+        "wpackagist-plugin/infinite-transporter": "dev-trunk",
+        "wpackagist-plugin/jetpack":"dev-trunk",
+        "wpackagist-plugin/lightbox": "dev-trunk",
+        "wpackagist-plugin/mailchimp-for-wp": "dev-trunk",
+        "wpackagist-plugin/qzzr-shortcode": "dev-trunk",
+        "wpackagist-plugin/redirection": "dev-trunk",
+        "wpackagist-plugin/responsive-menu": "dev-trunk",
+        "wpackagist-plugin/sem-external-links": "dev-trunk",
+        "wpackagist-plugin/w3-total-cache": "dev-trunk",
+        "wpackagist-plugin/wordpress-seo": "dev-trunk",
+        "wpackagist-plugin/newscred": "dev-trunk",
+        "wpackagist-plugin/json-api": "dev-trunk",
+        "Yoast/wpseo-news": "dev-trunk"
+    },
+    "scripts": {
+    "post-install-cmd": [
+      "svn export --force --ignore-externals http://core.svn.wordpress.org/tags/4.1/ ."
+    ]
+  },
+    "minimum-stability":"dev"
+}
